@@ -1,0 +1,14 @@
+@theme {
+    --color-primary: #FF3300;
+    --color-secondary: #FF6600;
+    --color-breaking: #162456;
+    --font-inter: "Inter", sans-serif;
+}
+@layer components{
+    .container{
+        @apply max-w-screen-lg mx-auto px-4
+    }
+    .section__title{
+        @apply text-2xl
+    }
+}

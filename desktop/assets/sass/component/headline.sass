@@ -1,0 +1,169 @@
+.headline
+    @apply px-4 flex items-stretch flex-row gap-10 h-[660px]
+    &--main
+        @apply border rounded-lg h-full flex-1 relative
+        &__list
+            @apply flex flex-row py-5 divide-x border-t
+            &__item
+                @apply flex-1
+            .headline
+                &__item
+                    @apply px-4
+    &__item
+        @apply flex flex-col gap-1.5
+        &--headline
+            @apply flex flex-col py-0 gap-4 mb-4
+            .headline__item
+                &__detail
+                    @apply px-4
+                &__title
+                    @apply text-[28px] font-bold
+        &__figure
+            @apply rounded-lg overflow-hidden relative block shrink-0 w-full
+        &__image
+            @apply w-full h-full object-cover
+        &__detail
+            @apply flex flex-col gap-2
+        &__published
+            @apply text-xs
+        &__title
+            @apply font-semibold line-clamp-3 text-sm leading-snug transition-colors
+    &--popular
+        @apply w-[300px] relative flex flex-col
+        &__title
+            @apply flex items-center gap-2 text-xl font-bold pb-4 border-b
+            @apply before:w-1 before:h-5 before:bg-gradient-to-br before:inline-block before:rounded-sm
+        &__wrapper
+            @apply relative h-10 flex-1
+            @apply before:block before:absolute before:inset-x-0 before:top-0 before:bg-gradient-to-b before:to-transparent before:h-8 before:z-10 before:pointer-events-none
+            @apply after:block after:absolute after:inset-x-0 after:bottom-0 after:bg-gradient-to-t after:to-transparent after:h-8 after:z-10 after:pointer-events-none
+            &__box
+                @apply overflow-y-auto max-h-full py-4
+                &::-webkit-scrollbar
+                    @apply hidden
+        &__link
+            @apply flex items-center justify-center gap-1 hover:underline
+        &__list
+            counter-reset: popular
+            @apply h-full relative divide-y
+            &__item
+                @apply flex items-start gap-4 py-3
+                &::before
+                    counter-increment: popular
+                    content: counter(popular)
+                    -webkit-text-stroke: 1px var(--color-primary)
+                    text-shadow: .125rem .125rem --alpha(var(--color-primary) / 10%)
+                    letter-spacing: -.75rem
+                    font-family: sans-serif
+                    @apply text-[64px] leading-none text-transparent font-bold w-14 shrink-0 text-center -translate-x-2
+                // &__number
+                //     @apply w-14 shrink-0 text-primary
+                .headline__item__title
+                    @apply text-base font-bold
+    &.--breaking
+        .headline
+            &--main
+                @apply p-1.5 bg-gradient-to-br to-35% overflow-hidden flex flex-col justify-between border-0
+                &__emblem
+                    @apply italic flex gap-2.5 absolute left-1.5 top-1.5 z-10 py-3 px-6 bg-gradient-to-r from-70% rounded-br-xl pointer-events-none
+                    @apply after:absolute after:top-0 after:right-px after:translate-x-full after:border-solid after:border-t-[3.25rem] after:border-r-[1.25rem] after:pointer-events-none
+                    // &::after
+                    //     border-color: #6980fe transparent transparent transparent
+                    &__background
+                        @apply invisible absolute left-0 top-0
+                    &__text
+                        @apply flex flex-col
+                    &__subtitle
+                        @apply text-xs leading-none
+                    &__title
+                        @apply text-2xl font-bold leading-none
+            &__item--headline
+                .headline__item__title
+                    @apply line-clamp-2
+            &--updates
+                @apply relative mx-4 pt-4 border-t mb-5
+                &__title
+                    @apply flex items-center justify-between leading-none mb-4
+                    &__text
+                        @apply font-semibold relative flex items-center gap-2.5
+                    &__link
+                        @apply flex items-center gap-1 hover:underline text-xs
+                    &__icon
+                        @apply relative flex size-2.5
+                        @apply before:absolute before:inline-flex before:h-full before:w-full before:animate-ping before:rounded-full before:opacity-75
+                        @apply after:relative after:inline-flex after:w-full after:h-full after:rounded-full 
+                &__swiper
+                    .headline__item
+                        @apply shadow-md rounded-lg py-3 px-5
+                        &__title
+                            @apply line-clamp-2
+        .swiper
+            &-button
+                @apply absolute bottom-10 inset-x-0
+                &-prev,
+                &-next
+                    @apply after:hidden
+                &-prev
+                    @apply -left-3
+                &-next
+                    @apply -right-3
+    &.--report
+        .headline
+            &--main
+                @apply p-1.5 overflow-hidden flex flex-col justify-between border-0
+                &__emblem
+                    @apply italic flex gap-2.5 absolute left-1.5 top-1.5 z-10 py-3 px-6 bg-gradient-to-r from-70% rounded-br-xl pointer-events-none
+                    @apply after:absolute after:top-0 after:right-px after:translate-x-full after:border-solid after:border-t-[3.25rem] after:border-r-[1.25rem] after:pointer-events-none
+                    // &::after
+                    //     border-color: #6980fe transparent transparent transparent
+                    &__background
+                        @apply invisible absolute left-0 top-0
+                    &__text
+                        @apply flex flex-col
+                    &__subtitle
+                        @apply text-xs leading-none
+                    &__title
+                        @apply text-2xl font-bold leading-none
+            &__item--headline
+                .headline__item__title
+                    @apply line-clamp-2
+            &--updates
+                @apply relative mx-4 pt-4 border-t mb-5
+                &__title
+                    @apply flex items-center justify-between leading-none mb-4
+                    &__text
+                        @apply font-semibold relative flex items-center gap-2.5
+                    &__link
+                        @apply flex items-center gap-1 hover:underline text-xs
+                    &__icon
+                        @apply relative flex size-2.5
+                        @apply before:absolute before:inline-flex before:h-full before:w-full before:animate-ping before:rounded-full before:opacity-75
+                        @apply after:relative after:inline-flex after:w-full after:h-full after:rounded-full 
+                &__swiper
+                    .headline__item
+                        @apply shadow-md rounded-lg py-3 px-5
+                        &__title
+                            @apply line-clamp-2
+        .swiper
+            &-button
+                @apply absolute bottom-10 inset-x-0
+                &-prev,
+                &-next
+                    @apply after:hidden
+                &-prev
+                    @apply -left-3
+                &-next
+                    @apply -right-3
+
+.dark
+    .headline--popular__list__item::before
+        text-shadow: .125rem .125rem --alpha(var(--color-primary) / 30%)
+
+aside
+    .headline
+        @apply px-4 block gap-0 h-auto w-full border-0
+        &--popular
+            @apply w-full relative flex flex-col
+    .headline--popular__wrapper
+        &::after
+            background-image: none

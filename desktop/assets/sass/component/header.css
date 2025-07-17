@@ -1,0 +1,223 @@
+.header {
+  @apply py-3 inset-x-0 z-20 sticky top-0 transition-transform duration-500 {}
+}
+
+.header--wrapper {
+  @apply flex items-center justify-between {}  @apply gap-8 {}
+}
+
+.header .container {
+  @apply mx-auto max-w-screen-lg px-4 {}
+}
+
+.header.--unsticky {
+  @apply -translate-y-full pointer-events-none {}
+}
+
+.header.--unsticky + .navbar {
+  @apply top-0 {}
+}
+
+.header.--searchCollapsed {
+  @apply z-30 {}
+}
+
+.header.--searchCollapsed + .navbar {
+  @apply z-20 {}
+}
+
+.header--logo {
+  @apply flex-none {}
+}
+
+.header--logo__link {
+  @apply block h-8 {}
+}
+
+.header--logo__image {
+  @apply w-auto h-full object-contain {}
+}
+
+.header--search {
+  @apply flex flex-1 {}
+}
+
+.header--search__form {
+  @apply flex items-stretch justify-between text-sm relative flex-1 gap-3 h-10 {}
+}
+
+.header--search__form__input {
+  @apply flex-1 border rounded-full py-2 px-4 {}
+}
+
+.header--search__form__button {
+  @apply items-center justify-center py-2 px-7 bg-gradient-to-tr font-semibold rounded-full cursor-pointer {}
+}
+
+.header--search__form__button {
+  @apply flex items-center justify-center py-2 px-7 bg-gradient-to-tr font-semibold rounded-full cursor-pointer {}
+}
+
+.header--search__button {
+  @apply translate-x-3 {}
+}
+
+.header--right {
+  @apply items-center flex gap-2 {}
+}
+
+.header__live {
+  @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-8 px-3 transition-colors {}
+}
+
+.header__login {
+  @apply flex items-center justify-center gap-1.5 w-10 h-10 text-xs transition-colors {}  @apply rounded-sm py-2 px-3 w-auto h-auto {}
+}
+
+.header__login__icon {
+  @apply w-4 h-4 {}
+}
+
+.header-theme {
+  @apply cursor-pointer w-8 h-8 flex items-center justify-center {}
+}
+
+.header-theme__icon {
+  @apply pointer-events-none w-6 h-6 {}
+}
+
+.header-theme__icon.--dark {
+  @apply block dark:hidden {}
+}
+
+.header-theme__icon.--light {
+  @apply hidden dark:block {}
+}
+
+.navbar {
+  @apply shadow-md sticky z-20 duration-500 transition-[top] top-16 {}
+}
+
+.navbar .container {
+  @apply mx-auto max-w-screen-lg px-4 relative {}
+}
+
+.navbar--list {
+  @apply flex items-center overflow-x-auto -mx-4 whitespace-nowrap text-sm justify-between font-semibold uppercase {}
+}
+
+.navbar--list::-webkit-scrollbar {
+  @apply hidden {}
+}
+
+.navbar--list__link {
+  @apply px-4 py-3 border-b-2 border-transparent flex items-center transition-colors {}
+}
+
+.navbar--list__item.--active .navbar--list__link {
+  @apply border-primary {}
+}
+
+.navbar--category {
+  @apply text-xs font-semibold {}
+}
+
+.navbar--category__wrapper {
+  @apply flex items-center h-full py-1 {}
+}
+
+.navbar--category__title {
+  @apply flex items-center border-r pr-6 gap-2.5 transition-colors {}
+}
+
+.navbar--category__list {
+  @apply flex items-center pl-6 gap-5 *:*:py-3 *:*:block *:*:transition-colors {}
+}
+
+.megamenu--title {
+  @apply flex items-center justify-between pb-4 border-b mb-3 {}
+}
+
+.megamenu--title__text {
+  @apply flex items-center gap-2 text-xl font-bold {}  @apply before:w-1 before:h-5 before:bg-gradient-to-br before:inline-block before:rounded-sm {}
+}
+
+.megamenu__icon {
+  @apply w-5 h-5 {}
+}
+
+.megamenu__dropdown {
+  @apply absolute pt-6 pb-8 px-8 inset-x-4 top-full h-[600px] z-20 rounded-b-xl transition-all -translate-y-4 opacity-0 pointer-events-none shadow-lg overflow-hidden capitalize {}
+}
+
+.megamenu__dropdown__inner {
+  @apply h-full flex items-start gap-8 {}
+}
+
+.megamenu__dropdown .navbar--list__link {
+  @apply rounded-lg px-3 {}
+}
+
+.megamenu:hover .megamenu__dropdown {
+  @apply opacity-100 pointer-events-auto translate-y-0 {}
+}
+
+.megamenu--channel {
+  @apply overflow-y-auto h-full border-r flex flex-col gap-6 w-96 shrink-0 {}
+}
+
+.megamenu--channel::-webkit-scrollbar {
+  @apply hidden {}
+}
+
+.megamenu--news {
+  @apply whitespace-normal {}
+}
+
+.megamenu--news__list {
+  @apply divide-y divide-neutral-200 dark:divide-neutral-700 {}
+}
+
+.megamenu--news__item {
+  @apply flex gap-4 items-center py-3 {}
+}
+
+.megamenu--news__item__figure {
+  @apply rounded-lg overflow-hidden relative block w-[100px] shrink-0 {}
+}
+
+.megamenu--news__item__image {
+  @apply w-full h-full object-cover {}
+}
+
+.megamenu--news__item__desc {
+  @apply flex flex-col gap-1.5 {}
+}
+
+.megamenu--news__item__title {
+  @apply font-semibold line-clamp-3 text-base {}
+}
+
+.megamenu--news__item__detail {
+  @apply text-xs flex items-center gap-1 font-normal {}
+}
+
+.channel {
+  @apply flex items-center gap-4 {}
+}
+
+.channel__icon {
+  @apply transition-colors border rounded-lg p-2 block {}
+}
+
+.channel__detail {
+  @apply flex flex-col {}
+}
+
+.channel__title {
+  @apply text-sm transition-colors {}
+}
+
+.channel__desc {
+  @apply text-xs font-normal transition-colors {}
+}

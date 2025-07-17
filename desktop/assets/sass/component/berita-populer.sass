@@ -1,0 +1,26 @@
+.popular-news
+  @apply px-4 overflow-x-hidden
+  &__header
+    @apply flex justify-between items-center mb-4 border-b border-gray-200 dark:border-gray-700 pb-2
+  &__title
+    @apply text-xl font-bold relative pl-4 text-gray-900 dark:text-white
+    &::before
+      content: ''
+      @apply absolute left-0 top-1/2 -translate-y-1/2 h-5 w-1 bg-primary rounded-sm
+  &__more-link
+    @apply text-sm text-primary hover:underline font-medium
+  &__list
+    @apply columns-2 gap-8 w-full border-b border-gray-200 dark:border-gray-700 pb-4
+    counter-reset: news
+  &__item
+    @apply relative mb-8 pl-10 break-inside-avoid
+    counter-increment: news
+    &::before
+      content: counter(news)
+      @apply absolute left-0 top-0 text-4xl font-bold text-gray-300 leading-none
+  &__content
+    @apply flex flex-col gap-1
+  &__category
+    @apply text-sm font-semibold text-primary
+  &__headline
+    @apply text-base font-medium text-gray-900 dark:text-white leading-snug hover:underline

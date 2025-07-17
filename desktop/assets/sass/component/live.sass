@@ -1,0 +1,31 @@
+.live
+    @apply pt-4 px-4
+    &-container
+        @apply border border-gray-300 rounded-xl
+    &-head
+        @apply p-4 flex items-center justify-between mb-2
+        &-title
+            @apply text-primary font-bold text-sm
+        &-sponsor
+            @apply flex items-center gap-1 
+            span
+                @apply text-xs
+            img
+                @apply object-contain
+    &-img
+        @apply relative overflow-hidden aspect-300/182
+        &-img
+            @apply w-full h-full object-cover
+        &-play
+            @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/50 rounded-full h-15 w-15 flex items-center justify-center
+            svg
+                @apply w-6 h-6
+        &-time
+            @apply absolute bottom-1 right-1 bg-black/50 rounded-full text-white px-4 py-1
+    &-desc
+        @apply  text-base font-bold p-4
+
+.section-title
+    @apply flex items-center gap-2 text-xl font-bold pb-4 border-b
+    @apply before:w-1 before:h-5 before:bg-gradient-to-br before:inline-block before:rounded-sm
+

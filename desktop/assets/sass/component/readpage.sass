@@ -1,0 +1,341 @@
+.main
+    &--row
+        @apply px-4 flex items-start justify-between
+    &--page
+        @apply max-w-screen-sm
+    &--aside
+        @apply w-[300px]
+.also-read
+    @apply border rounded-lg py-6 pr-6 pl-4
+    &__title
+        @apply relative flex items-center gap-3 -ml-4 font-bold mb-3
+        @apply before:w-1 before:h-7 before:rounded-r-sm before:flex
+    &__list
+        @apply text-sm list-disc pl-4 flex flex-col gap-3 font-medium
+    &__content
+        @apply text-sm font-medium
+    &__figure
+        @apply overflow-hidden rounded-md w-[100px] shrink-0
+        &__image
+            @apply block
+            img
+                @apply w-full h-full object-cover
+    &--image
+        @apply flex items-start gap-6 py-4
+    &--summary
+        @apply mb-6
+.tags
+    &--list
+        @apply flex flex-wrap items-center gap-3 whitespace-nowrap text-sm font-medium mb-6
+    &__item
+        @apply flex items-center gap-1 rounded-full py-1 px-3
+
+
+.rekomendasi
+    &-list
+        @apply grid grid-cols-3 gap-x-4 gap-y-6
+        &__image
+            @apply rounded-lg overflow-hidden relative block mb-3
+        &__pict
+            @apply w-full h-full object-cover
+        &__duration
+            @apply absolute right-0 bottom-0 py-1 px-2 rounded flex items-center gap-1 text-white text-[10px]
+        &__title
+            @apply font-semibold mb-1 line-clamp-3
+        &__detail
+            @apply flex items-center gap-2 text-xs
+
+
+.comment-page
+    padding: 15px
+    border-radius: 6px
+    margin-block: 30px
+    &__body
+        margin: 0
+        padding: 0
+        &__title
+            position: relative
+            margin-left: -15px
+            margin-bottom: 18px
+            &__text
+                font-size: 18px
+                font-weight: 700
+                padding: 0 15px
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    bottom: 0
+                    left: 0
+                    width: 5px
+                    border-radius: 0 5px 5px 0
+        &__main
+            &__input
+                margin-bottom: 15px
+                .fieldInput
+                    display: flex
+                    width: 100%
+                    height: auto
+                    position: relative
+                    overflow: visible
+                    border: none
+                .form-input
+                    width: 100%
+                    height: 30px
+                    min-height: 30px
+                    overflow-y: hidden
+                    resize: none
+                    line-height: 16px
+                    padding: 3px 30px 3px 15px!important
+                    background: none
+                    border-bottom-width: 1px
+                    border-bottom-style: solid
+                    border-top: none
+                    border-left: none
+                    border-right: none
+                    box-sizing: border-box
+                    padding: 0 
+                    font-size: 14px
+                    transition: 0.6s
+                    field-sizing: content
+                    margin: 0
+                    &:focus
+                        outline: none
+                .form-submit
+                    font-size: 12px
+                    position: absolute
+                    right: 0
+                    top: 0
+                    width: 30px
+                    height: 35px
+                    border: none
+                    background: none
+                    cursor: pointer
+                .hint
+                    font-size: 11px
+                    font-weight: 500
+                &.--subinput
+                    margin-left: 35px
+                    display: none
+            &__bubble
+                display: flex
+                gap: 10px
+                margin-bottom: 10px
+                &__profil
+                    figure
+                        overflow: hidden
+                        border-radius: 99px
+                        aspect-ratio: 1 / 1
+                        width: 26px
+                        img
+                            object-fit: cover
+                            width: 100%
+                            height: 100%
+                &__content
+                    flex: 1
+                    &__name
+                        font-size: 12px
+                        font-weight: 600
+                    &__time
+                        font-weight: 400
+                        margin-left: 10px
+                    &__chat
+                        font-size: 14px
+                        font-weight: 400
+                        overflow: hidden
+                        display: -webkit-box
+                        -webkit-box-orient: vertical
+                        -webkit-line-clamp: 3
+                    &__delete
+                        background: none
+                        border: none
+                        font-size: 12px
+                        font-weight: 500
+                        padding: 0
+                        margin-right: 10px
+                    &__reply
+                        background: none
+                        border: none
+                        font-size: 12px
+                        font-weight: 500
+                        padding: 0
+                        cursor: pointer
+                p
+                    margin: 4px 0
+                .comment-like-toggle
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    position: relative
+                    cursor: pointer
+                    font-size: 12px
+                    user-select: none
+                    transition: 100ms
+                    padding-left: 10px
+                    span
+                        font-size: 10px
+                    &__input
+                        position: absolute
+                        opacity: 0
+                        height: 0
+                        width: 0
+                        cursor: pointer
+                    &__icon
+                        width: 2em
+                        height: 2em
+                        transition: 100ms
+                    .comment-like-toggle__input:checked + .comment-like-toggle__icon svg .comment-like-toggle__icon-path
+                        fill: #27a139
+                        stroke-width: 1.2
+                        stroke: #FFFFFF
+            &__replies
+                background: none
+                border: none
+                font-size: 12px
+                font-weight: 500
+                padding: 0
+                margin-left: 35px
+                position: relative
+                padding-left: 35px
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 8px
+                    left: 0
+                    width: 25px
+                    height: 2px
+            .reply-toggle:checked ~ .comment-page__body__main__input.--subinput
+                display: block
+    &__footer
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 700 
+        border-top-width: 1px
+        border-top-style: solid 
+        padding: 15px 0
+        margin: 0
+    &__box
+        display: flex
+        align-items: center
+        flex-direction: column
+        padding: 20px 0
+        color: #475569
+.comment
+    &-btnJoin
+        width: 100%
+        height: auto
+        border-width: 1px
+        border-style: solid
+        border-radius: 8px
+        padding: 15px 12px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: Inter
+        font-weight: 600
+        font-size: 14px
+        line-height: 16px
+        text-align: center
+    &-wrapper
+        margin-bottom: 15px
+        &.--subcomment
+            margin-left: 35px
+    &-delete-modal
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.4)
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 999999
+        &__content
+            background: #fff
+            border-radius: 10px
+            padding: 24px
+            width: 320px
+            position: relative
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2)
+            text-align: center  
+        &__close
+            position: absolute
+            right: 16px
+            top: 12px
+            font-size: 18px
+            cursor: pointer 
+        &__title 
+            font-size: 18px
+            font-weight: bold
+            margin-bottom: 8px
+        &__text 
+            font-size: 14px
+            color: #555
+            margin-bottom: 20px
+        &__actions 
+            display: flex
+            justify-content: space-evenly
+        &__cancel,
+        &__confirm 
+            padding: 8px 16px
+            border: none
+            border-radius: 6px
+            font-weight: 500
+            cursor: pointer
+            width: 90px
+        &__cancel
+            background-color: #f1f1f1
+        &__confirm
+            background-color: #FF3300
+            color: #fff
+    &-toast
+        position: fixed
+        top: 80px
+        left: 50%
+        transform: translateX(-50%)
+        background-color: #333
+        color: #fff
+        padding: 10px 10px
+        border-radius: 10px
+        opacity: 0
+        pointer-events: none
+        transition: opacity 0.3s ease
+        z-index: 99999
+        font-size: 12px
+        &.show
+            opacity: 1
+
+
+@supports (-webkit-touch-callout: none) 
+    #message_area 
+        -webkit-appearance: none
+        border-radius: 0
+        -webkit-box-sizing: border-box
+
+
+.article-share
+    &.--collapsed
+        z-index: 1
+
+.article-content-body .also-read a
+    color: black
+    &:hover
+        color: var(--color-primary)
+.articles--iridescent-list--photo-item 
+    padding-bottom: 0
+    border-bottom-color: transparent
+.read-page
+    &-box
+        &__dropdown
+            pointer-events: none
+    &--engagement
+        border-top-width: 0
+        border-bottom-width: 0
+        padding-top: 0
+        padding-bottom: 8px
+.dark 
+    .article-content-body .also-read a
+        color: white

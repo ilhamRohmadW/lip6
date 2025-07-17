@@ -1,0 +1,40 @@
+.schedule
+  @apply px-4 font-sans
+  &__title
+    @apply text-xl font-bold mb-6 flex items-center gap-2 before:w-1 before:h-5 before:rounded-sm
+  &__content
+    @apply flex flex-row gap-6
+  &__list
+    @apply rounded-xl border flex flex-row gap-6 flex-1 relative
+    @apply before:absolute before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:h-[1px] before:w-[90%] before:md:w-[1px] before:md:h-[90%]
+  &__card
+    @apply p-6 w-1/2
+  &__card
+    &--header
+      @apply flex items-center gap-2 mb-4
+    &--logo
+      @apply w-8 h-8 object-contain
+    &--title
+      @apply text-base font-bold 
+  &__program
+    &--list
+      @apply w-full divide-y border-y
+    &--item
+      @apply flex items-start justify-start py-3 gap-3 text-sm 
+      // > span:first-child
+  &__time,
+  &__badge
+    @apply border-r pr-3 min-w-[4.5rem] text-right
+
+  &__badge
+    @apply px-2
+    &--live
+      @apply w-[60px] text-xs font-semibold px-2 py-1 rounded
+  &__time
+    @apply w-[60px] font-bold 
+  &__link
+    @apply mt-4 flex items-center justify-center font-semibold text-sm gap-1 
+  &__ads
+    @apply w-[360px] flex-shrink-0
+  &__ads-image
+    @apply w-full h-auto

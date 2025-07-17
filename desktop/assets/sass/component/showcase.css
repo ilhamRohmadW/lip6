@@ -1,0 +1,178 @@
+.showcase {
+  @apply font-inter px-4 {}
+}
+
+.showcase--list {
+  @apply gap-4 -mx-4 px-4 overflow-x-auto snap-x overflow-y-hidden snap-mandatory scroll-smooth grid grid-cols-4 {}
+}
+
+.showcase--list::-webkit-scrollbar {
+  @apply hidden {}
+}
+
+.showcase--list__item {
+  @apply snap-always snap-center max-w-96 shrink-0 w-auto {}
+}
+
+.showcase--list__image {
+  @apply rounded-lg overflow-hidden relative block mb-3 {}
+}
+
+.showcase--list__pict {
+  @apply w-full h-full object-cover {}
+}
+
+.showcase--list__duration {
+  @apply absolute right-0 bottom-0 py-1 px-2 rounded flex items-center gap-1 text-[10px] {}
+}
+
+.showcase--list__title {
+  @apply font-semibold mb-1 line-clamp-2 {}
+}
+
+.showcase--list__detail {
+  @apply flex items-center gap-2 text-xs {}
+}
+
+.showcase-instream {
+  @apply overflow-hidden rounded-xl flex mb-10 flex-row {}
+}
+
+.showcase-instream .vidio-embed {
+  margin: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  @apply pointer-events-none aspect-[342/193] {}
+}
+
+.showcase-instream__vidio {
+  @apply relative shrink-0 overflow-hidden w-1/2 {}
+}
+
+.showcase-instream__vidio__overlay {
+  @apply absolute inset-x-0 bottom-0 px-4 py-5 bg-gradient-to-t to-transparent to-60% {}
+}
+
+.showcase-instream__vidio__detail {
+  @apply leading-tight {}
+}
+
+.showcase-instream__vidio__detail__top {
+  @apply flex items-center gap-2 mb-3 {}
+}
+
+.showcase-instream__vidio__title {
+  @apply text-base font-bold overflow-hidden line-clamp-2 {}
+}
+
+.showcase-instream__viewer, .showcase-instream__live {
+  @apply py-1 px-1.5 rounded-sm text-sm flex items-center shadow-md {}
+}
+
+.showcase-instream__live {
+  @apply font-bold px-2.5 gap-2 {}
+}
+
+.showcase-instream__live__pulse {
+  @apply relative w-2 h-2 rounded-full block {}  @apply before:w-2 before:h-2 before:rounded-full before:block before:absolute before:inset-0 {}
+}
+
+.showcase-instream__live__pulse:before {
+  animation: pulseAnim .7s infinite;
+}
+
+.showcase-instream__viewer {
+  @apply gap-1 font-medium opacity-50 transition-opacity {}  @apply hover:opacity-100 {}
+}
+
+.showcase-instream__description {
+  background-image: var(--instream-bg);
+  background-size: 100% auto;
+  @apply gap-3 bg-top flex-1 flex flex-col items-center p-6 text-sm {}
+}
+
+.showcase-instream__description__text {
+  @apply text-center font-medium leading-relaxed {}
+}
+
+.showcase-instream__description__title {
+  @apply font-bold text-xl uppercase {}
+}
+
+.showcase-instream__description__logo {
+  @apply max-w-36 max-h-14 {}
+}
+
+.showcase-instream__description__logo__image {
+  @apply h-full object-contain {}
+}
+
+.showcase-instream__description__button {
+  @apply py-2 px-6 font-semibold border rounded-md {}
+}
+
+.showcase-video {
+  @apply overflow-hidden rounded-xl flex mb-10 flex-row {}
+}
+
+.showcase-video .vidio-embed {
+  margin: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  @apply pointer-events-none aspect-[342/193] {}
+}
+
+.showcase-video__vidio {
+  @apply relative shrink-0 overflow-hidden w-1/2 {}
+}
+
+.showcase-video__description {
+  @apply gap-3 bg-top flex-1 flex flex-col items-start text-sm py-11 px-14 {}
+}
+
+.showcase-video__description__text {
+  @apply font-medium leading-relaxed text-sm {}
+}
+
+.showcase-video__description__title {
+  @apply font-bold uppercase {}
+}
+
+.showcase-video__description__logo {
+  @apply max-w-20 max-h-6 {}
+}
+
+.showcase-video__description__logo__image {
+  @apply h-full object-contain {}
+}
+
+.showcase-video__description__button {
+  @apply py-2 px-6 font-semibold rounded-md transition-colors mt-1 hover:bg-primary hover:text-white {}
+}
+
+.showcase-video--main {
+  @apply flex-col {}
+}
+
+.showcase-video--main .showcase-video__vidio {
+  @apply w-full {}
+}
+
+.showcase-video--main .showcase-video__description {
+  @apply px-9 py-7 {}
+}
+
+@keyframes pulseAnim {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

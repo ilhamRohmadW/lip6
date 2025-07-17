@@ -1,0 +1,67 @@
+.schedule {
+  @apply px-4 font-sans {}
+}
+
+.schedule__title {
+  @apply text-xl font-bold mb-6 flex items-center gap-2 before:w-1 before:h-5 before:rounded-sm {}
+}
+
+.schedule__content {
+  @apply flex flex-row gap-6 {}
+}
+
+.schedule__list {
+  @apply rounded-xl border flex flex-row gap-6 flex-1 relative {}  @apply before:absolute before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:h-[1px] before:w-[90%] before:md:w-[1px] before:md:h-[90%] {}
+}
+
+.schedule__card {
+  @apply p-6 w-1/2 {}
+}
+
+.schedule__card--header {
+  @apply flex items-center gap-2 mb-4 {}
+}
+
+.schedule__card--logo {
+  @apply w-8 h-8 object-contain {}
+}
+
+.schedule__card--title {
+  @apply text-base font-bold {}
+}
+
+.schedule__program--list {
+  @apply w-full divide-y border-y {}
+}
+
+.schedule__program--item {
+  @apply flex items-start justify-start py-3 gap-3 text-sm {}
+}
+
+.schedule__time, .schedule__badge {
+  @apply border-r pr-3 min-w-[4.5rem] text-right {}
+}
+
+.schedule__badge {
+  @apply px-2 {}
+}
+
+.schedule__badge--live {
+  @apply w-[60px] text-xs font-semibold px-2 py-1 rounded {}
+}
+
+.schedule__time {
+  @apply w-[60px] font-bold {}
+}
+
+.schedule__link {
+  @apply mt-4 flex items-center justify-center font-semibold text-sm gap-1 {}
+}
+
+.schedule__ads {
+  @apply w-[360px] flex-shrink-0 {}
+}
+
+.schedule__ads-image {
+  @apply w-full h-auto {}
+}
