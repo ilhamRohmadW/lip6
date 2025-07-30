@@ -1,0 +1,122 @@
+.showcase
+    @apply font-inter px-4
+    // &--title
+    //     @apply flex items-center justify-between py-4 border-b mb-5
+    //     @apply dark:border-neutral-700
+    //     &__link
+    //         @apply flex items-center gap-1 text-primary 
+    //         @apply hover:underline
+    //         &__text
+    //             @apply font-medium
+    //         &__icon
+    //             @apply transition 
+    //             @apply group-hover:translate-x-1/2
+    &--list
+        @apply flex gap-4 -mx-4 px-4 overflow-x-auto snap-x overflow-y-hidden snap-mandatory scroll-smooth 
+        &::-webkit-scrollbar
+            @apply hidden
+        &__item
+            @apply snap-always snap-center w-8/12 max-w-96 shrink-0 
+        &__image
+            @apply rounded-lg overflow-hidden relative block mb-3
+        &__pict
+            @apply w-full h-full object-cover
+        &__duration
+            @apply absolute right-0 bottom-0 py-1 px-2 rounded flex items-center gap-1 text-[10px]
+        &__title
+            @apply font-semibold mb-1 line-clamp-2
+        &__detail
+            @apply flex items-center gap-2 text-xs
+
+    &-instream
+        @apply overflow-hidden rounded-xl flex flex-col mb-10
+        .vidio-embed
+            margin: -5px
+            width: calc(100% + 10px)
+            height: calc(100% + 10px)
+            @apply pointer-events-none aspect-[342/193]
+        &__vidio
+            @apply relative shrink-0 w-full overflow-hidden
+            &__overlay
+                @apply absolute inset-x-0 bottom-0 px-4 py-5 bg-gradient-to-t to-transparent to-60%
+            &__detail
+                @apply leading-tight
+                &__top
+                    @apply flex items-center gap-2 mb-3
+            &__title
+                @apply text-base font-bold overflow-hidden line-clamp-2
+            &__play
+                @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+        &__viewer,
+        &__live
+            @apply py-1 px-1.5 rounded-sm text-sm flex items-center shadow-md
+            // box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25)
+        &__live
+            @apply font-bold px-2.5 gap-2
+            &__pulse
+                @apply relative w-2 h-2 rounded-full block
+                @apply before:w-2 before:h-2 before:rounded-full before:block before:absolute before:inset-0
+            &__pulse:before
+                animation: pulseAnim .7s infinite
+        &__viewer
+            @apply gap-1 font-medium opacity-50 transition-opacity
+            @apply hover:opacity-100
+        &__description
+            @apply gap-3 bg-top flex-1 flex flex-col p-6 text-sm bg-gradient-to-r
+            &__text
+                @apply leading-relaxed line-clamp-2 font-bold
+            &__title
+                @apply font-bold text-xl uppercase
+            &__logo
+                @apply w-full flex gap-2 items-center
+                &__image
+                    @apply h-full object-contain
+
+            &__button
+                @apply py-2 px-6 font-semibold border rounded-md
+
+    &-video
+        @apply overflow-hidden rounded-xl flex flex-col mb-10
+        .vidio-embed
+            margin: -5px
+            width: calc(100% + 10px)
+            height: calc(100% + 10px)
+            @apply pointer-events-none aspect-[342/193]
+        &__vidio
+            @apply relative shrink-0 w-full overflow-hidden
+        // &__viewer,
+        // &__live
+        //     @apply py-1 px-1.5 rounded-sm text-sm flex items-center text-white shadow-md
+        //     // box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25)
+        // &__live
+        //     @apply font-bold px-2.5 gap-2 bg-red-500
+        //     &__pulse
+        //         @apply relative w-2 h-2 bg-white rounded-full block
+        //         @apply before:w-2 before:h-2 before:bg-white before:rounded-full before:block before:absolute before:inset-0
+        //     &__pulse:before
+        //         animation: pulseAnim .7s infinite
+        // &__viewer
+        //     @apply text-white gap-1 font-medium bg-neutral-950/60 opacity-50 transition-opacity
+        //     @apply hover:opacity-100
+        &__description
+            @apply gap-3 bg-top flex-1 flex flex-col items-start py-6 px-8 text-sm
+            &__text
+                @apply font-medium leading-relaxed text-sm
+            &__title
+                @apply font-bold uppercase
+            &__logo
+                @apply max-w-20 max-h-6
+                &__image
+                    @apply h-full object-contain
+            &__button
+                @apply py-2 px-6 font-semibold rounded-md transition-colors mt-1
+@keyframes pulseAnim
+    0%
+        transform: scale(1)
+        opacity: 1
+    70%
+        transform: scale(2)
+        opacity: 0
+    100%
+        transform: scale(1)
+        opacity: 0

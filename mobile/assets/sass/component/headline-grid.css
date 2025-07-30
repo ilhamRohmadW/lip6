@@ -1,0 +1,120 @@
+.headline-grid {
+  @apply font-inter px-4 {}
+}
+
+.headline-grid--title {
+  @apply flex items-center justify-between pb-4 border-b {}
+}
+
+.headline-grid--title__text {
+  @apply flex items-center gap-2 text-xl font-bold {}  @apply before:w-1 before:h-5 before:bg-gradient-to-br before:inline-block before:rounded-sm {}
+}
+
+.headline-grid--title__link {
+  @apply flex items-center gap-1 {}  @apply hover:underline {}
+}
+
+.headline-grid--title__link__text {
+  @apply font-medium {}
+}
+
+.headline-grid--wrapper {
+  @apply flex flex-col gap-5 mb-6 {}
+}
+
+.headline-grid--headline {
+  @apply pt-5 {}
+}
+
+.headline-grid--list {
+  @apply grid grid-cols-2 gap-x-2 gap-y-4 {}
+}
+
+.headline-grid__overlay {
+  @apply h-20 w-full {}
+}
+
+.headline-grid__item {
+  @apply flex items-center relative flex-col gap-2 {}
+}
+
+.headline-grid__item--headline {
+  @apply flex-col relative rounded-xl overflow-hidden {}
+}
+
+.headline-grid__item--headline:before {
+  content: "";
+  @apply absolute bottom-20 bg-gradient-to-t from-black via-black/50 to-transparent w-full h-15 z-1 {}
+}
+
+.headline-grid__item--headline .headline-grid__item__figure {
+  @apply w-full {}
+}
+
+.headline-grid__item--headline .headline-grid__item__title {
+  @apply text-base line-clamp-3 {}
+}
+
+.headline-grid__item--headline .headline-grid__item__detail {
+  @apply absolute bottom-0 left-0 z-2 text-white p-4 {}
+}
+
+.headline-grid__item__figure {
+  @apply rounded-lg overflow-hidden relative block w-full shrink-0 {}
+}
+
+.headline-grid__item__image {
+  @apply w-full h-full object-cover {}
+}
+
+.headline-grid__item__detail {
+  @apply flex flex-col gap-1 {}
+}
+
+.headline-grid__item__published {
+  @apply text-xs {}
+}
+
+.headline-grid__item__title {
+  @apply font-semibold line-clamp-3 text-sm {}
+}
+
+.headline-grid__item__desc {
+  @apply text-sm line-clamp-3 {}
+}
+
+.item {
+  @apply flex gap-4 {}
+}
+
+.item__figure {
+  @apply rounded-lg overflow-hidden relative block aspect-square shrink-0 {}
+}
+
+.item__image {
+  @apply w-full h-full object-cover {}
+}
+
+.item__detail {
+  @apply flex flex-col gap-1 {}
+}
+
+.item__published {
+  @apply text-xs {}
+}
+
+.item__title {
+  @apply font-semibold line-clamp-3 text-sm {}
+}
+
+.item__desc {
+  @apply text-sm line-clamp-3 {}
+}
+
+.item--grid {
+  @apply flex-col {}
+}
+
+.item--grid .item__figure {
+  @apply aspect-video {}
+}

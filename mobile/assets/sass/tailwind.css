@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import './theme.css';
+@import './component/header.css';
+@import './component/highlight.css';
+@import './component/headline.css';
+@import './component/showcase.css';
+@import './component/promotion.css';
+@import './component/promotion-brand.css';
+@import './component/channel-highlights.css';
+@import './component/jadwal-acara.css';
+@import './component/berita-populer.css';
+@import './component/specialContent.css';
+@import './component/foto-pilihan.css';
+@import './component/headline-grid.css';
+@import './component/terpopulerList.css';
+@import './component/jadwal-tab.css';
+@import './component/footer.css';

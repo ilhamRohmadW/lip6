@@ -1,0 +1,81 @@
+.special {
+  @apply px-4 {}
+}
+
+.special-wrapper {
+  @apply overflow-hidden flex flex-col rounded-lg md:flex-row md:aspect-[980/342] aspect-[340/570] {}
+}
+
+.special-pict {
+  @apply md:flex-1 md:h-full md:w-1/2 {}
+}
+
+.special-pict-figure {
+  @apply w-full h-full {}
+}
+
+.special-pict-figure-img {
+  @apply content-(--wscBackground) w-full h-full object-cover {}
+}
+
+.special-inner {
+  @apply px-3 pb-6 relative flex-1 overflow-hidden md:py-5 md:pl-4 md:pr-6 md:overflow-visible {}  @apply before:absolute before:-inset-6 before:rotate-y-180 before:blur-md before:pointer-events-none before:z-0 {}
+}
+
+.special-inner::before {
+  background-image: var(--wscBackground);
+  background-size: 100% 100%;
+}
+
+.special-inner-box {
+  @apply relative px-4 py-5 h-full overflow-y-auto rounded-xl z-10 {}
+}
+
+.special-inner-box-list {
+  @apply flex flex-col {}
+}
+
+.special-inner-box-list-item {
+  @apply py-4 border-b {}
+}
+
+.special-inner-box-list-item-link {
+  @apply flex gap-3 items-start {}
+}
+
+.special-inner-box-list-item-detail {
+  @apply flex-1 flex flex-col gap-1.5 {}
+}
+
+.special-inner-box-list-item-title {
+  @apply text-sm font-bold line-clamp-3 {}
+}
+
+.special-inner-box-list-item-time {
+  @apply text-xs {}
+}
+
+.special-inner-box-list-item-figure {
+  @apply overflow-hidden w-20 rounded-xl {}
+}
+
+.special-inner-box-list-item-figure-img {
+  @apply w-full h-full object-cover {}
+}
+
+.special-inner-box-link {
+  @apply -mx-4 {}
+}
+
+.special-inner-box-title {
+  @apply font-bold relative px-4 {}  @apply before:absolute before:w-1 before:h-7 before:rounded-r-md before:inset-y-0 before:left-0 before:my-auto {}
+}
+
+.special-inner-box-list-item:last-child {
+  border-bottom-width: 0;
+  padding-bottom: 0;
+}
+
+.special-inner-box-button {
+  @apply py-3 border rounded-lg flex items-center justify-center font-semibold mt-6 transition-colors {}
+}

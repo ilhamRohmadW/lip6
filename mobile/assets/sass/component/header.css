@@ -1,0 +1,203 @@
+.header {
+  @apply pt-1 inset-x-0 z-20 sticky top-0 transition-transform duration-500 {}
+}
+
+.header--wrapper {
+  @apply flex items-center justify-between {}  @apply gap-8 {}
+}
+
+.header .container {
+  @apply mx-auto max-w-screen-lg px-4 {}
+}
+
+.header.--unsticky {
+  @apply -translate-y-full pointer-events-none {}
+}
+
+.header.--unsticky + .navbar {
+  @apply top-0 {}
+}
+
+.header.--searchCollapsed {
+  @apply z-30 {}
+}
+
+.header.--searchCollapsed + .navbar {
+  @apply z-20 {}
+}
+
+.header__menu, .header--search__button {
+  @apply h-10 w-10 flex items-center justify-center cursor-pointer {}
+}
+
+.header--logo {
+  @apply flex-1 {}
+}
+
+.header--logo__link {
+  @apply h-6 block {}
+}
+
+.header--logo__image {
+  @apply w-auto h-full object-contain {}
+}
+
+.header--search {
+  @apply hidden {}
+}
+
+.header--search__form {
+  @apply fixed top-0 inset-x-0 -translate-y-full pointer-events-none transition-all duration-500 {}  @apply flex items-center justify-between px-4 py-2 shadow-md z-10 text-sm {}
+}
+
+.header--search__form.--active {
+  @apply translate-y-0 pointer-events-auto {}
+}
+
+.header--search__form__input {
+  @apply flex-1 border rounded-full py-2 px-4 {}
+}
+
+.header--search__form__close {
+  @apply h-10 w-10 flex items-center justify-center translate-x-3 cursor-pointer {}
+}
+
+.header--search__form__button {
+  @apply hidden items-center justify-center py-2 px-7 bg-gradient-to-tr font-semibold rounded-full cursor-pointer {}
+}
+
+.header--search__button {
+  @apply translate-x-3 {}
+}
+
+.header--right {
+  @apply items-center flex translate-x-2 {}
+}
+
+.header__live {
+  @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-8 px-3 mr-2 transition-colors {}
+}
+
+.header__login {
+  @apply flex items-center justify-center gap-1.5 w-10 h-10 text-xs transition-colors {}
+}
+
+.header__login__icon {
+  @apply w-6 h-6 {}
+}
+
+.header__login__text {
+  @apply hidden {}
+}
+
+.navbar {
+  @apply shadow-md sticky top-11 z-20 duration-500 transition-[top] {}
+}
+
+.navbar .container {
+  @apply mx-auto max-w-screen-lg px-4 relative {}
+}
+
+.navbar--list {
+  @apply flex items-center overflow-x-auto -mx-4 whitespace-nowrap text-sm justify-between font-semibold uppercase {}
+}
+
+.navbar--list::-webkit-scrollbar {
+  @apply hidden {}
+}
+
+.navbar--list__link {
+  @apply px-4 py-3 border-b-2 border-transparent flex items-center transition-colors {}
+}
+
+.navbar--list__item.--active .navbar--list__link {
+  @apply border-primary {}
+}
+
+.navbar--collapsed {
+  @apply fixed inset-0 translate-x-full transition-transform duration-500 pointer-events-none flex flex-col {}
+}
+
+.navbar--collapsed__form {
+  @apply flex-1 {}
+}
+
+.navbar--collapsed__form__input {
+  @apply w-full border rounded-full py-2 px-4 text-sm {}
+}
+
+.navbar--collapsed__top {
+  @apply flex items-center justify-between gap-2 pl-4 pt-2 pr-2 {}
+}
+
+.navbar--collapsed__top__close {
+  @apply h-10 w-10 flex items-center justify-center cursor-pointer {}
+}
+
+.navbar--collapsed__menu {
+  @apply flex flex-col overflow-y-auto h-full px-4 pb-4 uppercase whitespace-nowrap {}
+}
+
+.navbar--collapsed__menu::-webkit-scrollbar {
+  @apply hidden {}
+}
+
+.navbar--collapsed__menu__link {
+  @apply flex items-center gap-4 py-3 transition-colors {}
+}
+
+.navbar--collapsed__menu__item.submenu .navbar--collapsed__menu__link {
+  @apply hidden {}
+}
+
+.navbar--collapsed__menu__item.--active .navbar--collapsed__menu__link {
+  @apply border-primary {}
+}
+
+.navbar--collapsed__menu__icon {
+  @apply h-7 w-7 block {}
+}
+
+.navbar--collapsed__menu__item {
+  @apply relative {}
+}
+
+.navbar--collapsed__menu__item.--submenu {
+  @apply hidden {}
+}
+
+.navbar--collapsed.--active {
+  @apply translate-x-0 pointer-events-auto {}
+}
+
+.submenu__icon {
+  @apply w-5 h-5 {}
+}
+
+.submenu__list {
+  @apply absolute p-3 right-0 top-full max-h-96 overflow-y-auto z-20 rounded-lg transition-all duration-500 -translate-y-4 opacity-0 pointer-events-none shadow-[0_0_19px_0_rgba(159,161,162,0.3)] {}  @apply dark:shadow-[0_0_19px_0_rgba(75,75,75,0.3)] {}
+}
+
+.submenu__list .navbar--list__link {
+  @apply rounded-lg px-3 {}
+}
+
+.submenu:hover .submenu__list {
+  @apply opacity-100 pointer-events-auto translate-y-0 {}
+}
+
+.switch-theme {
+  @apply cursor-pointer w-8 h-8 flex items-center justify-center {}
+}
+
+.switch-theme__icon {
+  @apply pointer-events-none w-6 h-6 {}
+}
+
+.switch-theme__icon.--dark {
+  @apply block dark:hidden {}
+}
+
+.switch-theme__icon.--light {
+  @apply hidden dark:block {}
+}

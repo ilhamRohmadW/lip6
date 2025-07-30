@@ -1,5 +1,5 @@
 .header {
-  @apply py-3 inset-x-0 z-20 sticky top-0 transition-transform duration-500 {}
+  @apply py-3 inset-x-0 z-30 sticky top-0 transition-transform duration-500 {}
 }
 
 .header--wrapper {
@@ -220,4 +220,28 @@
 
 .channel__desc {
   @apply text-xs font-normal transition-colors {}
+}
+
+.submenu {
+  @apply relative {}
+}
+
+.submenu__trigger {
+  @apply rounded-full overflow-hidden block size-8 {}
+}
+
+.submenu__dropdown {
+  @apply z-10 absolute top-full right-0 -translate-y-4 opacity-0 pointer-events-none transition-all rounded-lg shadow-lg p-3 min-w-48 {}
+}
+
+.submenu__break {
+  @apply border-b {}
+}
+
+.submenu__link {
+  @apply flex items-center gap-2 p-2 rounded-md transition-colors {}
+}
+
+.submenu:hover .submenu__dropdown {
+  @apply opacity-100 pointer-events-auto translate-y-0 {}
 }

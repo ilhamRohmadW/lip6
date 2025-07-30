@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/sass/tailwind.min.css">
+</head>
+<body class="dark:bg-zinc-900">
+    <header class="header bg-white dark:bg-zinc-900 dark:text-white">
+        <div class="container">
+            <div class="header--wrapper">
+                <h1 class="header--logo">
+                    <meta itemprop="logo" content="https://cdn1-production-assets-kly.akamaized.net/logos/188/original/040376900_1740988466-Liputan6.png">
+                    <meta itemprop="url" content="https://www.liputan6.com">
+                    <a href="#" class="header--logo__link">
+                        <img class="header--logo__image" src="assets/image/logo-navbar.png" width="130" height="25" alt="logo">
+                    </a>
+                </h1>
+                <div class="header--search">
+                    <form id="headerSearch" class="header--search__form dark:bg-zinc-900" role="search" method="get" action="https://www.liputan6.com/search" autocomplete="off">
+                        <input class="header--search__form__input border-neutral-200 placeholder:text-neutral-500 dark:placeholder:text-white dark:border-neutral-700" type="text" value="" name="q" id="q" placeholder="Berita apa yang ingin anda baca hari ini?" maxlength="100">
+                        <button class="header--search__form__close" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        </button>
+                        <button class="header--search__form__button from-primary to-secondary text-white" type="button">CARI</button>
+                    </form>
+                </div>
+                <div class="header--right">
+                    <a href="#" class="header__live bg-primary text-white">
+                        <!-- <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.76272 5.15214C5.87366 5.03228 5.94308 4.87452 5.94308 4.69994C5.94308 4.32783 5.63549 4.02494 5.25737 4.02494C5.08002 4.02494 4.91975 4.09338 4.79799 4.20248L2.69442 2.13175C2.51596 1.95608 2.22656 1.95608 2.04799 2.13175C1.27087 2.89652 0.842968 3.91375 0.842968 4.99559C0.842968 5.63478 0.99587 6.2498 1.27846 6.80505L0.0512273 9.80841C0.0453122 9.8228 0.0400666 9.83764 0.0359371 9.85247C-0.0438619 10.1266 0.0107139 10.4143 0.184933 10.6418C0.359151 10.8695 0.625111 11 0.914732 11H4.34263C4.64364 11 4.92533 10.8544 5.09576 10.6103C5.26652 10.3662 5.30424 10.0552 5.19654 9.77842C5.1904 9.76249 5.18292 9.74656 5.17489 9.73118L4.80804 9.03848C4.85781 9.04024 4.90681 9.04562 4.95681 9.04562C6.0558 9.04562 7.08895 8.6244 7.86607 7.85942C8.04464 7.68375 8.04464 7.39887 7.86607 7.22309L5.76272 5.15214ZM4.33917 10.1H0.917522L1.89922 7.6977C1.94855 7.75164 1.99542 7.80745 2.04821 7.8592C2.51183 8.31569 3.06786 8.64649 3.67344 8.84183L4.33917 10.1ZM4.95725 8.1454C4.10268 8.1454 3.299 7.81778 2.69464 7.22265C2.09029 6.62751 1.75725 5.8366 1.75725 4.99537C1.75725 4.30597 1.9808 3.6503 2.39408 3.10845L6.87411 7.51851C6.32366 7.92556 5.65759 8.1454 4.95725 8.1454Z" fill="currentColor"></path><path d="M6.95648 0C6.32829 0 5.6691 0.190005 5.19324 0.508025C4.99368 0.641559 4.93996 0.911494 5.07318 1.11105C5.20651 1.31061 5.47623 1.36432 5.67632 1.23111C6.00995 1.00809 6.50047 0.869565 6.95648 0.869565C8.15523 0.869565 9.13042 1.84475 9.13042 3.04348C9.13042 3.49938 8.99201 3.99 8.76888 4.32373C8.63566 4.52329 8.68937 4.79344 8.88893 4.92676C8.96303 4.97633 9.04699 5 9.13 5C9.27044 5 9.40811 4.93217 9.49197 4.8067C9.80999 4.33063 10 3.67156 10 3.04348C10 1.36517 8.63481 0 6.95648 0Z" fill="currentColor"></path><path d="M6.21743 2C5.86504 2 5.52298 2.10309 5.22816 2.29845C4.99365 2.45389 4.92937 2.76987 5.0848 3.00439C5.2401 3.23905 5.55643 3.30321 5.79044 3.14777C5.92 3.06222 6.06362 3.01869 6.21743 3.01869C6.6387 3.01869 6.98139 3.36153 6.98139 3.78271C6.98139 3.93654 6.93787 4.07992 6.85232 4.20924C6.69702 4.44365 6.76118 4.75988 6.99544 4.91519C7.08223 4.97277 7.17984 5 7.27658 5C7.44158 5 7.6036 4.92004 7.70158 4.77206C7.89692 4.47747 8 4.13513 8 3.78271C8 2.79971 7.20011 2 6.21743 2Z" fill="currentColor"></path></svg> -->
+                        <span>LIVE</span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33337 14.5H10.6667M8.00004 11.8333V14.5M2.66671 2.5H13.3334C14.0698 2.5 14.6667 3.09695 14.6667 3.83333V10.5C14.6667 11.2364 14.0698 11.8333 13.3334 11.8333H2.66671C1.93033 11.8333 1.33337 11.2364 1.33337 10.5V3.83333C1.33337 3.09695 1.93033 2.5 2.66671 2.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/></svg>
+                    </a>
+                    <span class="switch-theme" data-value="light">
+                        <svg class="switch-theme__icon --dark" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3C9.00544 3.99456 8.4467 5.34348 8.4467 6.75C8.4467 8.15652 9.00544 9.50544 10 10.5C10.9946 11.4946 12.3435 12.0533 13.75 12.0533C15.1565 12.0533 16.5054 11.4946 17.5 10.5C17.5 11.9834 17.0601 13.4334 16.236 14.6668C15.4119 15.9001 14.2406 16.8614 12.8701 17.4291C11.4997 17.9968 9.99168 18.1453 8.53683 17.8559C7.08197 17.5665 5.7456 16.8522 4.6967 15.8033C3.64781 14.7544 2.9335 13.418 2.64411 11.9632C2.35472 10.5083 2.50325 9.00032 3.07091 7.62987C3.63856 6.25943 4.59986 5.08809 5.83323 4.26398C7.0666 3.43987 8.51664 3 10 3Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg class="switch-theme__icon --light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    </span>
+                    <a href="#" class="header__login lg:bg-neutral-950 lg:text-white lg:dark:bg-white/10 lg:dark:text-white lg:dark:hover:bg-white/20 lg:hover:bg-neutral-700">
+                        <!-- <svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.8333C12.0007 12.7724 11.5792 11.755 10.8291 11.0048C10.0789 10.2547 9.06152 9.83325 8.00065 9.83325M8.00065 9.83325C6.93978 9.83325 5.92237 10.2547 5.17222 11.0048C4.42208 11.755 4.00065 12.7724 4.00065 13.8333M8.00065 9.83325C9.47341 9.83325 10.6673 8.63934 10.6673 7.16658C10.6673 5.69383 9.47341 4.49992 8.00065 4.49992C6.52789 4.49992 5.33398 5.69383 5.33398 7.16658C5.33398 8.63934 6.52789 9.83325 8.00065 9.83325ZM14.6673 8.49992C14.6673 12.1818 11.6825 15.1666 8.00065 15.1666C4.31875 15.1666 1.33398 12.1818 1.33398 8.49992C1.33398 4.81802 4.31875 1.83325 8.00065 1.83325C11.6825 1.83325 14.6673 4.81802 14.6673 8.49992Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg> -->
+                        <svg class="header__login__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+                        <span class="header__login__text">Masuk</span>
+                    </a>
+                    <button class="header__menu">
+                        <svg width="22" height="22" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 3H14C14.5523 3 15 3.44772 15 4V14C15 14.5523 14.5523 15 14 15H4C3.44772 15 3 14.5523 3 14V4C3 3.44772 3.44772 3 4 3ZM0 4C0 1.79086 1.79086 0 4 0H14C16.2091 0 18 1.79086 18 4V14C18 16.2091 16.2091 18 14 18H4C1.79086 18 0 16.2091 0 14V4ZM30.075 35.15C32.8778 35.15 35.15 32.8778 35.15 30.075C35.15 27.2722 32.8778 25 30.075 25C27.2722 25 25 27.2722 25 30.075C25 32.8778 27.2722 35.15 30.075 35.15ZM30.075 38.15C31.7631 38.15 33.3303 37.632 34.6261 36.7462L37.436 39.5562C38.0218 40.1419 38.9716 40.1419 39.5574 39.5562C40.1431 38.9704 40.1431 38.0206 39.5574 37.4348L36.7472 34.6247C37.6324 33.3291 38.15 31.7625 38.15 30.075C38.15 25.6153 34.5347 22 30.075 22C25.6153 22 22 25.6153 22 30.075C22 34.5347 25.6153 38.15 30.075 38.15ZM14 25H4C3.44772 25 3 25.4477 3 26V36C3 36.5523 3.44772 37 4 37H14C14.5523 37 15 36.5523 15 36V26C15 25.4477 14.5523 25 14 25ZM4 22C1.79086 22 0 23.7909 0 26V36C0 38.2091 1.79086 40 4 40H14C16.2091 40 18 38.2091 18 36V26C18 23.7909 16.2091 22 14 22H4ZM26 3H36C36.5523 3 37 3.44772 37 4V14C37 14.5523 36.5523 15 36 15H26C25.4477 15 25 14.5523 25 14V4C25 3.44772 25.4477 3 26 3ZM22 4C22 1.79086 23.7909 0 26 0H36C38.2091 0 40 1.79086 40 4V14C40 16.2091 38.2091 18 36 18H26C23.7909 18 22 16.2091 22 14V4Z" fill="currentColor"></path></svg>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="navbar bg-white dark:bg-zinc-900">
+        <div class="container">
+            <ul class="navbar--list dark:text-white">
+                <li class="navbar--list__item --active">
+                    <a class="navbar--list__link hover:text-primary" href="#">Berita Utama</a>
+                </li>
+                <li class="navbar--list__item">
+                    <a class="navbar--list__link hover:text-primary" href="#">Terkini</a>
+                </li>
+                <li class="navbar--list__item">
+                    <a class="navbar--list__link hover:text-primary" href="#">Populer</a>
+                </li>
+                <li class="navbar--list__item">
+                    <a class="navbar--list__link hover:text-primary" href="#">Rekomendasi</a>
+                </li>
+                
+            </ul>
+            <div class="navbar--collapsed bg-white dark:bg-zinc-900">
+                <div class="navbar--collapsed__top">
+                    <form id="headerSearch" class="navbar--collapsed__form" role="search" method="get" action="https://www.liputan6.com/search" autocomplete="off">
+                        <input class="navbar--collapsed__form__input dark:placeholder:text-white dark:border-neutral-700 border-neutral-200 placeholder:text-neutral-500" type="text" value="" name="q" id="q" placeholder="Berita apa yang ingin anda baca hari ini?" maxlength="100">
+                    </form>
+                    <button class="navbar--collapsed__top__close dark:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                </div>
+                <ul class="navbar--collapsed__menu dark:text-white">
+                    <li class="navbar--collapsed__menu__item --active">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Berita Utama</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-2.png" alt="">
+                            </span>
+                            <span>Terkini</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-3.png" alt="">
+                            </span>
+                            <span>Populer</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Rekomendasi</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-2.png" alt="">
+                            </span>
+                            <span>TV</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-3.png" alt="">
+                            </span>
+                            <span>SHOWBIZ</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>TEKNO</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-2.png" alt="">
+                            </span>
+                            <span>FOTO</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-3.png" alt="">
+                            </span>
+                            <span>HOT</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>CEK FAKTA</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>ISLAMI</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>CRYPTO</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>CITIZEN6</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>SAHAM</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Crypto</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Citizen6</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Regional</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Otomotif</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Opini</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Disabilitas</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Global</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>On Off</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Surabaya</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Lifestyle</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Health</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>English</span>                                
+                        </a>
+                    </li>
+                    <li class="navbar--collapsed__menu__item">
+                        <a class="navbar--collapsed__menu__link hover:text-primary" href="#">
+                            <span class="navbar--collapsed__menu__icon">
+                                <img src="assets/image/menu-1.png" alt="">
+                            </span>
+                            <span>Feeds</span>                                
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <main class="main mx-auto max-w-screen-lg flex flex-col gap-6 lg:gap-10 mb-6 lg:mb-10">
+
+        <div class="main--top">
+            <!-- trending -->
+            <div class="trending">
+                <div class="trending--inner bg-[#FFFBF7] dark:bg-orange-950">
+                    <div class="trending--title text-primary dark:text-white">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.8327 5.83325H18.8327M18.8327 5.83325V10.8333M18.8327 5.83325L11.7493 12.9166L7.58268 8.74992L2.16602 14.1666" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <!-- <span>Trending</span> -->
+                    </div>
+                    <div class="trending--wrapper before:from-[#FFFBF7] after:from-[#FFFBF7] dark:before:from-orange-950 dark:after:from-orange-950">
+                        <ul class="trending--list dark:text-white">
+                            <li class="trending--list__item">
+                                <a href="#" class="trending__item bg-[#FFF0E6] dark:bg-orange-800">
+                                    <span class="trending__item__title">Raja Ampat</span>
+                                    <svg  width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.50065 7.99992L7.83398 9.33325L10.5007 6.66658M15.1673 7.99992C15.1673 11.6818 12.1825 14.6666 8.50065 14.6666C4.81875 14.6666 1.83398 11.6818 1.83398 7.99992C1.83398 4.31802 4.81875 1.33325 8.50065 1.33325C12.1825 1.33325 15.1673 4.31802 15.1673 7.99992Z" stroke="#148440" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                            <li class="trending--list__item">
+                                <a href="#" class="trending__item bg-[#FFF0E6] dark:bg-orange-800">
+                                    <span class="trending__item__title">Haji</span>
+                                    <svg  width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.50065 7.99992L7.83398 9.33325L10.5007 6.66658M15.1673 7.99992C15.1673 11.6818 12.1825 14.6666 8.50065 14.6666C4.81875 14.6666 1.83398 11.6818 1.83398 7.99992C1.83398 4.31802 4.81875 1.33325 8.50065 1.33325C12.1825 1.33325 15.1673 4.31802 15.1673 7.99992Z" stroke="#148440" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                            <li class="trending--list__item">
+                                <a href="#" class="trending__item bg-[#FFF0E6] dark:bg-orange-800">
+                                    <span class="trending__item__title">Haji 2025</span>
+                                    <svg  width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.50065 7.99992L7.83398 9.33325L10.5007 6.66658M15.1673 7.99992C15.1673 11.6818 12.1825 14.6666 8.50065 14.6666C4.81875 14.6666 1.83398 11.6818 1.83398 7.99992C1.83398 4.31802 4.81875 1.33325 8.50065 1.33325C12.1825 1.33325 15.1673 4.31802 15.1673 7.99992Z" stroke="#148440" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                            <li class="trending--list__item">
+                                <a href="#" class="trending__item bg-[#FFF0E6] dark:bg-orange-800">
+                                    <span class="trending__item__title">Indonesia vs China</span>
+                                </a>
+                            </li>
+                            <li class="trending--list__item">
+                                <a href="#" class="trending__item bg-[#FFF0E6] dark:bg-orange-800">
+                                    <span class="trending__item__title">Idul Adha 2025</span>
+                                </a>
+                            </li>
+                            <li class="trending--list__item">
+                                <a href="#" class="trending__item bg-[#FFF0E6] dark:bg-orange-800">
+                                    <span class="trending__item__title">Indonesia Open</span>
+                                </a>
+                            </li>
+                            <li class="trending--list__item">
+                                <a href="#" class="trending__item bg-[#FFF0E6] dark:bg-orange-800">
+                                    <span class="trending__item__title">Tan Joe Hok</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <div class="highlight--inner bg-[#F6F8FF] dark:bg-blue-950">
+                    <div class="highlight--title text-[#0300C4] before:from-primary before:to-secondary dark:text-blue-300">
+                        <span>HEADLINE HARI INI :</span>
+                    </div>
+                    <div class="highlight--wrapper before:from-[#F6F8FF] after:from-[#F6F8FF] dark:before:from-blue-950 dark:after:from-blue-950 dark:text-white">
+                        <ul class="highlight--list">
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    Gelombang Baru COVID-19 di Indonesia, Bagaimana Langkah Penanganannya?
+                                </a>
+                            </li>
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    DPR Pertanyakan Kesiapan Anggaran Terkait Putusan MK Gratiskan SD-SMP
+                                </a>
+                            </li>
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    Gelombang Tinggi Pesisir Selatan Banten Capai 4 Meter, BMKG Minta Warga Waspada
+                                </a>
+                            </li>
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    Prediksi Harga Emas 2 Juni 2025, Siap-Siap Melesat
+                                </a>
+                            </li>
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    7 Monumen Megah Dunia yang Ternyata Punya Makna Mengejutkan
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="highlight--list">
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    Gelombang Baru COVID-19 di Indonesia, Bagaimana Langkah Penanganannya?
+                                </a>
+                            </li>
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    DPR Pertanyakan Kesiapan Anggaran Terkait Putusan MK Gratiskan SD-SMP
+                                </a>
+                            </li>
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    Gelombang Tinggi Pesisir Selatan Banten Capai 4 Meter, BMKG Minta Warga Waspada
+                                </a>
+                            </li>
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    Prediksi Harga Emas 2 Juni 2025, Siap-Siap Melesat
+                                </a>
+                            </li>
+                            <li class="highlight--list__item">
+                                <a href="#" class="highlight__item">
+                                    7 Monumen Megah Dunia yang Ternyata Punya Makna Mengejutkan
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="highlight--link text-primary bg-white hover:bg-primary hover:text-white dark:bg-black dark:text-white">
+                        <span>Selengkapnya</span>
+                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.43639 5.50013L2.07119 9.76605C1.752 10.078 1.23437 10.078 0.915176 9.76605C0.595983 9.45412 0.595983 8.94826 0.915176 8.63533L4.73407 4.93528L0.980649 1.23523C0.775023 0.925321 0.812877 0.519409 1.0717 0.250472C1.33052 -0.0174657 1.74382 -0.0774307 2.07118 0.104511L6.43638 4.37043C6.75557 4.68236 6.75559 5.1882 6.43639 5.50013Z" fill="currentColor"/><path d="M1.16016 0.335938C1.37685 0.111607 1.72159 0.0588539 1.99902 0.206055L6.35059 4.45801C6.62059 4.72187 6.62051 5.14821 6.35059 5.41211L1.98535 9.67871C1.7138 9.94382 1.27252 9.94384 1.00098 9.67871C0.731317 9.41518 0.730591 8.98869 1 8.72363L4.81934 5.02344L4.90918 4.93652L4.82031 4.84766L1.0791 1.16016C0.910524 0.899412 0.942857 0.561884 1.16016 0.335938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- trending end -->
+        </div>
+
+        <!-- headline-grid -->
+        <div class="headline-grid dark:text-white">
+            <div class="headline-grid--wrapper border-neutral-200 dark:border-neutral-700">
+                <div class="headline-grid--headline border-neutral-200 dark:border-neutral-700">
+                    <a href="#" class="headline-grid__item headline-grid__item--headline">
+                        <figure class="headline-grid__item__figure">
+                            <img class="headline-grid__item__image" src="assets/image/promotion-headline.png" alt="">
+                        </figure>
+                        <div class="headline-grid__overlay bg-black"></div>
+                        <div class="headline-grid__item__detail from-black">
+                            <span class="headline-grid__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                            <span class="headline-grid__item__published text-neutral-400">5 menit lalu</span>
+                            <!-- <p class="headline-grid__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p> -->
+                        </div>
+                    </a>
+                </div>
+                <ul class="headline-grid--list">
+                    <li class="headline-grid--list__item">
+                        <a href="#" class="item item--grid">
+                            <figure class="item__figure">
+                                <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                            </figure>
+                            <div class="item__detail">
+                                <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <span class="item__published text-neutral-400">5 menit lalu</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="headline-grid--list__item">
+                        <a href="#" class="item item--grid">
+                            <figure class="item__figure">
+                                <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                            </figure>
+                            <div class="item__detail">
+                                <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <span class="item__published text-neutral-400">5 menit lalu</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="headline-grid--list__item">
+                        <a href="#" class="item item--grid">
+                            <figure class="item__figure">
+                                <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                            </figure>
+                            <div class="item__detail">
+                                <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <span class="item__published text-neutral-400">5 menit lalu</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="headline-grid--list__item">
+                        <a href="#" class="item item--grid">
+                            <figure class="item__figure">
+                                <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                            </figure>
+                            <div class="item__detail">
+                                <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <span class="item__published text-neutral-400">5 menit lalu</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- headline-grid end -->
+
+        <section class="terpopulerList bg-[#FFF0E6]">
+            <div class="terpopulerList__header">
+                <svg class="text-primary" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.8327 5.83325H18.8327M18.8327 5.83325V10.8333M18.8327 5.83325L11.7493 12.9166L7.58268 8.74992L2.16602 14.1666" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <h2 class="terpopulerList__title">Terpopuler</h2>
+            </div>
+
+            <ul class="terpopulerList__items">
+                <li class="terpopulerList__item">
+                    <a href="#" class="item">
+                        <figure class="item__figure">
+                            <img class="item__image" src="assets/image/promotion-2.png" width="90" height="90" alt="">
+                        </figure>
+                        <div class="item__detail">
+                            <span class="item__title">DPR Pertanyakan Kesiapan Anggaran Terkait Putusan MK Gratiskan SD-SMP</span>
+                            <span class="item__published text-primary">Liga Inggris</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="terpopulerList__item">
+                    <a href="#" class="item">
+                        <figure class="item__figure">
+                            <img class="item__image" src="assets/image/promotion-2.png" width="90" height="90" alt="">
+                        </figure>
+                        <div class="item__detail">
+                            <span class="item__title">DPR Pertanyakan Kesiapan Anggaran Terkait Putusan MK Gratiskan SD-SMP</span>
+                            <span class="item__published text-primary">Liga Inggris</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="terpopulerList__item">
+                    <a href="#" class="item">
+                        <figure class="item__figure">
+                            <img class="item__image" src="assets/image/promotion-2.png" width="90" height="90" alt="">
+                        </figure>
+                        <div class="item__detail">
+                            <span class="item__title">DPR Pertanyakan Kesiapan Anggaran Terkait Putusan MK Gratiskan SD-SMP</span>
+                            <span class="item__published text-primary">Liga Inggris</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="terpopulerList__item">
+                    <a href="#" class="item">
+                        <figure class="item__figure">
+                            <img class="item__image" src="assets/image/promotion-2.png" width="90" height="90" alt="">
+                        </figure>
+                        <div class="item__detail">
+                            <span class="item__title">DPR Pertanyakan Kesiapan Anggaran Terkait Putusan MK Gratiskan SD-SMP</span>
+                            <span class="item__published text-primary">Liga Inggris</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="terpopulerList__item">
+                    <a href="#" class="item">
+                        <figure class="item__figure">
+                            <img class="item__image" src="assets/image/promotion-2.png" width="90" height="90" alt="">
+                        </figure>
+                        <div class="item__detail">
+                            <span class="item__title">DPR Pertanyakan Kesiapan Anggaran Terkait Putusan MK Gratiskan SD-SMP</span>
+                            <span class="item__published text-primary">Liga Inggris</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#" class="terpopulerList__more">
+                Selengkapnya 
+                <svg class="promotion--title__link__icon" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5985 6.00013L2.2333 10.2661C1.91411 10.578 1.39648 10.578 1.07729 10.2661C0.758092 9.95412 0.758092 9.44826 1.07729 9.13533L4.89618 5.43528L1.14276 1.73523C0.937132 1.42532 0.974986 1.01941 1.23381 0.750472C1.49263 0.482534 1.90592 0.422569 2.23329 0.604511L6.59849 4.87043C6.91768 5.18236 6.91769 5.6882 6.5985 6.00013Z" fill="currentColor"></path><path d="M1.32227 0.835938C1.53896 0.611607 1.8837 0.558854 2.16113 0.706055L6.5127 4.95801C6.74898 5.18892 6.77878 5.54456 6.60156 5.80664L6.5127 5.91211L2.14746 10.1787C1.90989 10.4106 1.54253 10.4395 1.27246 10.2656L1.16309 10.1787C0.893426 9.91518 0.892701 9.48869 1.16211 9.22363L4.98145 5.52344L5.07129 5.43652L4.98242 5.34766L1.24121 1.66016C1.07263 1.3994 1.10397 1.06091 1.32129 0.834961L1.32227 0.835938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"></path></svg>
+            </a>
+        </section>
+
+        <!-- showcase -->
+        <div class="showcase dark:text-white">
+            <div class="showcase-instream">
+                <div class="showcase-instream__vidio">
+                    <div class="showcase-instream__vidio__overlay from-black">
+                        <div class="showcase-instream__vidio__detail">
+                            <div class="showcase-instream__vidio__detail__top text-white">
+                                <div class="showcase-instream__live bg-red-500">
+                                    <span class="showcase-instream__live__pulse bg-white before:bg-white"></span>
+                                    <span>LIVE</span>
+                                </div>
+                                <div class="showcase-instream__viewer bg-neutral-950/60">
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.53101 6.17699C1.48934 6.06473 1.48934 5.94125 1.53101 5.82899C1.93686 4.84492 2.62577 4.00351 3.51039 3.41144C4.39502 2.81937 5.43553 2.5033 6.50001 2.5033C7.56449 2.5033 8.605 2.81937 9.48962 3.41144C10.3743 4.00351 11.0632 4.84492 11.469 5.82899C11.5107 5.94125 11.5107 6.06473 11.469 6.17699C11.0632 7.16106 10.3743 8.00247 9.48962 8.59454C8.605 9.18661 7.56449 9.50268 6.50001 9.50268C5.43553 9.50268 4.39502 9.18661 3.51039 8.59454C2.62577 8.00247 1.93686 7.16106 1.53101 6.17699Z" stroke="#F8FAFC" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 7.50293C7.32843 7.50293 8 6.83136 8 6.00293C8 5.1745 7.32843 4.50293 6.5 4.50293C5.67157 4.50293 5 5.1745 5 6.00293C5 6.83136 5.67157 7.50293 6.5 7.50293Z" stroke="#F8FAFC" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <span>198.2 K</span>
+                                </div>
+                            </div>
+                            <span class="showcase-instream__vidio__title text-white">Ramadan 2025, BUMN Terjunkan Relawan Tebarkan Kebaikan di bulan suci ini pada tahun 2025</span>
+                        </div>
+                    </div>
+                    <iframe class="vidio-embed" src="https://www.vidio.com/embed/8755026-menang-lawan-china-1-0-timnas-indonesia-dapat-hadiah-jam-tangan-mewah-dari-prabowo-subianto?autoplay=true&player_only=true&mute=false" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe><script src="//static-web.prod.vidiocdn.com/assets/javascripts/vidio-embed.js"></script>
+                </div>
+                <div class="showcase-instream__description text-[var(--instream-color-text)] from-[#FFE2CC] to-[#FF9342]">
+                    <a href="#" class="showcase-instream__description__logo"><img class="showcase-instream__description__logo__image" src="assets/image/logo-6.png" width="14" height="23" alt=""><span class="showcase-instream__description__title text-primary">liputan6 update</span></a>
+                    <span class="showcase-instream__description__text">Generasi muda kini semakin aktif berpartisipasi dalam berbagai acara dan kegiatan sosial. Mereka menunjukkan semangat dan kreativitas yang tinggi dalam setiap event yang diadakan.</span>
+                    <!-- <a href="#" class="showcase-instream__description__button text-[var(--instream-color-text)] border-[var(--instream-color-text)]">Tonton Sekarang</a> -->
+                </div>
+            </div>
+
+            <!-- <div class="showcase--title">
+                <svg class="showcase--title__logo" width="81" height="23" viewBox="0 0 81 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.01563 3.28571H10.9517V0H0V23H10.9517V19.7143H4.01563V12.9786H9.528V9.69286H4.01563V3.28571Z" fill="url(#paint0_linear_165_2113)"/><path d="M23.1141 23H27.2393V0H23.6617V13.7671L19.5366 0H14.4988V23H18.1128V6.34143L23.1141 23Z" fill="url(#paint1_linear_165_2113)"/><path d="M40.117 0H34.2395L30.1509 23H33.838L34.5316 18.8271H39.4599L40.1535 23H44.2056L40.117 0ZM36.9775 4.07429L38.9123 15.7057H35.0427L36.9775 4.07429Z" fill="url(#paint2_linear_165_2113)"/><path d="M52.7197 0H47.1343V23H50.6389V6.73571L53.6324 23H57.429L60.2034 6.50571V23H64V0H58.4146L55.6767 16.33L52.7197 0Z" fill="url(#paint3_linear_165_2113)"/><path d="M75.1607 0H72.3256V4.90686H67.4551V7.74193H72.3256V12.7215H75.1607V7.74193H80.0312V4.90686H75.1607V0Z" fill="url(#paint4_linear_165_2113)"/><defs><linearGradient id="paint0_linear_165_2113" x1="-418.004" y1="98.1101" x2="64" y2="98.1101" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6600"/><stop offset="1" stop-color="#FF3300"/></linearGradient><linearGradient id="paint1_linear_165_2113" x1="-418.004" y1="98.1101" x2="64" y2="98.1101" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6600"/><stop offset="1" stop-color="#FF3300"/></linearGradient><linearGradient id="paint2_linear_165_2113" x1="-418.004" y1="98.1101" x2="64" y2="98.1101" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6600"/><stop offset="1" stop-color="#FF3300"/></linearGradient><linearGradient id="paint3_linear_165_2113" x1="-418.004" y1="98.1101" x2="64" y2="98.1101" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6600"/><stop offset="1" stop-color="#FF3300"/></linearGradient><linearGradient id="paint4_linear_165_2113" x1="-14.6833" y1="54.2655" x2="80.0312" y2="54.2655" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6600"/><stop offset="1" stop-color="#FF3300"/></linearGradient></defs></svg>
+                <a href="#" class="showcase--title__link group">
+                    <span class="showcase--title__link__text">Selengkapnya</span>
+                    <svg class="showcase--title__link__icon" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5985 6.00013L2.2333 10.2661C1.91411 10.578 1.39648 10.578 1.07729 10.2661C0.758092 9.95412 0.758092 9.44826 1.07729 9.13533L4.89618 5.43528L1.14276 1.73523C0.937132 1.42532 0.974986 1.01941 1.23381 0.750472C1.49263 0.482534 1.90592 0.422569 2.23329 0.604511L6.59849 4.87043C6.91768 5.18236 6.91769 5.6882 6.5985 6.00013Z" fill="currentColor"/><path d="M1.32227 0.835938C1.53896 0.611607 1.8837 0.558854 2.16113 0.706055L6.5127 4.95801C6.74898 5.18892 6.77878 5.54456 6.60156 5.80664L6.5127 5.91211L2.14746 10.1787C1.90989 10.4106 1.54253 10.4395 1.27246 10.2656L1.16309 10.1787C0.893426 9.91518 0.892701 9.48869 1.16211 9.22363L4.98145 5.52344L5.07129 5.43652L4.98242 5.34766L1.24121 1.66016C1.07263 1.3994 1.10397 1.06091 1.32129 0.834961L1.32227 0.835938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div> -->
+            <ul class="showcase--list">
+                <li class="showcase--list__item">
+                    <a class="showcase--list__image" href="#">
+                        <img class="showcase--list__pict" src="assets/image/showcase-1.png" alt="">
+                        <span class="showcase--list__duration bg-black/70 text-white">
+                            <svg class="showcase--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="showcase--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="showcase--list__title" href="#">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</a>
+                    <div class="showcase--list__detail text-neutral-500 dark:text-white">
+                        <a class="showcase--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="showcase--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="showcase--list__item">
+                    <a class="showcase--list__image" href="#">
+                        <img class="showcase--list__pict" src="assets/image/showcase-2.png" alt="">
+                        <span class="showcase--list__duration bg-black/70 text-white">
+                            <svg class="showcase--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="showcase--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="showcase--list__title" href="#">VIDEO : Inovasi “Gila” Dari GITEX 2025</a>
+                    <div class="showcase--list__detail text-neutral-500 dark:text-white">
+                        <a class="showcase--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="showcase--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="showcase--list__item">
+                    <a class="showcase--list__image" href="#">
+                        <img class="showcase--list__pict" src="assets/image/showcase-3.png" alt="">
+                        <span class="showcase--list__duration bg-black/70 text-white">
+                            <svg class="showcase--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="showcase--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="showcase--list__title" href="#">VIDEO : Inovasi “Gila” Dari GITEX 2025</a>
+                    <div class="showcase--list__detail text-neutral-500 dark:text-white">
+                        <a class="showcase--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="showcase--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="showcase--list__item">
+                    <a class="showcase--list__image" href="#">
+                        <img class="showcase--list__pict" src="assets/image/showcase-4.png" alt="">
+                        <span class="showcase--list__duration bg-black/70 text-white">
+                            <svg class="showcase--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="showcase--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="showcase--list__title" href="#">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</a>
+                    <div class="showcase--list__detail text-neutral-500 dark:text-white">
+                        <a class="showcase--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="showcase--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- showcase end -->
+
+        <!-- special content -->
+        <div class="special dark:text-white" style="--wscBackground: url('../image/wsc-1.png')">
+            <div class="special-wrapper">
+                <a href="#" class="special-pict">
+                    <figure class="special-pict-figure ">
+                        <img class="special-pict-figure-img" width="335" height="168" :alt="specialTitle">
+                    </figure>
+                </a>
+                <div class="special-inner">
+                    <div class="special-inner-box bg-white dark:bg-zinc-900">
+                        <a href="#" class="special-inner-box-link">
+                            <span class="special-inner-box-title text-primary before:bg-primary">LIPUTAN HAJI 2025</span>
+                        </a> 
+                        <ul class="special-inner-box-list">
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">China Pertahankan Strategi Global di Tengah Gencatan Dagang dan Ketegangan dengan Barat</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">54 minutes ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/UFWvddgsYgEhn9ZmfRb-M-SqFvg=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5239129/original/077137100_1748825526-1000013251.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">EKONOMI</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Perang Dagang AS-China: Donald Trump Sebut Sulit Capai Kesepakatan dengan Xi Jinping</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">1 hour ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn0-production-images-kly.akamaized.net/UNYuccTeMhUzhuZYcBN82-8-6CE=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4863724/original/082063600_1718356037-20240614-Jamaah_Haji_di_Mina-AP_7.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Jelang Armuzna, Amirul Hajj Bagikan 4 Cara Bersyukur agar Bisa Jadi Haji Mabrur</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">8 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/3O6HV7o6NxPDP6b0L3Zdq_U8XXI=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5239043/original/056324500_1748795709-1000033651.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Kronologi WNI Meninggal Dunia saat Coba Masuk Makkah Lewat Gurun Pasir</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">11 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/AJemcrvijaIKL72JmsM3Dn7_PNc=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4483899/original/057318600_1687915510-20230628-Cuaca_Panas_Wukuf_Arafah-AP-2.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Izinkan Klinik Haji Indonesia Beroperasi, Menteri Kesehatan Arab Saudi Beri Catatan Penting bagi Indonesia</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">13 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/KKmn5ZrEyCwcMfVHSshqx-UVCv8=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5238972/original/073200300_1748782421-WhatsApp_Image_2025-06-01_at_16.54.49.jpeg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Kloter Terakhir Gelombang II 2025 Tiba di Tanah Suci, Jemaah Haji Indonesia Bersiap Menuju Armuzna</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">15 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/VsM4_-x6X6hyMocRfi7AcmRyzA0=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5238916/original/002525100_1748771841-WhatsApp_Image_2025-06-01_at_16.22.49__2_.jpeg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="special-inner-box-button text-primary border-primary hover:bg-primary hover:text-white">Lihat Selengkapnya</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- special content end-->
+
+        <!-- promotion brand -->
+        <div class="promotion-brand text-white">
+            <div class="promotion-brand--top">
+                <div class="promotion-brand--top__left">
+                    <div class="promotion-brand--top__wrapper">
+                        <a class="promotion-brand--top__logo" href="#">
+                            <img src="assets/image/logo.png" alt="">
+                        </a>
+                        <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.131775 20.0983C0.187775 20.2663 0.383775 20.7423 0.579775 20.3783C2.34377 17.1583 4.35977 14.0783 6.59977 11.1663C9.95977 13.4623 13.2638 15.8143 15.5318 19.3143C15.7558 19.6503 15.9238 19.1463 15.9798 18.9783C16.0638 18.5863 16.0358 18.0823 15.8398 17.7183C13.9638 14.2183 10.8838 11.9503 7.60777 9.87828C9.56777 7.44228 11.6678 5.11828 13.9358 2.96228C14.2438 2.68228 14.2158 2.06628 14.1598 1.67428C14.1318 1.56228 13.9638 0.694282 13.6838 0.974282C11.0798 3.52228 8.67177 6.26628 6.45977 9.17828C4.33177 7.86228 2.14777 6.63028 0.215775 5.14628C-0.00822516 4.97828 -0.0922255 6.09828 0.131775 6.32228C1.81177 7.83428 3.65977 9.15028 5.53577 10.4383C3.57577 13.1543 1.81177 15.9823 0.215775 18.9503C0.0477748 19.2583 0.0197745 19.7623 0.131775 20.0983Z" fill="white"/></svg>
+                        <a class="promotion-brand--top__brand" href="#">
+                            <img src="assets/image/brand.png" alt="">
+                        </a>
+                    </div>
+                    <p class="promotion-brand--top__desc">Cek kebenaran informasi yang beredar di masyarakat bersama Liputan6 dan Komdigi. Kami menyajikan klarifikasi berbasis data dan verifikasi, untuk melawan hoaks dan disinformasi di ruang digital.</p>
+                    <a class="promotion-brand--top__button bg-white text-primary hover:bg-primary hover:text-white" href="#">
+                        <span>Selengkapnya</span>
+                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.43639 5.50013L2.07119 9.76605C1.752 10.078 1.23437 10.078 0.915176 9.76605C0.595983 9.45412 0.595983 8.94826 0.915176 8.63533L4.73407 4.93528L0.980649 1.23523C0.775023 0.925321 0.812877 0.519409 1.0717 0.250472C1.33052 -0.0174657 1.74382 -0.0774307 2.07118 0.104511L6.43638 4.37043C6.75557 4.68236 6.75559 5.1882 6.43639 5.50013Z" fill="currentColor"/><path d="M1.16016 0.335938C1.37685 0.111607 1.72159 0.0588539 1.99902 0.206055L6.35059 4.45801C6.58687 4.68892 6.61667 5.04456 6.43945 5.30664L6.35059 5.41211L1.98535 9.67871C1.74778 9.91065 1.38042 9.93952 1.11035 9.76562L1.00098 9.67871C0.731317 9.41518 0.730591 8.98869 1 8.72363L4.81934 5.02344L4.90918 4.93652L4.82031 4.84766L1.0791 1.16016C0.910519 0.899405 0.941864 0.560907 1.15918 0.334961L1.16016 0.335938Z" stroke="#currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                    </a>
+                </div>
+                <div class="promotion-brand--top__right">
+                    <a href="#" class="promotion-brand__item promotion-brand__item--headline">
+                        <img class="promotion-brand__item__badge" src="assets/image/badge.png" alt="">
+                        <figure class="promotion-brand__item__figure">
+                            <img class="promotion-brand__item__image" src="assets/image/promotion-brand-headline.png" alt="">
+                        </figure>
+                        <div class="promotion-brand__item__detail">
+                            <span class="promotion-brand__item__published">5 menit lalu</span>
+                            <span class="promotion-brand__item__title">Kemenkes Imbau Masyarakat Waspada Lonjakan Kasus COVID-19, Simak Langkah Antisipasi dan Pencegahannya</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="promotion-brand--wrapper">
+                <span class="promotion-brand--wrapper__title after:bg-white/20">Cek Fakta Terbaru</span>
+                <ul class="promotion-brand--list">
+                    <li class="promotion-brand--list__item">
+                        <a href="#" class="promotion-brand__item">
+                            <figure class="promotion-brand__item__figure">
+                                <img class="promotion-brand__item__image" src="assets/image/promotion-brand-2.png" alt="">
+                            </figure>
+                            <div class="promotion-brand__item__detail">
+                                <span class="promotion-brand__item__published">5 menit lalu</span>
+                                <span class="promotion-brand__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="promotion-brand--list__item">
+                        <a href="#" class="promotion-brand__item">
+                            <figure class="promotion-brand__item__figure">
+                                <img class="promotion-brand__item__image" src="assets/image/promotion-brand-3.png" alt="">
+                            </figure>
+                            <div class="promotion-brand__item__detail">
+                                <span class="promotion-brand__item__published">5 menit lalu</span>
+                                <span class="promotion-brand__item__title">Hal-hal yang Diperbolehkan dan Dilarang Saat Mengunjungi Candi Borobudur, Apa Saja?</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="promotion-brand--list__item">
+                        <a href="#" class="promotion-brand__item">
+                            <figure class="promotion-brand__item__figure">
+                                <img class="promotion-brand__item__image" src="assets/image/promotion-brand-1.png" alt="">
+                            </figure>
+                            <div class="promotion-brand__item__detail">
+                                <span class="promotion-brand__item__published">5 menit lalu</span>
+                                <span class="promotion-brand__item__title">Jangan Gampang Percaya Penjualan Hewan Kurban Online, Kenali Ciri Penipuan dan Cara Menghindarinya</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- promotion brand end -->
+
+        <!-- special content -->
+        <div class="special dark:text-white" style="--wscBackground: url('../image/wsc-2.png')">
+            <div class="special-wrapper">
+                <a href="#" class="special-pict">
+                    <figure class="special-pict-figure ">
+                        <img class="special-pict-figure-img" width="335" height="168" :alt="specialTitle">
+                    </figure>
+                </a>
+                <div class="special-inner">
+                    <div class="special-inner-box bg-white dark:bg-zinc-900">
+                        <a href="#" class="special-inner-box-link">
+                            <span class="special-inner-box-title text-primary">AKSI TIMNAS GARUDA</span>
+                        </a> 
+                        <ul class="special-inner-box-list">
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">China Pertahankan Strategi Global di Tengah Gencatan Dagang dan Ketegangan dengan Barat</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">54 minutes ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/UFWvddgsYgEhn9ZmfRb-M-SqFvg=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5239129/original/077137100_1748825526-1000013251.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">EKONOMI</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Perang Dagang AS-China: Donald Trump Sebut Sulit Capai Kesepakatan dengan Xi Jinping</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">1 hour ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn0-production-images-kly.akamaized.net/UNYuccTeMhUzhuZYcBN82-8-6CE=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4863724/original/082063600_1718356037-20240614-Jamaah_Haji_di_Mina-AP_7.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Jelang Armuzna, Amirul Hajj Bagikan 4 Cara Bersyukur agar Bisa Jadi Haji Mabrur</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">8 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/3O6HV7o6NxPDP6b0L3Zdq_U8XXI=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5239043/original/056324500_1748795709-1000033651.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Kronologi WNI Meninggal Dunia saat Coba Masuk Makkah Lewat Gurun Pasir</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">11 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/AJemcrvijaIKL72JmsM3Dn7_PNc=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4483899/original/057318600_1687915510-20230628-Cuaca_Panas_Wukuf_Arafah-AP-2.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Izinkan Klinik Haji Indonesia Beroperasi, Menteri Kesehatan Arab Saudi Beri Catatan Penting bagi Indonesia</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">13 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/KKmn5ZrEyCwcMfVHSshqx-UVCv8=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5238972/original/073200300_1748782421-WhatsApp_Image_2025-06-01_at_16.54.49.jpeg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Kloter Terakhir Gelombang II 2025 Tiba di Tanah Suci, Jemaah Haji Indonesia Bersiap Menuju Armuzna</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">15 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/VsM4_-x6X6hyMocRfi7AcmRyzA0=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5238916/original/002525100_1748771841-WhatsApp_Image_2025-06-01_at_16.22.49__2_.jpeg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="special-inner-box-button text-primary border-primary hover:bg-primary hover:text-white">Lihat Selengkapnya</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- special content end-->        
+
+        <!-- promotion -->
+        <div class="promotion dark:text-white">
+            <div class="promotion--title border-neutral-200 dark:border-neutral-700">
+                <span class="promotion--title__text before:from-primary before:to-secondary">Harga Emas Hari Ini</span>
+                
+            </div>
+            <div class="promotion--wrapper border-neutral-200 dark:border-neutral-700">
+                <div class="promotion--headline border-neutral-200 dark:border-neutral-700">
+                    <a href="#" class="promotion__item promotion__item--headline">
+                        <figure class="promotion__item__figure">
+                            <img class="promotion__item__image" src="assets/image/promotion-headline.png" alt="">
+                        </figure>
+                        <div class="promotion__item__detail from-black">
+                            <span class="promotion__item__published text-neutral-400">5 menit lalu</span>
+                            <span class="promotion__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                            <p class="promotion__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p>
+                        </div>
+                    </a>
+                </div>
+                <ul class="promotion--list">
+                    <li class="promotion--list__item">
+                        <a href="#" class="promotion__item">
+                            <figure class="promotion__item__figure">
+                                <img class="promotion__item__image" src="assets/image/promotion-2.png" alt="">
+                            </figure>
+                            <div class="promotion__item__detail">
+                                <span class="promotion__item__published text-neutral-400">5 menit lalu</span>
+                                <span class="promotion__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="promotion--list__item">
+                        <a href="#" class="promotion__item">
+                            <figure class="promotion__item__figure">
+                                <img class="promotion__item__image" src="assets/image/promotion-3.png" alt="">
+                            </figure>
+                            <div class="promotion__item__detail">
+                                <span class="promotion__item__published text-neutral-400">5 menit lalu</span>
+                                <span class="promotion__item__title">Hal-hal yang Diperbolehkan dan Dilarang Saat Mengunjungi Candi Borobudur, Apa Saja?</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="promotion--list__item">
+                        <a href="#" class="promotion__item">
+                            <figure class="promotion__item__figure">
+                                <img class="promotion__item__image" src="assets/image/promotion-1.png" alt="">
+                            </figure>
+                            <div class="promotion__item__detail">
+                                <span class="promotion__item__published text-neutral-400">5 menit lalu</span>
+                                <span class="promotion__item__title">Jangan Gampang Percaya Penjualan Hewan Kurban Online, Kenali Ciri Penipuan dan Cara Menghindarinya</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="promotion--title__link text-primary">
+                    <span class="promotion--title__link__text">Selengkapnya Harga Emas</span>
+                    <svg class="promotion--title__link__icon" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5985 6.00013L2.2333 10.2661C1.91411 10.578 1.39648 10.578 1.07729 10.2661C0.758092 9.95412 0.758092 9.44826 1.07729 9.13533L4.89618 5.43528L1.14276 1.73523C0.937132 1.42532 0.974986 1.01941 1.23381 0.750472C1.49263 0.482534 1.90592 0.422569 2.23329 0.604511L6.59849 4.87043C6.91768 5.18236 6.91769 5.6882 6.5985 6.00013Z" fill="currentColor"/><path d="M1.32227 0.835938C1.53896 0.611607 1.8837 0.558854 2.16113 0.706055L6.5127 4.95801C6.74898 5.18892 6.77878 5.54456 6.60156 5.80664L6.5127 5.91211L2.14746 10.1787C1.90989 10.4106 1.54253 10.4395 1.27246 10.2656L1.16309 10.1787C0.893426 9.91518 0.892701 9.48869 1.16211 9.22363L4.98145 5.52344L5.07129 5.43652L4.98242 5.34766L1.24121 1.66016C1.07263 1.3994 1.10397 1.06091 1.32129 0.834961L1.32227 0.835938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+
+            <ul class="promotion-video--list">
+                <li class="promotion-video--list__item">
+                    <a class="promotion-video--list__image" href="#">
+                        <img class="promotion-video--list__pict" src="assets/image/showcase-1.png" alt="">
+                        <span class="promotion-video--list__duration bg-black/70">
+                            <svg class="promotion-video--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="promotion-video--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="promotion-video--list__title" href="#">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</a>
+                    <div class="promotion-video--list__detail text-neutral-400 dark:text-white">
+                        <a class="promotion-video--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="promotion-video--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="promotion-video--list__item">
+                    <a class="promotion-video--list__image" href="#">
+                        <img class="promotion-video--list__pict" src="assets/image/showcase-2.png" alt="">
+                        <span class="promotion-video--list__duration bg-black/70">
+                            <svg class="promotion-video--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="promotion-video--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="promotion-video--list__title" href="#">VIDEO : Inovasi “Gila” Dari GITEX 2025</a>
+                    <div class="promotion-video--list__detail text-neutral-400 dark:text-white">
+                        <a class="promotion-video--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="promotion-video--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="promotion-video--list__item">
+                    <a class="promotion-video--list__image" href="#">
+                        <img class="promotion-video--list__pict" src="assets/image/showcase-3.png" alt="">
+                        <span class="promotion-video--list__duration bg-black/70">
+                            <svg class="promotion-video--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="promotion-video--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="promotion-video--list__title" href="#">VIDEO : Inovasi “Gila” Dari GITEX 2025</a>
+                    <div class="promotion-video--list__detail text-neutral-400 dark:text-white">
+                        <a class="promotion-video--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="promotion-video--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="promotion-video--list__item">
+                    <a class="promotion-video--list__image" href="#">
+                        <img class="promotion-video--list__pict" src="assets/image/showcase-4.png" alt="">
+                        <span class="promotion-video--list__duration bg-black/70">
+                            <svg class="promotion-video--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="promotion-video--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="promotion-video--list__title" href="#">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</a>
+                    <div class="promotion-video--list__detail text-neutral-400 dark:text-white">
+                        <a class="promotion-video--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="promotion-video--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- promotion end -->
+
+
+        <!-- special content -->
+        <div class="special dark:text-white" style="--wscBackground: url('../image/wsc-3.png')">
+            <div class="special-wrapper">
+                <a href="#" class="special-pict">
+                    <figure class="special-pict-figure ">
+                        <img class="special-pict-figure-img" width="335" height="168" :alt="specialTitle">
+                    </figure>
+                </a>
+                <div class="special-inner">
+                    <div class="special-inner-box bg-white dark:bg-zinc-900">
+                        <a href="#" class="special-inner-box-link">
+                            <span class="special-inner-box-title text-primary">HUT INDONESIA 2025</span>
+                        </a> 
+                        <ul class="special-inner-box-list">
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">China Pertahankan Strategi Global di Tengah Gencatan Dagang dan Ketegangan dengan Barat</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">54 minutes ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/UFWvddgsYgEhn9ZmfRb-M-SqFvg=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5239129/original/077137100_1748825526-1000013251.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">EKONOMI</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Perang Dagang AS-China: Donald Trump Sebut Sulit Capai Kesepakatan dengan Xi Jinping</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">1 hour ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn0-production-images-kly.akamaized.net/UNYuccTeMhUzhuZYcBN82-8-6CE=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4863724/original/082063600_1718356037-20240614-Jamaah_Haji_di_Mina-AP_7.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Jelang Armuzna, Amirul Hajj Bagikan 4 Cara Bersyukur agar Bisa Jadi Haji Mabrur</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">8 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/3O6HV7o6NxPDP6b0L3Zdq_U8XXI=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5239043/original/056324500_1748795709-1000033651.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Kronologi WNI Meninggal Dunia saat Coba Masuk Makkah Lewat Gurun Pasir</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">11 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/AJemcrvijaIKL72JmsM3Dn7_PNc=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4483899/original/057318600_1687915510-20230628-Cuaca_Panas_Wukuf_Arafah-AP-2.jpg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Izinkan Klinik Haji Indonesia Beroperasi, Menteri Kesehatan Arab Saudi Beri Catatan Penting bagi Indonesia</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">13 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/KKmn5ZrEyCwcMfVHSshqx-UVCv8=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5238972/original/073200300_1748782421-WhatsApp_Image_2025-06-01_at_16.54.49.jpeg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="special-inner-box-list-item border-neutral-200 dark:border-neutral-700">
+                                <div class="special-inner-box-list-item-link">
+                                    <div class="special-inner-box-list-item-detail">
+                                        <!-- <a href="#" class="special-inner-box-list-item-tag text-xs font-semibold text-light-1">POLITIK</a> -->
+                                        <a href="#" class="special-inner-box-list-item-title">Kloter Terakhir Gelombang II 2025 Tiba di Tanah Suci, Jemaah Haji Indonesia Bersiap Menuju Armuzna</a>
+                                        <span class="special-inner-box-list-item-time text-neutral-500">15 hours ago</span>
+                                    </div>
+                                    <a href="#">
+                                        <figure class="special-inner-box-list-item-figure">
+                                            <img class="special-inner-box-list-item-figure-img" src="https://cdn1-production-images-kly.akamaized.net/VsM4_-x6X6hyMocRfi7AcmRyzA0=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5238916/original/002525100_1748771841-WhatsApp_Image_2025-06-01_at_16.22.49__2_.jpeg" width="80" height="80" :alt="item.title">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="special-inner-box-button text-primary border-primary hover:bg-primary hover:text-white">Lihat Selengkapnya</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- special content end-->   
+
+        <!-- JADWAL ACARA -->
+        <div class="jadwal">
+            <header class="jadwal__header">
+                <span class="section-title border-neutral-200 before:from-primary before:to-secondary dark:border-neutral-700">Jadwal Acara Hari Ini</span>
+            </header>
+
+            <div class="jadwalTab border-neutral-200 dark:border-neutral-700">
+                <!-- Radio buttons -->
+                <input type="radio" id="jadwalTab__sctv" name="jadwalTab__radio" class="hidden" checked>
+                <input type="radio" id="jadwalTab__indosiar" name="jadwalTab__radio" class="hidden">
+
+                <!-- Tabs -->
+                <div class="jadwalTab__tabs">
+                    <label for="jadwalTab__sctv" data-target="sctv"
+                    class="jadwalTab__tab bg-gray-200 active">
+                        <img src="https://preview-kly.akamaized.net/liputan6/sctv-logo.png"
+                            alt="SCTV" class="" />
+                    </label>
+                    <label for="jadwalTab__indosiar" data-target="indosiar"
+                    class="jadwalTab__tab bg-gray-200">
+                        <img src="https://preview-kly.akamaized.net/liputan6/indosiar-logo-2015.png"
+                            alt="Indosiar" class="" />
+                    </label>
+                </div>
+
+                <!-- Tab Content: SCTV -->
+                <div id="sctv" class="jadwalTab__content">
+                    <div class="jadwalTab__item border-neutral-200 dark:border-neutral-700">
+                        <span class="jadwalTab__live bg-orange-500 text-white">• LIVE</span>
+                        <span class="jadwalTab__title border-neutral-200 dark:border-neutral-700">FTV Pagi</span>
+                    </div>
+                    <div class="jadwalTab__item flex items-center pb-2 border-b border-neutral-200 dark:border-neutral-700 pt-2">
+                        <span class="jadwalTab__time">12:00</span>
+                        <span class="jadwalTab__title border-neutral-200 dark:border-neutral-700">Liputan 6 Siang Live</span>
+                    </div>
+                    <div class="jadwalTab__item flex items-center pb-2 border-b border-neutral-200 dark:border-neutral-700 pt-2">
+                        <span class="jadwalTab__time">12:45</span>
+                        <span class="jadwalTab__title border-neutral-200 dark:border-neutral-700">Panji Petualang 911</span>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Indosiar -->
+                <div id="indosiar" class="jadwalTab__content hidden">
+                    <div class="jadwalTab__item border-neutral-200 dark:border-neutral-700">
+                        <span class="jadwalTab__live bg-orange-500 text-white">• LIVE</span>
+                        <span class="jadwalTab__title border-neutral-200 dark:border-neutral-700">Pintu Berkah</span>
+                    </div>
+                    <div class="jadwalTab__item flex items-center pb-2 border-b border-neutral-200 dark:border-neutral-700 pt-2">
+                        <span class="jadwalTab__time">11:00</span>
+                        <span class="jadwalTab__title border-neutral-200 dark:border-neutral-700">Kuis Berhadiah</span>
+                    </div>
+                    <div class="jadwalTab__item flex items-center pb-2 border-b border-neutral-200 dark:border-neutral-700 pt-2">
+                        <span class="jadwalTab__time">13:00</span>
+                        <span class="jadwalTab__title border-neutral-200 dark:border-neutral-700">Dunia Terbalik</span>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="jadwalTab__footer text-center px-3 pb-4">
+                    <a href="#" class="text-[13px] text-orange-600 font-semibold uppercase inline-flex items-center gap-1">
+                    Selengkapnya <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- JADWAL ACARA -->  
+
+        <!-- CHANNEL HIGHLIGHTS -->
+        <div class="channel-highlights dark:text-white">
+            <div class="headline-grid dark:text-white">
+                <h2 class="channel-highlights__category--title border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white before:bg-primary">News</h2>
+                <div class="headline-grid--wrapper border-neutral-200 dark:border-neutral-700">
+                    <div class="headline-grid--headline border-neutral-200 dark:border-neutral-700">
+                        <a href="#" class="headline-grid__item">
+                            <figure class="headline-grid__item__figure">
+                                <img class="headline-grid__item__image" src="assets/image/promotion-headline.png" alt="">
+                            </figure>
+                            <!-- <div class="headline-grid__overlay bg-black"></div> -->
+                            <div class="headline-grid__item__detail from-black">
+                                <span class="headline-grid__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <!-- <span class="headline-grid__item__published text-neutral-400">5 menit lalu</span> -->
+                                <!-- <p class="headline-grid__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="headline-grid--list">
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="channel-highlights__more-link text-primary">
+                    <span>Selengkapnya Bisnis</span>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.76061 5.50013L1.39541 9.76605C1.07622 10.078 0.558588 10.078 0.239395 9.76605C-0.0797982 9.45412 -0.0797982 8.94826 0.239395 8.63533L4.05829 4.93528L0.304868 1.23523C0.0992413 0.925321 0.137095 0.519409 0.395917 0.250472C0.654739 -0.0174657 1.06803 -0.0774307 1.3954 0.104511L5.7606 4.37043C6.07979 4.68236 6.0798 5.1882 5.76061 5.50013Z" fill="currentColor"/><path d="M0.484375 0.335938C0.701073 0.111607 1.04581 0.0588539 1.32324 0.206055L5.6748 4.45801C5.94481 4.72187 5.94473 5.14821 5.6748 5.41211L1.30957 9.67871C1.03802 9.94382 0.59674 9.94384 0.325195 9.67871C0.0555358 9.41518 0.0548101 8.98869 0.324219 8.72363L4.14355 5.02344L4.2334 4.93652L4.14453 4.84766L0.40332 1.16016C0.234742 0.899412 0.267076 0.561884 0.484375 0.335938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+            <div class="headline-grid dark:text-white">
+                <h2 class="channel-highlights__category--title border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white before:bg-primary">Bisnis</h2>
+                <div class="headline-grid--wrapper border-neutral-200 dark:border-neutral-700">
+                    <div class="headline-grid--headline border-neutral-200 dark:border-neutral-700">
+                        <a href="#" class="headline-grid__item">
+                            <figure class="headline-grid__item__figure">
+                                <img class="headline-grid__item__image" src="assets/image/promotion-headline.png" alt="">
+                            </figure>
+                            <!-- <div class="headline-grid__overlay bg-black"></div> -->
+                            <div class="headline-grid__item__detail from-black">
+                                <span class="headline-grid__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <!-- <span class="headline-grid__item__published text-neutral-400">5 menit lalu</span> -->
+                                <!-- <p class="headline-grid__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="headline-grid--list">
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="channel-highlights__more-link text-primary">
+                    <span>Selengkapnya Bisnis</span>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.76061 5.50013L1.39541 9.76605C1.07622 10.078 0.558588 10.078 0.239395 9.76605C-0.0797982 9.45412 -0.0797982 8.94826 0.239395 8.63533L4.05829 4.93528L0.304868 1.23523C0.0992413 0.925321 0.137095 0.519409 0.395917 0.250472C0.654739 -0.0174657 1.06803 -0.0774307 1.3954 0.104511L5.7606 4.37043C6.07979 4.68236 6.0798 5.1882 5.76061 5.50013Z" fill="currentColor"/><path d="M0.484375 0.335938C0.701073 0.111607 1.04581 0.0588539 1.32324 0.206055L5.6748 4.45801C5.94481 4.72187 5.94473 5.14821 5.6748 5.41211L1.30957 9.67871C1.03802 9.94382 0.59674 9.94384 0.325195 9.67871C0.0555358 9.41518 0.0548101 8.98869 0.324219 8.72363L4.14355 5.02344L4.2334 4.93652L4.14453 4.84766L0.40332 1.16016C0.234742 0.899412 0.267076 0.561884 0.484375 0.335938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+            <div class="headline-grid dark:text-white">
+                <h2 class="channel-highlights__category--title border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white before:bg-primary">Bola</h2>
+                <div class="headline-grid--wrapper border-neutral-200 dark:border-neutral-700">
+                    <div class="headline-grid--headline border-neutral-200 dark:border-neutral-700">
+                        <a href="#" class="headline-grid__item">
+                            <figure class="headline-grid__item__figure">
+                                <img class="headline-grid__item__image" src="assets/image/promotion-headline.png" alt="">
+                            </figure>
+                            <!-- <div class="headline-grid__overlay bg-black"></div> -->
+                            <div class="headline-grid__item__detail from-black">
+                                <span class="headline-grid__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <!-- <span class="headline-grid__item__published text-neutral-400">5 menit lalu</span> -->
+                                <!-- <p class="headline-grid__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="headline-grid--list">
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="channel-highlights__more-link text-primary">
+                    <span>Selengkapnya Bola</span>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.76061 5.50013L1.39541 9.76605C1.07622 10.078 0.558588 10.078 0.239395 9.76605C-0.0797982 9.45412 -0.0797982 8.94826 0.239395 8.63533L4.05829 4.93528L0.304868 1.23523C0.0992413 0.925321 0.137095 0.519409 0.395917 0.250472C0.654739 -0.0174657 1.06803 -0.0774307 1.3954 0.104511L5.7606 4.37043C6.07979 4.68236 6.0798 5.1882 5.76061 5.50013Z" fill="currentColor"/><path d="M0.484375 0.335938C0.701073 0.111607 1.04581 0.0588539 1.32324 0.206055L5.6748 4.45801C5.94481 4.72187 5.94473 5.14821 5.6748 5.41211L1.30957 9.67871C1.03802 9.94382 0.59674 9.94384 0.325195 9.67871C0.0555358 9.41518 0.0548101 8.98869 0.324219 8.72363L4.14355 5.02344L4.2334 4.93652L4.14453 4.84766L0.40332 1.16016C0.234742 0.899412 0.267076 0.561884 0.484375 0.335938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+        </div>
+        <!-- CHANNEL HIGHLIGHTS -->
+
+        <!-- FOTO PILIHAN -->
+        <div class="featured-photo dark:text-white">
+            <div class="featured-photo__header">
+                <h2 class="featured-photo__title before:bg-primary">Foto Pilihan</h2>
+                <a href="#" class="featured-photo__more text-primary">
+                    <span>Selengkapnya</span>
+                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.0985 6.00013L1.7333 10.2661C1.41411 10.578 0.896478 10.578 0.577285 10.2661C0.258092 9.95412 0.258092 9.44826 0.577285 9.13533L4.39618 5.43528L0.642758 1.73523C0.437132 1.42532 0.474986 1.01941 0.733808 0.750472C0.99263 0.482534 1.40592 0.422569 1.73329 0.604511L6.09849 4.87043C6.41768 5.18236 6.41769 5.6882 6.0985 6.00013Z" fill="currentColor"/><path d="M0.822266 0.835938C1.03896 0.611607 1.3837 0.558854 1.66113 0.706055L6.0127 4.95801C6.2827 5.22187 6.28262 5.64821 6.0127 5.91211L1.64746 10.1787C1.37591 10.4438 0.93463 10.4438 0.663086 10.1787C0.393426 9.91518 0.392701 9.48869 0.662109 9.22363L4.48145 5.52344L4.57129 5.43652L4.48242 5.34766L0.741211 1.66016C0.572633 1.39941 0.604967 1.06188 0.822266 0.835938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+            <div class="featured-photo__layout">
+                <a href="#" class="featured-photo__left">
+                    <img src="assets/image/image-1.png" alt="" class="featured-photo__image" />
+                    <div class="featured-photo__overlay text-white from-black/70">
+                        <p class="featured-photo__caption">Momen Upacara Peringatan Hari Lahir Pancasila ke-80, Prabowo-Gibran Bertemu Megawati</p>
+                        <span class="featured-photo__count bg-black/60 text-white">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 11H2C1.73478 11 1.48043 10.8946 1.29289 10.7071C1.10536 10.5196 1 10.2652 1 10V3M11 6.5L10.352 5.852C10.126 5.62606 9.81955 5.49913 9.5 5.49913C9.18045 5.49913 8.87398 5.62606 8.648 5.852L5.5 9M7 4C7 4.55228 6.55228 5 6 5C5.44772 5 5 4.55228 5 4C5 3.44772 5.44772 3 6 3C6.55228 3 7 3.44772 7 4ZM4 1H10C10.5523 1 11 1.44772 11 2V8C11 8.55228 10.5523 9 10 9H4C3.44772 9 3 8.55228 3 8V2C3 1.44772 3.44772 1 4 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>4 Foto</span>
+                        </span>
+                    </div>
+                </a>
+                <div class="featured-photo__right">
+                    <a href="#" class="featured-photo__right-item">
+                        <img src="assets/image/image-2.png" alt="" class="featured-photo__image" />
+                        <div class="featured-photo__overlay text-white from-black/70">
+                            <p class="featured-photo__caption">Kemensos Salurkan Bantuan ke Korban Banjir di Demak, Ini Rinciannya</p>
+                            <span class="featured-photo__count bg-black/60 text-white">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 11H2C1.73478 11 1.48043 10.8946 1.29289 10.7071C1.10536 10.5196 1 10.2652 1 10V3M11 6.5L10.352 5.852C10.126 5.62606 9.81955 5.49913 9.5 5.49913C9.18045 5.49913 8.87398 5.62606 8.648 5.852L5.5 9M7 4C7 4.55228 6.55228 5 6 5C5.44772 5 5 4.55228 5 4C5 3.44772 5.44772 3 6 3C6.55228 3 7 3.44772 7 4ZM4 1H10C10.5523 1 11 1.44772 11 2V8C11 8.55228 10.5523 9 10 9H4C3.44772 9 3 8.55228 3 8V2C3 1.44772 3.44772 1 4 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                                <span>4 Foto</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="featured-photo__right-item">
+                        <img src="assets/image/image-3.png" alt="" class="featured-photo__image" />
+                        <div class="featured-photo__overlay text-white from-black/70">
+                            <p class="featured-photo__caption">Tampil Mewah dan Memukau, Raye Jadi Penutup Gelaran Jakarta International BNI Java Jazz Festival 2025</p>
+                            <span class="featured-photo__count bg-black/60 text-white">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 11H2C1.73478 11 1.48043 10.8946 1.29289 10.7071C1.10536 10.5196 1 10.2652 1 10V3M11 6.5L10.352 5.852C10.126 5.62606 9.81955 5.49913 9.5 5.49913C9.18045 5.49913 8.87398 5.62606 8.648 5.852L5.5 9M7 4C7 4.55228 6.55228 5 6 5C5.44772 5 5 4.55228 5 4C5 3.44772 5.44772 3 6 3C6.55228 3 7 3.44772 7 4ZM4 1H10C10.5523 1 11 1.44772 11 2V8C11 8.55228 10.5523 9 10 9H4C3.44772 9 3 8.55228 3 8V2C3 1.44772 3.44772 1 4 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>4 Foto</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- FOTO PILIHAN -->
+
+        <!-- CHANNEL HIGHLIGHTS -->
+        <div class="channel-highlights dark:text-white">
+            <div class="headline-grid dark:text-white">
+                <h2 class="channel-highlights__category--title border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white before:bg-primary">News</h2>
+                <div class="headline-grid--wrapper border-neutral-200 dark:border-neutral-700">
+                    <div class="headline-grid--headline border-neutral-200 dark:border-neutral-700">
+                        <a href="#" class="headline-grid__item">
+                            <figure class="headline-grid__item__figure">
+                                <img class="headline-grid__item__image" src="assets/image/promotion-headline.png" alt="">
+                            </figure>
+                            <!-- <div class="headline-grid__overlay bg-black"></div> -->
+                            <div class="headline-grid__item__detail from-black">
+                                <span class="headline-grid__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <!-- <span class="headline-grid__item__published text-neutral-400">5 menit lalu</span> -->
+                                <!-- <p class="headline-grid__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="headline-grid--list">
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="channel-highlights__more-link text-primary">
+                    <span>Selengkapnya Bisnis</span>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.76061 5.50013L1.39541 9.76605C1.07622 10.078 0.558588 10.078 0.239395 9.76605C-0.0797982 9.45412 -0.0797982 8.94826 0.239395 8.63533L4.05829 4.93528L0.304868 1.23523C0.0992413 0.925321 0.137095 0.519409 0.395917 0.250472C0.654739 -0.0174657 1.06803 -0.0774307 1.3954 0.104511L5.7606 4.37043C6.07979 4.68236 6.0798 5.1882 5.76061 5.50013Z" fill="currentColor"/><path d="M0.484375 0.335938C0.701073 0.111607 1.04581 0.0588539 1.32324 0.206055L5.6748 4.45801C5.94481 4.72187 5.94473 5.14821 5.6748 5.41211L1.30957 9.67871C1.03802 9.94382 0.59674 9.94384 0.325195 9.67871C0.0555358 9.41518 0.0548101 8.98869 0.324219 8.72363L4.14355 5.02344L4.2334 4.93652L4.14453 4.84766L0.40332 1.16016C0.234742 0.899412 0.267076 0.561884 0.484375 0.335938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+            <div class="headline-grid dark:text-white">
+                <h2 class="channel-highlights__category--title border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white before:bg-primary">Bisnis</h2>
+                <div class="headline-grid--wrapper border-neutral-200 dark:border-neutral-700">
+                    <div class="headline-grid--headline border-neutral-200 dark:border-neutral-700">
+                        <a href="#" class="headline-grid__item">
+                            <figure class="headline-grid__item__figure">
+                                <img class="headline-grid__item__image" src="assets/image/promotion-headline.png" alt="">
+                            </figure>
+                            <!-- <div class="headline-grid__overlay bg-black"></div> -->
+                            <div class="headline-grid__item__detail from-black">
+                                <span class="headline-grid__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <!-- <span class="headline-grid__item__published text-neutral-400">5 menit lalu</span> -->
+                                <!-- <p class="headline-grid__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="headline-grid--list">
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="channel-highlights__more-link text-primary">
+                    <span>Selengkapnya Bisnis</span>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.76061 5.50013L1.39541 9.76605C1.07622 10.078 0.558588 10.078 0.239395 9.76605C-0.0797982 9.45412 -0.0797982 8.94826 0.239395 8.63533L4.05829 4.93528L0.304868 1.23523C0.0992413 0.925321 0.137095 0.519409 0.395917 0.250472C0.654739 -0.0174657 1.06803 -0.0774307 1.3954 0.104511L5.7606 4.37043C6.07979 4.68236 6.0798 5.1882 5.76061 5.50013Z" fill="currentColor"/><path d="M0.484375 0.335938C0.701073 0.111607 1.04581 0.0588539 1.32324 0.206055L5.6748 4.45801C5.94481 4.72187 5.94473 5.14821 5.6748 5.41211L1.30957 9.67871C1.03802 9.94382 0.59674 9.94384 0.325195 9.67871C0.0555358 9.41518 0.0548101 8.98869 0.324219 8.72363L4.14355 5.02344L4.2334 4.93652L4.14453 4.84766L0.40332 1.16016C0.234742 0.899412 0.267076 0.561884 0.484375 0.335938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+            <div class="headline-grid dark:text-white">
+                <h2 class="channel-highlights__category--title border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white before:bg-primary">Bola</h2>
+                <div class="headline-grid--wrapper border-neutral-200 dark:border-neutral-700">
+                    <div class="headline-grid--headline border-neutral-200 dark:border-neutral-700">
+                        <a href="#" class="headline-grid__item">
+                            <figure class="headline-grid__item__figure">
+                                <img class="headline-grid__item__image" src="assets/image/promotion-headline.png" alt="">
+                            </figure>
+                            <!-- <div class="headline-grid__overlay bg-black"></div> -->
+                            <div class="headline-grid__item__detail from-black">
+                                <span class="headline-grid__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                <!-- <span class="headline-grid__item__published text-neutral-400">5 menit lalu</span> -->
+                                <!-- <p class="headline-grid__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p> -->
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="headline-grid--list">
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="headline-grid--list__item">
+                            <a href="#" class="item item--grid">
+                                <figure class="item__figure">
+                                    <img class="item__image" src="assets/image/promotion-2.png" alt="">
+                                </figure>
+                                <div class="item__detail">
+                                    <span class="item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                                    <span class="item__published text-neutral-400">5 menit lalu</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="channel-highlights__more-link text-primary">
+                    <span>Selengkapnya Bola</span>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.76061 5.50013L1.39541 9.76605C1.07622 10.078 0.558588 10.078 0.239395 9.76605C-0.0797982 9.45412 -0.0797982 8.94826 0.239395 8.63533L4.05829 4.93528L0.304868 1.23523C0.0992413 0.925321 0.137095 0.519409 0.395917 0.250472C0.654739 -0.0174657 1.06803 -0.0774307 1.3954 0.104511L5.7606 4.37043C6.07979 4.68236 6.0798 5.1882 5.76061 5.50013Z" fill="currentColor"/><path d="M0.484375 0.335938C0.701073 0.111607 1.04581 0.0588539 1.32324 0.206055L5.6748 4.45801C5.94481 4.72187 5.94473 5.14821 5.6748 5.41211L1.30957 9.67871C1.03802 9.94382 0.59674 9.94384 0.325195 9.67871C0.0555358 9.41518 0.0548101 8.98869 0.324219 8.72363L4.14355 5.02344L4.2334 4.93652L4.14453 4.84766L0.40332 1.16016C0.234742 0.899412 0.267076 0.561884 0.484375 0.335938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+        </div>
+        <!-- CHANNEL HIGHLIGHTS -->
+
+        <!-- promotion -->
+        <div class="promotion dark:text-white">
+            <div class="promotion--title border-neutral-200 dark:border-neutral-700">
+                <span class="promotion--title__text before:from-primary before:to-secondary">Berita Terkini</span>
+                
+            </div>
+            <div class="promotion--wrapper border-neutral-200 dark:border-neutral-700">
+                <div class="promotion--headline border-neutral-200 dark:border-neutral-700">
+                    <a href="#" class="promotion__item promotion__item--headline">
+                        <figure class="promotion__item__figure">
+                            <img class="promotion__item__image" src="assets/image/promotion-headline.png" alt="">
+                        </figure>
+                        <div class="promotion__item__detail">
+                            <span class="promotion__item__published text-neutral-400">5 menit lalu</span>
+                            <span class="promotion__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                            <p class="promotion__item__desc text-neutral-500">Kemenkes mengimbau masyarakat waspada terhadap COVID-19. Selain imbauan Kemenkes, ketahui langkah antisipasi spesifik untuk melindungi diri dari lonjakan kasus.</p>
+                        </div>
+                    </a>
+                </div>
+                <ul class="promotion--list">
+                    <li class="promotion--list__item">
+                        <a href="#" class="promotion__item">
+                            <figure class="promotion__item__figure">
+                                <img class="promotion__item__image" src="assets/image/promotion-2.png" alt="">
+                            </figure>
+                            <div class="promotion__item__detail">
+                                <span class="promotion__item__published text-neutral-400">5 menit lalu</span>
+                                <span class="promotion__item__title">Apa itu Kemarau Basah? Anomali Cuaca yang Diprediksi BMKG Terjadi hingga Agustus 2025</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="promotion--list__item">
+                        <a href="#" class="promotion__item">
+                            <figure class="promotion__item__figure">
+                                <img class="promotion__item__image" src="assets/image/promotion-3.png" alt="">
+                            </figure>
+                            <div class="promotion__item__detail">
+                                <span class="promotion__item__published text-neutral-400">5 menit lalu</span>
+                                <span class="promotion__item__title">Hal-hal yang Diperbolehkan dan Dilarang Saat Mengunjungi Candi Borobudur, Apa Saja?</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="promotion--list__item">
+                        <a href="#" class="promotion__item">
+                            <figure class="promotion__item__figure">
+                                <img class="promotion__item__image" src="assets/image/promotion-1.png" alt="">
+                            </figure>
+                            <div class="promotion__item__detail">
+                                <span class="promotion__item__published text-neutral-400">5 menit lalu</span>
+                                <span class="promotion__item__title">Jangan Gampang Percaya Penjualan Hewan Kurban Online, Kenali Ciri Penipuan dan Cara Menghindarinya</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="promotion--title__link text-primary ">
+                    <span class="promotion--title__link__text">Selengkapnya Terkini</span>
+                    <svg class="promotion--title__link__icon" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5985 6.00013L2.2333 10.2661C1.91411 10.578 1.39648 10.578 1.07729 10.2661C0.758092 9.95412 0.758092 9.44826 1.07729 9.13533L4.89618 5.43528L1.14276 1.73523C0.937132 1.42532 0.974986 1.01941 1.23381 0.750472C1.49263 0.482534 1.90592 0.422569 2.23329 0.604511L6.59849 4.87043C6.91768 5.18236 6.91769 5.6882 6.5985 6.00013Z" fill="currentColor"/><path d="M1.32227 0.835938C1.53896 0.611607 1.8837 0.558854 2.16113 0.706055L6.5127 4.95801C6.74898 5.18892 6.77878 5.54456 6.60156 5.80664L6.5127 5.91211L2.14746 10.1787C1.90989 10.4106 1.54253 10.4395 1.27246 10.2656L1.16309 10.1787C0.893426 9.91518 0.892701 9.48869 1.16211 9.22363L4.98145 5.52344L5.07129 5.43652L4.98242 5.34766L1.24121 1.66016C1.07263 1.3994 1.10397 1.06091 1.32129 0.834961L1.32227 0.835938Z" stroke="currentColor" stroke-opacity="0.2" stroke-width="0.244917"/></svg>
+                </a>
+            </div>
+
+            <ul class="promotion-video--list">
+                <li class="promotion-video--list__item">
+                    <a class="promotion-video--list__image" href="#">
+                        <img class="promotion-video--list__pict" src="assets/image/showcase-1.png" alt="">
+                        <span class="promotion-video--list__duration bg-black/70">
+                            <svg class="promotion-video--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="promotion-video--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="promotion-video--list__title" href="#">VIDEO ZENERATION: Bahan Dapur Bikin Bye Jerawat</a>
+                    <div class="promotion-video--list__detail text-neutral-400 dark:text-white">
+                        <a class="promotion-video--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="promotion-video--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="promotion-video--list__item">
+                    <a class="promotion-video--list__image" href="#">
+                        <img class="promotion-video--list__pict" src="assets/image/showcase-2.png" alt="">
+                        <span class="promotion-video--list__duration bg-black/70">
+                            <svg class="promotion-video--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="promotion-video--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="promotion-video--list__title" href="#">VIDEO : Inovasi “Gila” Dari GITEX 2025</a>
+                    <div class="promotion-video--list__detail text-neutral-400 dark:text-white">
+                        <a class="promotion-video--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="promotion-video--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="promotion-video--list__item">
+                    <a class="promotion-video--list__image" href="#">
+                        <img class="promotion-video--list__pict" src="assets/image/showcase-3.png" alt="">
+                        <span class="promotion-video--list__duration bg-black/70">
+                            <svg class="promotion-video--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="promotion-video--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="promotion-video--list__title" href="#">VIDEO : Inovasi “Gila” Dari GITEX 2025</a>
+                    <div class="promotion-video--list__detail text-neutral-400 dark:text-white">
+                        <a class="promotion-video--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="promotion-video--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+                <li class="promotion-video--list__item">
+                    <a class="promotion-video--list__image" href="#">
+                        <img class="promotion-video--list__pict" src="assets/image/showcase-4.png" alt="">
+                        <span class="promotion-video--list__duration bg-black/70">
+                            <svg class="promotion-video--list__duration__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.08297 4.1703L2.33193 0.179129C1.7834 -0.144998 0.943359 0.169539 0.943359 0.971226V8.95165C0.943359 9.67086 1.72395 10.1043 2.33193 9.74374L9.08297 5.75449C9.68519 5.39968 9.68711 4.52511 9.08297 4.1703Z" fill="white"/></svg>
+                            <span class="promotion-video--list__time">05:36</span>
+                        </span>
+                    </a>
+                    <a class="promotion-video--list__title" href="#">VIDEO JOURNAL: KKN di Desa Penari dan Selera Horor Penonton Indonesia</a>
+                    <div class="promotion-video--list__detail text-neutral-400 dark:text-white">
+                        <a class="promotion-video--list__tag" href="#">Cek Fakta</a>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.83951" cy="3.07761" r="2.73209" fill="currentColor"/></svg>
+                        <span class="promotion-video--list__published">1 jam lalu</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- promotion end -->
+    </main>
+    <footer class="footer bg-gray-100 dark:bg-black">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__logo">
+                    <div class="footer__logo__inner">
+                        <a href="#" aria-label="logo footer" class="footer__logo__image">
+                            <img src="./assets/image/logo-footer.png" alt="logo" class="logo" width="172" height="32">                             
+                        </a>
+                        <a href="#" aria-label="logo brand">
+                            <img class="logo-brand" src="https://preview-kly.akamaized.net/liputan6/trustworthy.svg" width="50" height="68px" alt="Trustworthy">
+                        </a>
+                        <a href="#" aria-label="logo brand">
+                            <img class="logo-brand" src="https://preview-kly.akamaized.net/liputan6/ifcn.png" width="50" height="68px" alt="IFCN">
+                        </a>
+                    </div>
+                </div>
+                <nav class="footer__list border-neutral-200 text-neutral-400 dark:text-white dark:border-white/20">
+                    <a href="#" class="footer__list__link">Redaksi</a>
+                    <a href="#" class="footer__list__link">Disclaimer</a>
+                    <a href="#" class="footer__list__link">Kode Etik</a>
+                    <a href="#" class="footer__list__link">Provacy Policy</a>
+                    <a href="#" class="footer__list__link">Pedoman Media Siber</a>
+                    <a href="#" class="footer__list__link">Sitemap</a>
+                </nav>
+                <div class="footer__bottom">
+                    <ul class="footer__network text-neutral-400 dark:text-white">
+                        <li class="footer__network__item">
+                            <a href="http://liputan6.com" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --liputan6"></i>
+                                <span>Liputan6</span>
+                            </a>
+                        </li>
+                        <li class="footer__network__item">
+                            <a href="http://kapanlagi.com/" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --kapanlagi"></i>
+                                <span>Kapanlagi.com</span>
+                            </a>
+                        </li>
+                        <!-- <li class="footer__network__item">
+                            <a href="https://www.otosia.com" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --otosia"></i>
+                                <span>Otosia</span>
+                            </a>
+                        </li> -->
+                        <li class="footer__network__item">
+                            <a href="http://fimela.com" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --fimela"></i>
+                                <span>Fimela</span>
+                            </a>
+                        </li>
+                        <li class="footer__network__item">
+                            <a href="http://bola.net" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --bolanet"></i>
+                                <span>Bola.net</span>
+                            </a>
+                        </li>
+                        <li class="footer__network__item">
+                            <a href="http://brilio.net" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --brilio"></i>
+                                <span>Brilio</span>
+                            </a>
+                        </li>
+                        <li class="footer__network__item">
+                            <a href="http://bola.com" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --bolacom"></i>
+                                <span>Bola.com</span>
+                            </a>
+                        </li>
+                        <li class="footer__network__item">
+                            <a href="http://merdeka.com" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --merdeka"></i>
+                                <span>Merdeka</span>
+                            </a>
+                        </li>
+                        <li class="footer__network__item">
+                            <a href="https://www.dream.co.id" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --dream"></i>
+                                <span>Dream.co.id</span>
+                            </a>
+                        </li>
+                        <li class="footer__network__item">
+                            <a href="https://www.trstdly.com" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --trstdly"></i>
+                                <span>Trstdly.com</span>
+                            </a>
+                        </li>
+                        <li class="footer__network__item">
+                            <a href="https://manisdansedap.com" target="_blank" class="footer__network__item__link">
+                                <i class="footer__network__icon --manisdansedap"></i>
+                                <span>Manisdansedap.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__socmed">
+                        <span class="footer__socmed__title text-gray-400 dark:text-white">Connect with us</span>
+                        <ul class="footer__socmed__list">
+                            <li class="footer__socmed__list__item">
+                                <a href="#" target="_blank" class="footer__socmed__list__item__link">
+                                    <i class="footer__socmed__icon --threads"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socmed__list__item">
+                                <a href="#" target="_blank" class="footer__socmed__list__item__link">
+                                    <i class="footer__socmed__icon --whatsapp"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socmed__list__item">
+                                <a href="#" target="_blank" class="footer__socmed__list__item__link">
+                                    <i class="footer__socmed__icon --facebook"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socmed__list__item">
+                                <a href="#" target="_blank" class="footer__socmed__list__item__link">
+                                    <i class="footer__socmed__icon --x"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socmed__list__item">
+                                <a href="#" target="_blank" class="footer__socmed__list__item__link">
+                                    <i class="footer__socmed__icon --instagram"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socmed__list__item">
+                                <a href="#" target="_blank" class="footer__socmed__list__item__link">
+                                    <i class="footer__socmed__icon --youtube"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socmed__list__item">
+                                <a href="#" target="_blank" class="footer__socmed__list__item__link">
+                                    <i class="footer__socmed__icon --tiktok"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="footer__copyright text-gray-400 dark:text-white dark:border-white/20">Copyright ©2024 Liputan.com KLY KapanLagi Youniverse All Right Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+    const tabs = document.querySelectorAll('.jadwalTab__tab');
+    const panels = document.querySelectorAll('.jadwalTab__content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+        // Reset semua tab
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.add('hidden'));
+
+        // Aktifkan yang diklik
+        tab.classList.add('active');
+        const targetId = tab.getAttribute('data-target');
+        document.getElementById(targetId).classList.remove('hidden');
+        });
+    });
+    </script>
+</body>
+</html>

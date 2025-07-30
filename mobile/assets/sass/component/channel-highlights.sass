@@ -1,0 +1,24 @@
+.channel-highlights
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10
+    &__category
+        @apply flex flex-col
+        &--title
+            @apply text-xl font-bold relative pl-4 border-b py-2
+            @apply before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:h-5 before:w-1 before:rounded-sm
+    &__list
+        @apply divide-y
+    &__item
+        @apply flex flex-col gap-4 py-4
+    &__figure
+        @apply aspect-video rounded-md 
+    &__image
+        @apply w-full h-full object-cover flex-shrink-0
+    &__content
+        @apply flex flex-col justify-between
+    &__text
+        @apply text-base font-semibold leading-snug
+        @apply hover:underline
+    &__time
+        @apply text-sm mt-1
+    &__more-link
+        @apply text-sm flex items-center gap-1 hover:underline font-medium mt-auto

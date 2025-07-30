@@ -1,0 +1,64 @@
+.trending
+    @apply mx-4 p-px rounded-lg my-3 relative overflow-hidden
+    // @apply before:absolute before:inset-x-0 before:w-lvh before:aspect-square before:bg-gradient-to-r before:from-primary before:to-blue-600 before:animate-spin
+    &::before
+        content: ""
+        @apply rounded-lg pointer-events-none absolute inset-0 p-px
+        background: linear-gradient( 270deg, #ff6ec4, #7873f5, #4ade80, #facc15, #ff6ec4 ) 
+        background-size: 600% 600%
+        animation: aiGlow 8s ease infinite 
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0) 
+        -webkit-mask-composite: xor 
+        mask-composite: exclude 
+        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0) 
+        mask-composite: exclude 
+        z-index: -1 
+    &--inner
+        @apply flex items-center gap-2 w-full rounded-lg p-2 pr-0
+    &--wrapper
+        @apply overflow-hidden relative
+        @apply before:absolute before:inset-y-0 before:left-0 before:bg-gradient-to-r before:to-transparent before:w-4 before:z-10 before:pointer-events-none
+        @apply after:absolute after:inset-y-0 after:right-0 after:bg-gradient-to-l after:to-transparent after:w-4 after:z-10 after:pointer-events-none
+    &--title
+        @apply flex items-center gap-2 font-bold text-sm
+    &--list
+        @apply flex items-center gap-3 whitespace-nowrap overflow-x-auto px-4 text-sm font-medium
+        &::-webkit-scrollbar
+            @apply hidden
+    &__item
+        @apply flex items-center gap-1 rounded-full py-1 px-3
+.highlight
+    @apply px-4 rounded-lg
+    &--inner
+        @apply flex items-center gap-2 w-full rounded-lg px-3 py-2
+    &--wrapper
+        @apply overflow-hidden relative flex items-center
+        @apply before:absolute before:inset-y-0 before:left-0 before:bg-gradient-to-r before:to-transparent before:w-4 before:z-10 before:pointer-events-none
+        @apply after:absolute after:inset-y-0 after:right-0 after:bg-gradient-to-l after:to-transparent after:w-4 after:z-10 after:pointer-events-none
+        &:hover
+            .highlight--list
+                animation-play-state: paused
+    &--title
+        @apply flex items-center gap-2 font-bold whitespace-nowrap text-xs
+        @apply before:hidden before:w-1 before:h-5 before:bg-gradient-to-br before:rounded-sm
+    &--list
+        @apply flex items-center gap-6 px-3 whitespace-nowrap text-sm font-medium
+        animation: marquee 30s linear infinite
+    &__item
+        @apply flex items-center gap-1
+    &--link
+        @apply items-center justify-center gap-1 rounded-full py-1 px-4 text-sm font-medium shadow-sm transition-colors hidden
+
+@keyframes marquee
+    0% 
+        transform: translateX(0)
+    100% 
+        transform: translateX(-100%)
+
+@keyframes aiGlow
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 50%

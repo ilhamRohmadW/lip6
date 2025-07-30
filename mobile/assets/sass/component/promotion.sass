@@ -1,0 +1,61 @@
+.promotion
+    @apply font-inter px-4 
+    &--title
+        @apply flex items-center justify-between pb-4 border-b
+        &__text
+            @apply flex items-center gap-2 text-xl font-bold 
+            @apply before:w-1 before:h-5 before:bg-gradient-to-br before:inline-block before:rounded-sm
+        &__link
+            @apply flex items-center gap-1
+            @apply hover:underline
+            &__text
+                @apply font-medium
+            // &__icon
+            //     @apply transition group-hover:translate-x-1/2
+    &--wrapper
+        @apply flex flex-col gap-5 mb-6
+    &--headline
+        @apply pt-5 border-b pb-4
+    &--list
+        @apply flex flex-col gap-5 
+        &__item
+            @apply border-b pb-4 border-neutral-200 dark:border-neutral-700
+    &__item
+        @apply flex gap-4 items-center
+        &--headline
+            @apply flex-col
+            .promotion__item
+                &__figure
+                    @apply w-full
+                &__title
+                    @apply text-lg
+        &__figure
+            @apply rounded-lg overflow-hidden relative block w-24 shrink-0
+        &__image
+            @apply w-full h-full object-cover
+        &__detail
+            @apply flex flex-col gap-1 
+        &__published
+            @apply text-xs
+        &__title
+            @apply font-semibold line-clamp-3 text-sm 
+        &__desc
+            @apply text-sm line-clamp-3
+
+    &-video
+        &--list
+            @apply flex gap-4 -mx-4 px-4 overflow-x-auto snap-x overflow-y-hidden snap-mandatory scroll-smooth 
+            &::-webkit-scrollbar
+                @apply hidden
+            &__item
+                @apply snap-always snap-center w-8/12 max-w-96 shrink-0 
+            &__image
+                @apply rounded-lg overflow-hidden relative block mb-3
+            &__pict
+                @apply w-full h-full object-cover
+            &__duration
+                @apply absolute right-0 bottom-0 py-1 px-2 rounded flex items-center gap-1 text-white text-[10px]
+            &__title
+                @apply font-semibold mb-1 line-clamp-2
+            &__detail
+                @apply flex items-center gap-2 text-xs

@@ -1,0 +1,22 @@
+.terpopulerList
+    @apply rounded-2xl p-4 space-y-4 mx-4
+    &__header
+        @apply flex items-center gap-2 text-neutral-900 font-semibold border-b border-orange-200 pb-2
+    &__title
+        @apply text-lg
+    &__items 
+        @apply space-y-4 pt-1
+    &__item 
+        @apply flex gap-3 border-b border-orange-200 pb-4
+        &__img 
+            @apply w-16 h-16 rounded-md object-cover
+        &__title
+            @apply text-sm font-medium text-black leading-snug
+        &__tag
+            @apply text-xs text-primary mt-1
+    &__more 
+        @apply text-base font-semibold text-primary flex items-center gap-2 justify-center
+    .item
+        @apply h-23
+        &__detail 
+            @apply justify-between

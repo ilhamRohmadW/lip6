@@ -1,0 +1,107 @@
+.promotion {
+  @apply font-inter px-4 {}
+}
+
+.promotion--title {
+  @apply flex items-center justify-between pb-4 border-b {}
+}
+
+.promotion--title__text {
+  @apply flex items-center gap-2 text-xl font-bold {}  @apply before:w-1 before:h-5 before:bg-gradient-to-br before:inline-block before:rounded-sm {}
+}
+
+.promotion--title__link {
+  @apply flex items-center gap-1 {}  @apply hover:underline {}
+}
+
+.promotion--title__link__text {
+  @apply font-medium {}
+}
+
+.promotion--wrapper {
+  @apply flex flex-col gap-5 mb-6 {}
+}
+
+.promotion--headline {
+  @apply pt-5 border-b pb-4 {}
+}
+
+.promotion--list {
+  @apply flex flex-col gap-5 {}
+}
+
+.promotion--list__item {
+  @apply border-b pb-4 border-neutral-200 dark:border-neutral-700 {}
+}
+
+.promotion__item {
+  @apply flex gap-4 items-center {}
+}
+
+.promotion__item--headline {
+  @apply flex-col {}
+}
+
+.promotion__item--headline .promotion__item__figure {
+  @apply w-full {}
+}
+
+.promotion__item--headline .promotion__item__title {
+  @apply text-lg {}
+}
+
+.promotion__item__figure {
+  @apply rounded-lg overflow-hidden relative block w-24 shrink-0 {}
+}
+
+.promotion__item__image {
+  @apply w-full h-full object-cover {}
+}
+
+.promotion__item__detail {
+  @apply flex flex-col gap-1 {}
+}
+
+.promotion__item__published {
+  @apply text-xs {}
+}
+
+.promotion__item__title {
+  @apply font-semibold line-clamp-3 text-sm {}
+}
+
+.promotion__item__desc {
+  @apply text-sm line-clamp-3 {}
+}
+
+.promotion-video--list {
+  @apply flex gap-4 -mx-4 px-4 overflow-x-auto snap-x overflow-y-hidden snap-mandatory scroll-smooth {}
+}
+
+.promotion-video--list::-webkit-scrollbar {
+  @apply hidden {}
+}
+
+.promotion-video--list__item {
+  @apply snap-always snap-center w-8/12 max-w-96 shrink-0 {}
+}
+
+.promotion-video--list__image {
+  @apply rounded-lg overflow-hidden relative block mb-3 {}
+}
+
+.promotion-video--list__pict {
+  @apply w-full h-full object-cover {}
+}
+
+.promotion-video--list__duration {
+  @apply absolute right-0 bottom-0 py-1 px-2 rounded flex items-center gap-1 text-white text-[10px] {}
+}
+
+.promotion-video--list__title {
+  @apply font-semibold mb-1 line-clamp-2 {}
+}
+
+.promotion-video--list__detail {
+  @apply flex items-center gap-2 text-xs {}
+}

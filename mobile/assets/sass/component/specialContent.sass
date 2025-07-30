@@ -1,0 +1,67 @@
+.special
+    @apply px-4
+    &-wrapper
+        @apply overflow-hidden flex flex-col rounded-lg md:flex-row md:aspect-[980/342] aspect-[340/570]
+    &-pict
+        @apply md:flex-1 md:h-full md:w-1/2
+        &-figure
+            @apply w-full h-full
+            &-img
+                @apply content-(--wscBackground) w-full h-full object-cover
+                // content: var(--wscMobile)
+                // @media (min-width: 768px)
+                //     content: var(--wscDesktop)
+    &-inner
+        @apply px-3 pb-6 relative flex-1 overflow-hidden md:py-5 md:pl-4 md:pr-6 md:overflow-visible
+        @apply before:absolute before:-inset-6 before:rotate-y-180 before:blur-md before:pointer-events-none before:z-0
+        &::before
+            background-image: var(--wscBackground)
+            background-size: 100% 100%
+            // transform: rotateX(180deg)
+            // filter: blur(10px)
+            // pointer-events: none
+            // @media (min-width: 768px)
+            //     background-image: var(--wscDesktop)
+            //     background-size: 100% 100%
+            //     transform: rotateX(180deg) rotateZ(180deg)
+
+        &-box
+            @apply relative px-4 py-5 h-full overflow-y-auto rounded-xl z-10
+            &-list
+                @apply flex flex-col
+                &-item
+                    @apply py-4 border-b
+                    &-link
+                        @apply flex gap-3 items-start
+                    &-detail
+                        @apply flex-1 flex flex-col gap-1.5
+                    &-title
+                        @apply text-sm font-bold line-clamp-3
+                    &-time
+                        @apply text-xs
+                    &-figure
+                        @apply overflow-hidden w-20 rounded-xl
+                        &-img
+                            @apply w-full h-full object-cover
+            &-link
+                @apply -mx-4
+            &-title
+                @apply font-bold relative px-4
+                @apply before:absolute before:w-1 before:h-7 before:rounded-r-md before:inset-y-0 before:left-0 before:my-auto
+                // &:before
+                //     content: ''
+                //     position: absolute
+                //     width: 5px
+                //     height: 30px
+                //     background-color: RGB(var(--color-light1))
+                //     border-radius: 0 5px 5px 0
+                //     left: -1px
+                //     top: 0
+                //     bottom: 0
+                //     margin: auto
+            &-list-item
+                &:last-child
+                    border-bottom-width: 0
+                    padding-bottom: 0
+            &-button
+                @apply py-3 border rounded-lg flex items-center justify-center font-semibold mt-6 transition-colors

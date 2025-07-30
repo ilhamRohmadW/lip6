@@ -1,0 +1,45 @@
+.popular-news {
+  @apply px-4 overflow-x-hidden {}
+}
+
+.popular-news__header {
+  @apply flex justify-between items-center mb-4 border-b border-gray-200 dark:border-gray-700 pb-2 {}
+}
+
+.popular-news__title {
+  @apply text-xl font-bold relative pl-4 text-gray-900 dark:text-white {}
+}
+
+.popular-news__title::before {
+  content: '';
+  @apply absolute left-0 top-1/2 -translate-y-1/2 h-5 w-1 bg-primary rounded-sm {}
+}
+
+.popular-news__more-link {
+  @apply text-sm text-primary hover:underline font-medium {}
+}
+
+.popular-news__list {
+  @apply columns-2 gap-8 w-full border-b border-gray-200 dark:border-gray-700 pb-4 {}  counter-reset: news;
+}
+
+.popular-news__item {
+  @apply relative mb-8 pl-10 break-inside-avoid {}  counter-increment: news;
+}
+
+.popular-news__item::before {
+  content: counter(news);
+  @apply absolute left-0 top-0 text-4xl font-bold text-gray-300 leading-none {}
+}
+
+.popular-news__content {
+  @apply flex flex-col gap-1 {}
+}
+
+.popular-news__category {
+  @apply text-sm font-semibold text-primary {}
+}
+
+.popular-news__headline {
+  @apply text-base font-medium text-gray-900 dark:text-white leading-snug hover:underline {}
+}
