@@ -883,9 +883,6 @@
 .header--submenu__link {
   display: flex;
   align-items: center;
-  border-bottom-style: var(--tw-border-style);
-  border-bottom-width: 2px;
-  border-color: transparent;
   padding-inline: calc(var(--spacing) * 4);
   padding-block: calc(var(--spacing) * 2.5);
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
@@ -893,7 +890,7 @@
   transition-duration: var(--tw-duration, var(--default-transition-duration));
 }
 .header--submenu__item.--active .header--submenu__link {
-  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 .header--collapsed {
   pointer-events: none;

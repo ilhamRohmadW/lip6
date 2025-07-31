@@ -1,20 +1,20 @@
 .header
     @apply inset-x-0 z-20 sticky top-0 transition-transform shadow-md duration-500
     &--navbar
-        @apply flex items-center justify-between py-3 gap-8
+        @apply flex items-center justify-between py-4 gap-8
     .container
         @apply mx-auto max-w-screen-lg px-4 relative
     &.--unsticky
-        @apply -translate-y-15
+        @apply -translate-y-17
         // + .navbar
         //     @apply top-0
     &__menu,
     &--search__button
         @apply size-8 flex items-center justify-center cursor-pointer
     &--logo
-        // @apply flex-1 
+        @apply w-[170px]
         &__link
-            @apply h-7 block 
+            @apply h-8 block 
         &__image
             @apply w-auto h-full object-contain
     &--search
@@ -39,7 +39,7 @@
     &__login
         @apply flex items-center justify-center gap-1.5 h-9 px-3 text-xs transition-colors rounded-md ml-1
         &__icon
-            @apply size-6
+            @apply size-4
     &--submenu
         @apply flex items-center overflow-x-auto -mx-3 whitespace-nowrap text-xs font-semibold justify-between
         &::-webkit-scrollbar

@@ -59,11 +59,11 @@
 }
 
 .header--submenu__link {
-  @apply px-4 py-2.5 border-b-2 border-transparent flex items-center transition-colors {}
+  @apply px-4 py-2.5 flex items-center transition-colors {}
 }
 
 .header--submenu__item.--active .header--submenu__link {
-  @apply border-primary {}
+  @apply text-primary {}
 }
 
 .header--collapsed {

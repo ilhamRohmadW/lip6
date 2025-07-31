@@ -3,7 +3,7 @@
 }
 
 .header--navbar {
-  @apply flex items-center justify-between py-3 gap-8 {}
+  @apply flex items-center justify-between py-4 gap-8 {}
 }
 
 .header .container {
@@ -11,15 +11,19 @@
 }
 
 .header.--unsticky {
-  @apply -translate-y-15 {}
+  @apply -translate-y-17 {}
 }
 
 .header__menu, .header--search__button {
   @apply size-8 flex items-center justify-center cursor-pointer {}
 }
 
+.header--logo {
+  @apply w-[170px] {}
+}
+
 .header--logo__link {
-  @apply h-7 block {}
+  @apply h-8 block {}
 }
 
 .header--logo__image {
@@ -63,7 +67,7 @@
 }
 
 .header__login__icon {
-  @apply size-6 {}
+  @apply size-4 {}
 }
 
 .header--submenu {
