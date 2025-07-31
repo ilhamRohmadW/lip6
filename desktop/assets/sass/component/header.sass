@@ -1,28 +1,26 @@
 .header
-    @apply py-3 inset-x-0 z-30 sticky top-0 transition-transform duration-500
-    &--wrapper
-        @apply flex items-center justify-between
-        @apply gap-8
+    @apply inset-x-0 z-20 sticky top-0 transition-transform shadow-md duration-500
+    &--navbar
+        @apply flex items-center justify-between py-3 gap-8
     .container
-        @apply mx-auto max-w-screen-lg px-4
+        @apply mx-auto max-w-screen-lg px-4 relative
     &.--unsticky
-        @apply -translate-y-full pointer-events-none
-        + .navbar
-            @apply top-0
-    &.--searchCollapsed
-        @apply z-30
-        + .navbar
-            @apply z-20
+        @apply -translate-y-15
+        // + .navbar
+        //     @apply top-0
+    &__menu,
+    &--search__button
+        @apply size-8 flex items-center justify-center cursor-pointer
     &--logo
-        @apply flex-none
+        // @apply flex-1 
         &__link
-            @apply block h-8
+            @apply h-7 block 
         &__image
             @apply w-auto h-full object-contain
     &--search
         @apply flex flex-1
         &__form
-            @apply flex items-stretch justify-between text-sm relative flex-1 gap-3 h-10
+            @apply flex items-stretch justify-between text-sm relative flex-1 gap-3 h-9
             &__input
                 @apply flex-1 border rounded-full py-2 px-4
             &__button
@@ -32,37 +30,77 @@
         &__button
             @apply translate-x-3
     &--right
-        @apply items-center flex gap-2
+        @apply items-center flex gap-1
+        // &:has('.header__account')
+        //     @apply bg-red-500
+        //     @apply translate-x-1.5
     &__live
-        @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-8 px-3 transition-colors
+        @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-9 px-3 mr-1 transition-colors
     &__login
-        @apply flex items-center justify-center gap-1.5 w-10 h-10 text-xs transition-colors
-        @apply rounded-sm py-2 px-3 w-auto h-auto
+        @apply flex items-center justify-center gap-1.5 h-9 px-3 text-xs transition-colors rounded-md ml-1
         &__icon
-            @apply w-4 h-4
-
-    &-theme
-        @apply cursor-pointer w-8 h-8 flex items-center justify-center
-        &__icon
-            @apply pointer-events-none w-6 h-6
-            &.--dark
-                @apply block dark:hidden
-            &.--light
-                @apply hidden dark:block
-.navbar
-    @apply shadow-md sticky z-20 duration-500 transition-[top] top-16
-    .container
-        @apply mx-auto max-w-screen-lg px-4 relative
-    &--list
-        @apply flex items-center overflow-x-auto -mx-4 whitespace-nowrap text-sm justify-between font-semibold uppercase
+            @apply size-6
+    &--submenu
+        @apply flex items-center overflow-x-auto -mx-3 whitespace-nowrap text-xs font-semibold justify-between
         &::-webkit-scrollbar
             @apply hidden
         &__link
-            @apply px-4 py-3 border-b-2 border-transparent flex items-center transition-colors
+            @apply px-3 py-2.5 flex items-center transition-colors
         &__item
             &.--active
-                .navbar--list__link
-                    @apply border-primary
+                .header--submenu__link
+                    @apply text-primary
+    &--collapsed
+        @apply fixed inset-0 pointer-events-none
+        &__overlay
+            @apply absolute inset-0 opacity-0 transition-opacity duration-500
+        &__inner
+            @apply relative flex flex-col w-2xs h-full -translate-x-full transition-transform duration-500
+        &__form
+            @apply flex-1 w-full rounded-lg px-2 gap-1 text-sm flex items-center justify-between
+            &__input
+                @apply flex-1 h-9 outline-none
+            &__close
+                @apply opacity-0 pointer-events-none transition-opacity
+            &.--active
+                .header--collapsed__form__close
+                    @apply opacity-100 pointer-events-auto
+
+        &__title
+            @apply flex items-center gap-2 text-lg font-semibold 
+            @apply before:w-1 before:h-5 before:inline-block before:rounded-sm
+        &__top
+            @apply flex items-center justify-between flex-wrap gap-2 px-4 pt-2
+            &__close
+                @apply h-10 w-10 -mr-2 flex items-center justify-center cursor-pointer
+        &__menu
+            @apply flex flex-col overflow-y-auto h-full px-4 pb-4 whitespace-nowrap
+            &::-webkit-scrollbar
+                @apply hidden
+            &__break
+                @apply border-b -mx-4
+            &__link
+                @apply flex items-center gap-2 py-3 transition-colors
+            &__item
+                // &.submenu
+                //     .header--collapsed__menu__link
+                //         @apply hidden
+                &.--active
+                    .header--collapsed__menu__link
+                        @apply border-primary
+            // &__icon
+            //     @apply h-7 w-7 block
+            // &__item
+            //     @apply relative
+            //     &.--submenu
+            //         @apply hidden 
+        &.--active
+            @apply pointer-events-auto
+            .header--collapsed
+                &__overlay
+                    @apply opacity-100
+                &__inner
+                    @apply translate-x-0
     &--category
         @apply text-xs font-semibold
         &__wrapper
@@ -71,6 +109,44 @@
             @apply flex items-center border-r pr-6 gap-2.5 transition-colors
         &__list
             @apply flex items-center pl-6 gap-5 *:*:py-3 *:*:block *:*:transition-colors
+
+// .submenu
+//     &__icon
+//         @apply w-5 h-5
+//     &__list
+//         @apply absolute p-3 right-0 top-full max-h-96 overflow-y-auto z-20 rounded-lg transition-all duration-500 -translate-y-4 opacity-0 pointer-events-none shadow-[0_0_19px_0_rgba(159,161,162,0.3)]
+//         @apply dark:shadow-[0_0_19px_0_rgba(75,75,75,0.3)]
+//         .header--list__link
+//             @apply rounded-lg px-3
+//     &:hover
+//         .submenu__list
+//             @apply opacity-100 pointer-events-auto translate-y-0
+.switch-theme
+    @apply cursor-pointer size-9 flex items-center justify-center
+    &__icon
+        @apply pointer-events-none size-6
+        &.--dark
+            @apply block dark:hidden
+        &.--light
+            @apply hidden dark:block
+
+.submenu
+    @apply relative
+    &__trigger
+        @apply block size-9 p-1.5
+        img
+            @apply rounded-full overflow-hidden pointer-events-none
+    &__dropdown
+        @apply z-10 absolute top-full right-0 -translate-y-4 opacity-0 pointer-events-none transition-all rounded-lg shadow-lg p-3 min-w-48
+    &__break
+        @apply border-b
+    &__link
+        @apply flex items-center gap-2 p-2 rounded-md transition-colors
+    &:hover
+        .submenu__dropdown
+            @apply opacity-100 pointer-events-auto translate-y-0
+
+
 .megamenu
     &--title
         @apply flex items-center justify-between pb-4 border-b mb-3
@@ -78,7 +154,7 @@
             @apply flex items-center gap-2 text-xl font-bold 
             @apply before:w-1 before:h-5 before:bg-gradient-to-br before:inline-block before:rounded-sm
     &__icon
-        @apply w-5 h-5
+        @apply size-4
     &__dropdown
         @apply absolute pt-6 pb-8 px-8 inset-x-4 top-full h-[600px] z-20 rounded-b-xl transition-all -translate-y-4 opacity-0 pointer-events-none shadow-lg overflow-hidden capitalize
         // transition: opacity 3s ease, transform 3s ease
@@ -113,6 +189,94 @@
                 @apply font-semibold line-clamp-3 text-base
             &__detail
                 @apply text-xs flex items-center gap-1 font-normal
+// .header
+//     @apply py-3 inset-x-0 z-30 sticky top-0 transition-transform duration-500
+//     &--wrapper
+//         @apply flex items-center justify-between
+//         @apply gap-8
+//     .container
+//         @apply mx-auto max-w-screen-lg px-4
+//     &.--unsticky
+//         @apply -translate-y-full pointer-events-none
+//         + .navbar
+//             @apply top-0
+//     &.--searchCollapsed
+//         @apply z-30
+//         + .navbar
+//             @apply z-20
+//     &--logo
+//         @apply flex-none
+//         &__link
+//             @apply block h-8
+//         &__image
+//             @apply w-auto h-full object-contain
+    // &--search
+    //     @apply hidden 
+    //     &__form
+    //         @apply fixed top-0 inset-x-0 -translate-y-full pointer-events-none transition-all duration-500
+    //         @apply flex items-center justify-between px-4 py-2 shadow-md z-10 text-sm
+    //         &.--active
+    //             @apply translate-y-0 pointer-events-auto
+    //         &__input
+    //             @apply flex-1 border rounded-full py-2 px-4
+    //         &__close
+    //             @apply h-10 w-10 flex items-center justify-center translate-x-3 cursor-pointer
+    //         &__button
+    //             @apply hidden items-center justify-center py-2 px-7 bg-gradient-to-tr font-semibold rounded-full cursor-pointer
+    //     &__button
+    //         @apply translate-x-3
+//     &--search
+//         @apply flex flex-1
+//         &__form
+//             @apply flex items-stretch justify-between text-sm relative flex-1 gap-3 h-10
+//             &__input
+//                 @apply flex-1 border rounded-full py-2 px-4
+//             &__button
+//                 @apply items-center justify-center py-2 px-7 bg-gradient-to-tr font-semibold rounded-full cursor-pointer
+//             &__button
+//                 @apply flex items-center justify-center py-2 px-7 bg-gradient-to-tr font-semibold rounded-full cursor-pointer
+//         &__button
+//             @apply translate-x-3
+//     &--right
+//         @apply items-center flex gap-2
+//     &__live
+//         @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-8 px-3 transition-colors
+//     &__login
+//         @apply flex items-center justify-center gap-1.5 w-10 h-10 text-xs transition-colors
+//         @apply rounded-sm py-2 px-3 w-auto h-auto
+//         &__icon
+//             @apply w-4 h-4
+
+//     &-theme
+//         @apply cursor-pointer w-8 h-8 flex items-center justify-center
+//         &__icon
+//             @apply pointer-events-none w-6 h-6
+//             &.--dark
+//                 @apply block dark:hidden
+//             &.--light
+//                 @apply hidden dark:block
+// .navbar
+//     @apply shadow-md sticky z-20 duration-500 transition-[top] top-16
+//     .container
+//         @apply mx-auto max-w-screen-lg px-4 relative
+//     &--list
+//         @apply flex items-center overflow-x-auto -mx-4 whitespace-nowrap text-sm justify-between font-semibold uppercase
+//         &::-webkit-scrollbar
+//             @apply hidden
+//         &__link
+//             @apply px-4 py-3 border-b-2 border-transparent flex items-center transition-colors
+//         &__item
+//             &.--active
+//                 .navbar--list__link
+//                     @apply border-primary
+//     &--category
+//         @apply text-xs font-semibold
+//         &__wrapper
+//             @apply flex items-center h-full py-1
+//         &__title
+//             @apply flex items-center border-r pr-6 gap-2.5 transition-colors
+//         &__list
+//             @apply flex items-center pl-6 gap-5 *:*:py-3 *:*:block *:*:transition-colors
 .channel
     @apply flex items-center gap-4
     &__icon
@@ -123,16 +287,16 @@
         @apply text-sm transition-colors
     &__desc
         @apply text-xs font-normal transition-colors
-.submenu
-    @apply relative
-    &__trigger
-        @apply rounded-full overflow-hidden block size-8
-    &__dropdown
-        @apply z-10 absolute top-full right-0 -translate-y-4 opacity-0 pointer-events-none transition-all rounded-lg shadow-lg p-3 min-w-48
-    &__break
-        @apply border-b
-    &__link
-        @apply flex items-center gap-2 p-2 rounded-md transition-colors
-    &:hover
-        .submenu__dropdown
-            @apply opacity-100 pointer-events-auto translate-y-0
+// .submenu
+//     @apply relative
+//     &__trigger
+//         @apply rounded-full overflow-hidden block size-8
+//     &__dropdown
+//         @apply z-10 absolute top-full right-0 -translate-y-4 opacity-0 pointer-events-none transition-all rounded-lg shadow-lg p-3 min-w-48
+//     &__break
+//         @apply border-b
+//     &__link
+//         @apply flex items-center gap-2 p-2 rounded-md transition-colors
+//     &:hover
+//         .submenu__dropdown
+//             @apply opacity-100 pointer-events-auto translate-y-0

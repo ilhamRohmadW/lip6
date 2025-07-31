@@ -10,7 +10,7 @@ function setTheme(param) {
 }
 setTheme(checkMode)
 
-document.querySelectorAll('.header-theme').forEach((item)=>{
+document.querySelectorAll('.switch-theme').forEach((item)=>{
     item.addEventListener('click',(e)=>{
         let value = e.target.dataset.value;
         console.log(value);
@@ -61,7 +61,7 @@ let lastScrollTop = 0,
 window.addEventListener('scroll', function() {
     //unsticky header
     let scrollHeaderTop = window.pageYOffset || document.documentElement.scrollTop,
-        limitHeader = document.querySelector('.navbar').offsetHeight + document.querySelector('.header').offsetHeight;
+        limitHeader = document.querySelector('.header').offsetHeight;
     // if(window.innerWidth < 1024){
         if (scrollHeaderTop  > limitHeader){
             if (scrollHeaderTop  > lastHeaderPosition) {

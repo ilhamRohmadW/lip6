@@ -1,33 +1,21 @@
 .header {
-  @apply pt-1 inset-x-0 z-20 sticky top-0 transition-transform duration-500 {}
+  @apply inset-x-0 z-20 sticky top-0 transition-transform shadow-md duration-500 {}
 }
 
-.header--wrapper {
-  @apply flex items-center justify-between {}  @apply gap-8 {}
+.header--navbar {
+  @apply flex items-center justify-between py-3 {}
 }
 
 .header .container {
-  @apply mx-auto max-w-screen-lg px-4 {}
+  @apply mx-auto max-w-screen-lg px-4 relative {}
 }
 
 .header.--unsticky {
-  @apply -translate-y-full pointer-events-none {}
-}
-
-.header.--unsticky + .navbar {
-  @apply top-0 {}
-}
-
-.header.--searchCollapsed {
-  @apply z-30 {}
-}
-
-.header.--searchCollapsed + .navbar {
-  @apply z-20 {}
+  @apply -translate-y-13 {}
 }
 
 .header__menu, .header--search__button {
-  @apply h-10 w-10 flex items-center justify-center cursor-pointer {}
+  @apply size-7 flex items-center justify-center cursor-pointer {}
 }
 
 .header--logo {
@@ -35,163 +23,127 @@
 }
 
 .header--logo__link {
-  @apply h-6 block {}
+  @apply h-7 block {}
 }
 
 .header--logo__image {
   @apply w-auto h-full object-contain {}
 }
 
-.header--search {
-  @apply hidden {}
-}
-
-.header--search__form {
-  @apply fixed top-0 inset-x-0 -translate-y-full pointer-events-none transition-all duration-500 {}  @apply flex items-center justify-between px-4 py-2 shadow-md z-10 text-sm {}
-}
-
-.header--search__form.--active {
-  @apply translate-y-0 pointer-events-auto {}
-}
-
-.header--search__form__input {
-  @apply flex-1 border rounded-full py-2 px-4 {}
-}
-
-.header--search__form__close {
-  @apply h-10 w-10 flex items-center justify-center translate-x-3 cursor-pointer {}
-}
-
-.header--search__form__button {
-  @apply hidden items-center justify-center py-2 px-7 bg-gradient-to-tr font-semibold rounded-full cursor-pointer {}
-}
-
-.header--search__button {
-  @apply translate-x-3 {}
-}
-
 .header--right {
-  @apply items-center flex translate-x-2 {}
+  @apply items-center flex translate-x-0.5 gap-1 {}
 }
 
 .header__live {
-  @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-8 px-3 mr-2 transition-colors {}
+  @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-7 px-2 mr-1 transition-colors {}
 }
 
 .header__login {
-  @apply flex items-center justify-center gap-1.5 w-10 h-10 text-xs transition-colors {}
+  @apply flex items-center justify-center gap-1.5 size-7 text-xs transition-colors {}
 }
 
 .header__login__icon {
-  @apply w-6 h-6 {}
+  @apply size-6 {}
 }
 
 .header__login__text {
   @apply hidden {}
 }
 
-.navbar {
-  @apply shadow-md sticky top-11 z-20 duration-500 transition-[top] {}
+.header--submenu {
+  @apply flex items-center overflow-x-auto -mx-4 whitespace-nowrap text-sm font-semibold {}
 }
 
-.navbar .container {
-  @apply mx-auto max-w-screen-lg px-4 relative {}
-}
-
-.navbar--list {
-  @apply flex items-center overflow-x-auto -mx-4 whitespace-nowrap text-sm justify-between font-semibold uppercase {}
-}
-
-.navbar--list::-webkit-scrollbar {
+.header--submenu::-webkit-scrollbar {
   @apply hidden {}
 }
 
-.navbar--list__link {
-  @apply px-4 py-3 border-b-2 border-transparent flex items-center transition-colors {}
+.header--submenu__link {
+  @apply px-4 py-2.5 border-b-2 border-transparent flex items-center transition-colors {}
 }
 
-.navbar--list__item.--active .navbar--list__link {
+.header--submenu__item.--active .header--submenu__link {
   @apply border-primary {}
 }
 
-.navbar--collapsed {
-  @apply fixed inset-0 translate-x-full transition-transform duration-500 pointer-events-none flex flex-col {}
+.header--collapsed {
+  @apply fixed inset-0 pointer-events-none {}
 }
 
-.navbar--collapsed__form {
-  @apply flex-1 {}
+.header--collapsed__overlay {
+  @apply absolute inset-0 opacity-0 transition-opacity duration-500 {}
 }
 
-.navbar--collapsed__form__input {
-  @apply w-full border rounded-full py-2 px-4 text-sm {}
+.header--collapsed__inner {
+  @apply relative flex flex-col w-2xs h-full -translate-x-full transition-transform duration-500 {}
 }
 
-.navbar--collapsed__top {
-  @apply flex items-center justify-between gap-2 pl-4 pt-2 pr-2 {}
+.header--collapsed__form {
+  @apply flex-1 w-full rounded-lg px-2 gap-1 text-sm flex items-center justify-between {}
 }
 
-.navbar--collapsed__top__close {
-  @apply h-10 w-10 flex items-center justify-center cursor-pointer {}
+.header--collapsed__form__input {
+  @apply flex-1 h-9 outline-none {}
 }
 
-.navbar--collapsed__menu {
-  @apply flex flex-col overflow-y-auto h-full px-4 pb-4 uppercase whitespace-nowrap {}
+.header--collapsed__form__close {
+  @apply opacity-0 pointer-events-none transition-opacity {}
 }
 
-.navbar--collapsed__menu::-webkit-scrollbar {
+.header--collapsed__form.--active .header--collapsed__form__close {
+  @apply opacity-100 pointer-events-auto {}
+}
+
+.header--collapsed__title {
+  @apply flex items-center gap-2 text-lg font-semibold {}  @apply before:w-1 before:h-5 before:inline-block before:rounded-sm {}
+}
+
+.header--collapsed__top {
+  @apply flex items-center justify-between flex-wrap gap-2 px-4 pt-2 {}
+}
+
+.header--collapsed__top__close {
+  @apply h-10 w-10 -mr-2 flex items-center justify-center cursor-pointer {}
+}
+
+.header--collapsed__menu {
+  @apply flex flex-col overflow-y-auto h-full px-4 pb-4 whitespace-nowrap {}
+}
+
+.header--collapsed__menu::-webkit-scrollbar {
   @apply hidden {}
 }
 
-.navbar--collapsed__menu__link {
-  @apply flex items-center gap-4 py-3 transition-colors {}
+.header--collapsed__menu__break {
+  @apply border-b -mx-4 {}
 }
 
-.navbar--collapsed__menu__item.submenu .navbar--collapsed__menu__link {
-  @apply hidden {}
+.header--collapsed__menu__link {
+  @apply flex items-center gap-2 py-3 transition-colors {}
 }
 
-.navbar--collapsed__menu__item.--active .navbar--collapsed__menu__link {
+.header--collapsed__menu__item.--active .header--collapsed__menu__link {
   @apply border-primary {}
 }
 
-.navbar--collapsed__menu__icon {
-  @apply h-7 w-7 block {}
+.header--collapsed.--active {
+  @apply pointer-events-auto {}
 }
 
-.navbar--collapsed__menu__item {
-  @apply relative {}
+.header--collapsed.--active .header--collapsed__overlay {
+  @apply opacity-100 {}
 }
 
-.navbar--collapsed__menu__item.--submenu {
-  @apply hidden {}
-}
-
-.navbar--collapsed.--active {
-  @apply translate-x-0 pointer-events-auto {}
-}
-
-.submenu__icon {
-  @apply w-5 h-5 {}
-}
-
-.submenu__list {
-  @apply absolute p-3 right-0 top-full max-h-96 overflow-y-auto z-20 rounded-lg transition-all duration-500 -translate-y-4 opacity-0 pointer-events-none shadow-[0_0_19px_0_rgba(159,161,162,0.3)] {}  @apply dark:shadow-[0_0_19px_0_rgba(75,75,75,0.3)] {}
-}
-
-.submenu__list .navbar--list__link {
-  @apply rounded-lg px-3 {}
-}
-
-.submenu:hover .submenu__list {
-  @apply opacity-100 pointer-events-auto translate-y-0 {}
+.header--collapsed.--active .header--collapsed__inner {
+  @apply translate-x-0 {}
 }
 
 .switch-theme {
-  @apply cursor-pointer w-8 h-8 flex items-center justify-center {}
+  @apply cursor-pointer size-7 flex items-center justify-center {}
 }
 
 .switch-theme__icon {
-  @apply pointer-events-none w-6 h-6 {}
+  @apply pointer-events-none size-6 {}
 }
 
 .switch-theme__icon.--dark {
@@ -200,4 +152,28 @@
 
 .switch-theme__icon.--light {
   @apply hidden dark:block {}
+}
+
+.submenu__trigger {
+  @apply flex items-center justify-center size-7 {}
+}
+
+.submenu__trigger img {
+  @apply rounded-full overflow-hidden pointer-events-none {}
+}
+
+.submenu__dropdown {
+  @apply z-10 absolute top-full right-0 -translate-y-4 opacity-0 pointer-events-none transition-all rounded-lg shadow-lg p-3 min-w-48 {}
+}
+
+.submenu__break {
+  @apply border-b {}
+}
+
+.submenu__link {
+  @apply flex items-center gap-2 p-2 rounded-md transition-colors {}
+}
+
+.submenu.--active .submenu__dropdown {
+  @apply opacity-100 pointer-events-auto translate-y-0 {}
 }

@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1024">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,85 +15,82 @@
 <body class="dark:bg-zinc-900">
     <header class="header bg-white dark:bg-zinc-900 dark:text-white">
         <div class="container">
-            <div class="header--wrapper">
+            <div class="header--navbar">
                 <h1 class="header--logo">
                     <meta itemprop="logo" content="https://cdn1-production-assets-kly.akamaized.net/logos/188/original/040376900_1740988466-Liputan6.png">
                     <meta itemprop="url" content="https://www.liputan6.com">
                     <a href="#" class="header--logo__link">
-                        <img class="header--logo__image" src="assets/image/logo-navbar.png" width="130" height="25" alt="logo">
+                        <img class="header--logo__image" src="assets/image/logo-navbar.png" width="162" height="30" alt="logo">
                     </a>
                 </h1>
                 <div class="header--search">
                     <form id="headerSearch" class="header--search__form dark:bg-zinc-900" role="search" method="get" action="https://www.liputan6.com/search" autocomplete="off">
                         <input class="header--search__form__input border-neutral-200 placeholder:text-neutral-500 dark:placeholder:text-white dark:border-neutral-700" type="text" value="" name="q" id="q" placeholder="Berita apa yang ingin anda baca hari ini?" maxlength="100">
-                        <!-- <button class="header--search__form__close" type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                        </button> -->
                         <button class="header--search__form__button from-primary to-secondary text-white" type="button">CARI</button>
                     </form>
                 </div>
                 <div class="header--right">
                     <a href="#" class="header__live bg-primary text-white">
-                        <!-- <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.76272 5.15214C5.87366 5.03228 5.94308 4.87452 5.94308 4.69994C5.94308 4.32783 5.63549 4.02494 5.25737 4.02494C5.08002 4.02494 4.91975 4.09338 4.79799 4.20248L2.69442 2.13175C2.51596 1.95608 2.22656 1.95608 2.04799 2.13175C1.27087 2.89652 0.842968 3.91375 0.842968 4.99559C0.842968 5.63478 0.99587 6.2498 1.27846 6.80505L0.0512273 9.80841C0.0453122 9.8228 0.0400666 9.83764 0.0359371 9.85247C-0.0438619 10.1266 0.0107139 10.4143 0.184933 10.6418C0.359151 10.8695 0.625111 11 0.914732 11H4.34263C4.64364 11 4.92533 10.8544 5.09576 10.6103C5.26652 10.3662 5.30424 10.0552 5.19654 9.77842C5.1904 9.76249 5.18292 9.74656 5.17489 9.73118L4.80804 9.03848C4.85781 9.04024 4.90681 9.04562 4.95681 9.04562C6.0558 9.04562 7.08895 8.6244 7.86607 7.85942C8.04464 7.68375 8.04464 7.39887 7.86607 7.22309L5.76272 5.15214ZM4.33917 10.1H0.917522L1.89922 7.6977C1.94855 7.75164 1.99542 7.80745 2.04821 7.8592C2.51183 8.31569 3.06786 8.64649 3.67344 8.84183L4.33917 10.1ZM4.95725 8.1454C4.10268 8.1454 3.299 7.81778 2.69464 7.22265C2.09029 6.62751 1.75725 5.8366 1.75725 4.99537C1.75725 4.30597 1.9808 3.6503 2.39408 3.10845L6.87411 7.51851C6.32366 7.92556 5.65759 8.1454 4.95725 8.1454Z" fill="currentColor"></path><path d="M6.95648 0C6.32829 0 5.6691 0.190005 5.19324 0.508025C4.99368 0.641559 4.93996 0.911494 5.07318 1.11105C5.20651 1.31061 5.47623 1.36432 5.67632 1.23111C6.00995 1.00809 6.50047 0.869565 6.95648 0.869565C8.15523 0.869565 9.13042 1.84475 9.13042 3.04348C9.13042 3.49938 8.99201 3.99 8.76888 4.32373C8.63566 4.52329 8.68937 4.79344 8.88893 4.92676C8.96303 4.97633 9.04699 5 9.13 5C9.27044 5 9.40811 4.93217 9.49197 4.8067C9.80999 4.33063 10 3.67156 10 3.04348C10 1.36517 8.63481 0 6.95648 0Z" fill="currentColor"></path><path d="M6.21743 2C5.86504 2 5.52298 2.10309 5.22816 2.29845C4.99365 2.45389 4.92937 2.76987 5.0848 3.00439C5.2401 3.23905 5.55643 3.30321 5.79044 3.14777C5.92 3.06222 6.06362 3.01869 6.21743 3.01869C6.6387 3.01869 6.98139 3.36153 6.98139 3.78271C6.98139 3.93654 6.93787 4.07992 6.85232 4.20924C6.69702 4.44365 6.76118 4.75988 6.99544 4.91519C7.08223 4.97277 7.17984 5 7.27658 5C7.44158 5 7.6036 4.92004 7.70158 4.77206C7.89692 4.47747 8 4.13513 8 3.78271C8 2.79971 7.20011 2 6.21743 2Z" fill="currentColor"></path></svg> -->
                         <span>LIVE</span>
                         <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33337 14.5H10.6667M8.00004 11.8333V14.5M2.66671 2.5H13.3334C14.0698 2.5 14.6667 3.09695 14.6667 3.83333V10.5C14.6667 11.2364 14.0698 11.8333 13.3334 11.8333H2.66671C1.93033 11.8333 1.33337 11.2364 1.33337 10.5V3.83333C1.33337 3.09695 1.93033 2.5 2.66671 2.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/></svg>
                     </a>
-                    <!-- <span class="header-theme" data-value="light">
-                        <svg class="header-theme__icon --dark" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3C9.00544 3.99456 8.4467 5.34348 8.4467 6.75C8.4467 8.15652 9.00544 9.50544 10 10.5C10.9946 11.4946 12.3435 12.0533 13.75 12.0533C15.1565 12.0533 16.5054 11.4946 17.5 10.5C17.5 11.9834 17.0601 13.4334 16.236 14.6668C15.4119 15.9001 14.2406 16.8614 12.8701 17.4291C11.4997 17.9968 9.99168 18.1453 8.53683 17.8559C7.08197 17.5665 5.7456 16.8522 4.6967 15.8033C3.64781 14.7544 2.9335 13.418 2.64411 11.9632C2.35472 10.5083 2.50325 9.00032 3.07091 7.62987C3.63856 6.25943 4.59986 5.08809 5.83323 4.26398C7.0666 3.43987 8.51664 3 10 3Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <svg class="header-theme__icon --light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <!-- <span class="switch-theme" data-value="light">
+                        <svg class="switch-theme__icon --dark" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3C9.00544 3.99456 8.4467 5.34348 8.4467 6.75C8.4467 8.15652 9.00544 9.50544 10 10.5C10.9946 11.4946 12.3435 12.0533 13.75 12.0533C15.1565 12.0533 16.5054 11.4946 17.5 10.5C17.5 11.9834 17.0601 13.4334 16.236 14.6668C15.4119 15.9001 14.2406 16.8614 12.8701 17.4291C11.4997 17.9968 9.99168 18.1453 8.53683 17.8559C7.08197 17.5665 5.7456 16.8522 4.6967 15.8033C3.64781 14.7544 2.9335 13.418 2.64411 11.9632C2.35472 10.5083 2.50325 9.00032 3.07091 7.62987C3.63856 6.25943 4.59986 5.08809 5.83323 4.26398C7.0666 3.43987 8.51664 3 10 3Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg class="switch-theme__icon --light" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
                     </span> -->
-                    <a href="#" class="header__login lg:bg-neutral-950 lg:text-white lg:dark:bg-white/10 lg:dark:text-white lg:dark:hover:bg-white/20 lg:hover:bg-neutral-700">
-                        <!-- <svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.8333C12.0007 12.7724 11.5792 11.755 10.8291 11.0048C10.0789 10.2547 9.06152 9.83325 8.00065 9.83325M8.00065 9.83325C6.93978 9.83325 5.92237 10.2547 5.17222 11.0048C4.42208 11.755 4.00065 12.7724 4.00065 13.8333M8.00065 9.83325C9.47341 9.83325 10.6673 8.63934 10.6673 7.16658C10.6673 5.69383 9.47341 4.49992 8.00065 4.49992C6.52789 4.49992 5.33398 5.69383 5.33398 7.16658C5.33398 8.63934 6.52789 9.83325 8.00065 9.83325ZM14.6673 8.49992C14.6673 12.1818 11.6825 15.1666 8.00065 15.1666C4.31875 15.1666 1.33398 12.1818 1.33398 8.49992C1.33398 4.81802 4.31875 1.83325 8.00065 1.83325C11.6825 1.83325 14.6673 4.81802 14.6673 8.49992Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg> -->
+                    <a href="#" class="header__login bg-neutral-950 text-white dark:bg-white/10 dark:text-white dark:hover:bg-white/20 hover:bg-neutral-700">
                         <svg class="header__login__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
                         <span class="header__login__text">Masuk</span>
                     </a>
-                    <!-- <button class="header__menu">
-                        <svg width="22" height="22" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 3H14C14.5523 3 15 3.44772 15 4V14C15 14.5523 14.5523 15 14 15H4C3.44772 15 3 14.5523 3 14V4C3 3.44772 3.44772 3 4 3ZM0 4C0 1.79086 1.79086 0 4 0H14C16.2091 0 18 1.79086 18 4V14C18 16.2091 16.2091 18 14 18H4C1.79086 18 0 16.2091 0 14V4ZM30.075 35.15C32.8778 35.15 35.15 32.8778 35.15 30.075C35.15 27.2722 32.8778 25 30.075 25C27.2722 25 25 27.2722 25 30.075C25 32.8778 27.2722 35.15 30.075 35.15ZM30.075 38.15C31.7631 38.15 33.3303 37.632 34.6261 36.7462L37.436 39.5562C38.0218 40.1419 38.9716 40.1419 39.5574 39.5562C40.1431 38.9704 40.1431 38.0206 39.5574 37.4348L36.7472 34.6247C37.6324 33.3291 38.15 31.7625 38.15 30.075C38.15 25.6153 34.5347 22 30.075 22C25.6153 22 22 25.6153 22 30.075C22 34.5347 25.6153 38.15 30.075 38.15ZM14 25H4C3.44772 25 3 25.4477 3 26V36C3 36.5523 3.44772 37 4 37H14C14.5523 37 15 36.5523 15 36V26C15 25.4477 14.5523 25 14 25ZM4 22C1.79086 22 0 23.7909 0 26V36C0 38.2091 1.79086 40 4 40H14C16.2091 40 18 38.2091 18 36V26C18 23.7909 16.2091 22 14 22H4ZM26 3H36C36.5523 3 37 3.44772 37 4V14C37 14.5523 36.5523 15 36 15H26C25.4477 15 25 14.5523 25 14V4C25 3.44772 25.4477 3 26 3ZM22 4C22 1.79086 23.7909 0 26 0H36C38.2091 0 40 1.79086 40 4V14C40 16.2091 38.2091 18 36 18H26C23.7909 18 22 16.2091 22 14V4Z" fill="currentColor"></path></svg>
-                    </button> -->
                 </div>
             </div>
-        </div>
-    </header>
-    <div class="navbar bg-white dark:bg-zinc-900">
-        <div class="container">
-            <ul class="navbar--list dark:text-white">
-                <li class="navbar--list__item --active">
-                    <a class="navbar--list__link hover:text-primary" href="#">HOME</a>
+            <ul class="header--submenu">
+                <li class="header--submenu__item --active">
+                    <a class="header--submenu__link hover:text-primary" href="#">HOME</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">NEWS</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">NEWS</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">BISNIS</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">BISNIS</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">BOLA</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">BOLA</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">TV</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">TV</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">SHOWBIZ</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">SHOWBIZ</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">TEKNO</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">TEKNO</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">FOTO</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">FOTO</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">HOT</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">HOT</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">CEK FAKTA</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">CEK FAKTA</a>
                 </li>
-                <li class="navbar--list__item">
-                    <a class="navbar--list__link hover:text-primary" href="#">ISLAMI</a>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">ISLAMI</a>
                 </li>
-                <li class="navbar--list__item megamenu">
-                    <a class="navbar--list__link hover:text-primary" href="#">
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">CRYPTO</a>
+                </li>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">CITIZEN6</a>
+                </li>
+                <li class="header--submenu__item">
+                    <a class="header--submenu__link hover:text-primary" href="#">SAHAM</a>
+                </li>
+                <li class="header--submenu__item megamenu">
+                    <a class="header--submenu__link hover:text-primary" href="#">
                         <span>LAINNYA</span>  
-                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>                              
+                        <svg class="megamenu__icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 6.5L8.5 10.5L12.5 6.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                     <div class="megamenu__dropdown bg-white dark:bg-zinc-900 dark:shadow-white/20">
                         <div class="megamenu__dropdown__inner">
@@ -304,43 +302,42 @@
                         </div>
                     </div>
                 </li>
-                
-            </ul>
+            </ul>   
         </div>
-        <div class="navbar--category bg-[#FAFAFA] dark:bg-zinc-800 dark:text-white">
+        <div class="header--category bg-[#FAFAFA] dark:bg-zinc-800 dark:text-white">
             <div class="container">
-                <div class="navbar--category__wrapper">
-                    <a href="#" class="navbar--category__title border-neutral-700 dark:border-neutral-200 hover:text-primary">
+                <div class="header--category__wrapper">
+                    <a href="#" class="header--category__title border-neutral-700 dark:border-neutral-200 hover:text-primary">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12H12.01M16 6V4C16 3.46957 15.7893 2.96086 15.4142 2.58579C15.0391 2.21071 14.5304 2 14 2H10C9.46957 2 8.96086 2.21071 8.58579 2.58579C8.21071 2.96086 8 3.46957 8 4V6M22 13C19.0328 14.959 15.5555 16.0033 12 16.0033C8.44445 16.0033 4.96721 14.959 2 13M4 6H20C21.1046 6 22 6.89543 22 8V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V8C2 6.89543 2.89543 6 4 6Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         <span>BISNIS</span>
                     </a>
-                    <ul class="navbar--category__list *:*:hover:text-primary">
-                        <li class="navbar--category__item">
+                    <ul class="header--category__list *:*:hover:text-primary">
+                        <li class="header--category__item">
                             <a href="#">Ekonomi</a>
                         </li>
-                        <li class="navbar--category__item">
+                        <li class="header--category__item">
                             <a href="#">Bank</a>
                         </li>
-                        <li class="navbar--category__item">
+                        <li class="header--category__item">
                             <a href="#">Saham</a>
                         </li>
-                        <li class="navbar--category__item">
+                        <li class="header--category__item">
                             <a href="#">Energi & Tambang</a>
                         </li>
-                        <li class="navbar--category__item">
+                        <li class="header--category__item">
                             <a href="#">Konsultasi Pajak</a>
                         </li>
-                        <li class="navbar--category__item">
+                        <li class="header--category__item">
                             <a href="#">CPNS</a>
                         </li>
-                        <li class="navbar--category__item">
+                        <li class="header--category__item">
                             <a href="#">Info Kementan</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <!-- header end -->
     <main class="main mx-auto max-w-screen-lg flex flex-col gap-6 lg:gap-10 mb-6 lg:mb-10">
 
