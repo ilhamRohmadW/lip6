@@ -815,7 +815,7 @@
 }
 .header--logo__link {
   display: block;
-  height: calc(var(--spacing) * 7);
+  height: calc(var(--spacing) * 7.5);
 }
 .header--logo__image {
   height: 100%;

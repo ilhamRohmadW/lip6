@@ -23,7 +23,7 @@
 }
 
 .header--logo__link {
-  @apply h-7 block {}
+  @apply h-7.5 block {}
 }
 
 .header--logo__image {
