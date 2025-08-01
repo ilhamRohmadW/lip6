@@ -3,7 +3,7 @@
 }
 
 .header--navbar {
-  @apply flex items-center justify-between py-3 {}
+  @apply flex items-center justify-between py-4 {}
 }
 
 .header .container {
@@ -11,7 +11,7 @@
 }
 
 .header.--unsticky {
-  @apply -translate-y-13 {}
+  @apply -translate-y-15 {}
 }
 
 .header__menu, .header--search__button {
