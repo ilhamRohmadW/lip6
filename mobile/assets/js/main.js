@@ -69,23 +69,19 @@ if (header) {
             document.querySelector('.submenu.--active')?.classList.remove('--active')
         }
     })
+
+    let lastHeaderPosition = 0
+    window.addEventListener('scroll', function() {
+        let scrollHeaderTop = window.pageYOffset || document.documentElement.scrollTop,
+            limitHeader = header.nextElementSibling.offsetTop
+            if (scrollHeaderTop  > limitHeader){
+                if (scrollHeaderTop  > lastHeaderPosition) {
+                    header.classList.add('--unsticky')
+                } else {
+                    header.classList.remove('--unsticky')
+                }
+            }
+        lastHeaderPosition = scrollHeaderTop;
+    })
 }
 
-let lastScrollTop = 0,
-    lastHeaderPosition = 0
-window.addEventListener('scroll', function() {
-    //unsticky header
-    let scrollHeaderTop = window.pageYOffset || document.documentElement.scrollTop,
-        limitHeader = document.querySelector('.header').offsetHeight;
-        // limitHeader = document.querySelector('.navbar').offsetHeight + document.querySelector('.header').offsetHeight;
-    // if(window.innerWidth < 1024){
-        if (scrollHeaderTop  > limitHeader){
-            if (scrollHeaderTop  > lastHeaderPosition) {
-                document.querySelector('.header').classList.add('--unsticky')
-            } else {
-                document.querySelector('.header').classList.remove('--unsticky')
-            }
-        }
-    // }
-    lastHeaderPosition = scrollHeaderTop;
-})

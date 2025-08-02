@@ -27,14 +27,11 @@ document.querySelectorAll('.switch-theme').forEach((item)=>{
     })
 })
 
-let lastScrollTop = 0,
-    lastHeaderPosition = 0
+let lastHeaderPosition = 0
 const header = document.querySelector('.header')
 window.addEventListener('scroll', function() {
-    //unsticky header
     let scrollHeaderTop = window.pageYOffset || document.documentElement.scrollTop,
-        limitHeader = header.offsetHeight;
-    // if(window.innerWidth < 1024){
+        limitHeader = header.nextElementSibling.offsetTop
         if (scrollHeaderTop  > limitHeader){
             if (scrollHeaderTop  > lastHeaderPosition) {
                 header.classList.add('--unsticky')
@@ -42,7 +39,6 @@ window.addEventListener('scroll', function() {
                 header.classList.remove('--unsticky')
             }
         }
-    // }
     lastHeaderPosition = scrollHeaderTop;
 })
 
