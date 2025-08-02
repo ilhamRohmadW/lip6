@@ -268,6 +268,9 @@
   .flex-col {
     flex-direction: column;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
