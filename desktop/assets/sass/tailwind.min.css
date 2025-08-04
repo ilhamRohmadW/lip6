@@ -947,7 +947,7 @@
   }
 }
 .header {
-  position: sticky;
+  position: relative;
   inset-inline: calc(var(--spacing) * 0);
   top: calc(var(--spacing) * 0);
   z-index: 20;
@@ -971,6 +971,9 @@
   margin-inline: auto;
   max-width: var(--breakpoint-lg);
   padding-inline: calc(var(--spacing) * 4);
+}
+.header.--stick {
+  position: fixed;
 }
 .header.--unsticky {
   --tw-translate-y: calc(var(--spacing) * -17);

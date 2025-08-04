@@ -71,17 +71,27 @@ if (header) {
     })
 
     let lastHeaderPosition = 0
+    const header = document.querySelector('.header')
     window.addEventListener('scroll', function() {
-        let scrollHeaderTop = window.pageYOffset || document.documentElement.scrollTop,
-            limitHeader = header.nextElementSibling.offsetTop
-            if (scrollHeaderTop  > limitHeader){
-                if (scrollHeaderTop  > lastHeaderPosition) {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const rect = header.nextElementSibling.getBoundingClientRect();
+        const headerHeight = header.offsetHeight;
+        const offsetTop = rect.top + scrollTop - headerHeight; // Akurat meskipun layout dinamis
+        if (scrollTop > offsetTop) {
+            header.classList.add('--stick');
+            header.nextElementSibling.style.marginTop = headerHeight + 'px'
+            if (scrollTop > offsetTop + 100) {
+                if (scrollTop  > lastHeaderPosition) {
                     header.classList.add('--unsticky')
                 } else {
                     header.classList.remove('--unsticky')
                 }
             }
-        lastHeaderPosition = scrollHeaderTop;
+        } else {
+            header.classList.remove('--stick');
+            header.nextElementSibling.style.marginTop = ''
+        }
+        lastHeaderPosition = scrollTop;
     })
 }
 

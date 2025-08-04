@@ -1,9 +1,11 @@
 .header
-    @apply inset-x-0 z-20 sticky top-0 transition-transform shadow-md duration-500
+    @apply inset-x-0 z-20 relative top-0 transition-transform shadow-md duration-500
     &--navbar
         @apply flex items-center justify-between py-4
     .container
         @apply mx-auto max-w-screen-lg px-4 relative
+    &.--stick
+        @apply fixed
     &.--unsticky
         @apply -translate-y-15
     &__menu,
