@@ -30,7 +30,7 @@ document.querySelectorAll('.switch-theme').forEach((item)=>{
 const header = document.querySelector('.header')
 if (header) {
     const headerCollapsed = document.querySelector('.header--collapsed')
-    let search = header.querySelector('.header--collapsed__form__input'),
+    let search = headerCollapsed.querySelector('.header--collapsed__form__input'),
         searchParent = search.closest('.header--collapsed__form')
 
     header.querySelector('.header__menu').addEventListener('click',()=>{
@@ -71,7 +71,6 @@ if (header) {
     })
 
     let lastHeaderPosition = 0
-    const header = document.querySelector('.header')
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const rect = header.nextElementSibling.getBoundingClientRect();
