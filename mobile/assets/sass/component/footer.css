@@ -79,7 +79,7 @@
 }
 
 .footer__wrapper {
-  @apply flex flex-col px-5 {}
+  @apply flex flex-col {}
 }
 
 .footer__logo {

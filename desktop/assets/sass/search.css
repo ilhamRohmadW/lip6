@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import './theme.css';
+@import './component/headerMini.css';
+@import './component/footer.css';
+@import './component/smartsearch.css';

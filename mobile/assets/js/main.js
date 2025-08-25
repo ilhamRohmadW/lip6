@@ -40,6 +40,7 @@ if (header) {
     function headerClose() {
         headerCollapsed.classList.remove('--active')
         document.documentElement.classList.remove('overflow-hidden')
+        searchParent.classList.remove('--active')
         search.value = ''
     }
     header.querySelector('.header--collapsed__top__close').addEventListener('click',()=>{

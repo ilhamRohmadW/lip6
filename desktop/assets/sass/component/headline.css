@@ -3,7 +3,7 @@
 }
 
 .headline--main {
-  @apply border rounded-lg h-full flex-1 relative {}
+  @apply border rounded-lg h-full flex-1 relative flex flex-col {}
 }
 
 .headline--main__list {
@@ -23,7 +23,7 @@
 }
 
 .headline__item--headline {
-  @apply flex flex-col py-0 gap-4 mb-4 {}
+  @apply flex flex-col py-0 gap-4 mb-4 flex-1 {}
 }
 
 .headline__item--headline .headline__item__detail {

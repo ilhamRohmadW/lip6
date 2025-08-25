@@ -1,7 +1,7 @@
 .headline
     @apply px-4 flex items-stretch flex-row gap-10 h-[660px]
     &--main
-        @apply border rounded-lg h-full flex-1 relative
+        @apply border rounded-lg h-full flex-1 relative flex flex-col
         &__list
             @apply flex flex-row py-5 divide-x border-t
             &__item
@@ -12,7 +12,7 @@
     &__item
         @apply flex flex-col gap-1.5
         &--headline
-            @apply flex flex-col py-0 gap-4 mb-4
+            @apply flex flex-col py-0 gap-4 mb-4 flex-1
             .headline__item
                 &__detail
                     @apply px-4
