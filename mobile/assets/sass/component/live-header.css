@@ -23,7 +23,7 @@
 }
 
 .header--logo {
-  @apply flex-1 {}
+  @apply flex-1 my-0 {}
 }
 
 .header--logo__link {
@@ -39,7 +39,7 @@
 }
 
 .header__live {
-  @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-7 px-2 mr-1 transition-colors {}
+  @apply flex items-center gap-x-1 justify-center mr-1 font-semibold text-xs rounded-md h-7 px-2 transition-colors bg-primary text-white {}
 }
 
 .header__login {
@@ -111,7 +111,7 @@
 }
 
 .header--collapsed__menu {
-  @apply flex flex-col overflow-y-auto h-full pb-4 whitespace-nowrap {}
+  @apply flex flex-col overflow-y-auto overflow-x-hidden h-full px-4 pb-4 whitespace-nowrap {}
 }
 
 .header--collapsed__menu::-webkit-scrollbar {
@@ -119,11 +119,11 @@
 }
 
 .header--collapsed__menu__break {
-  @apply border-b {}
+  @apply border-b -mx-4 {}
 }
 
 .header--collapsed__menu__link {
-  @apply flex items-center gap-2 py-3 px-4 transition-colors {}
+  @apply flex items-center gap-2 py-3 transition-colors {}
 }
 
 .header--collapsed__menu__item.--active .header--collapsed__menu__link {
@@ -140,22 +140,6 @@
 
 .header--collapsed.--active .header--collapsed__inner {
   @apply translate-x-0 {}
-}
-
-.switch-theme {
-  @apply cursor-pointer size-7 flex items-center justify-center {}
-}
-
-.switch-theme__icon {
-  @apply pointer-events-none size-6 {}
-}
-
-.switch-theme__icon.--dark {
-  @apply block dark:hidden {}
-}
-
-.switch-theme__icon.--light {
-  @apply hidden dark:block {}
 }
 
 .submenu__trigger {

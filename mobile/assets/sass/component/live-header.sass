@@ -12,7 +12,7 @@
     &--search__button
         @apply size-7 flex items-center justify-center cursor-pointer
     &--logo
-        @apply flex-1 
+        @apply flex-1 my-0
         &__link
             @apply h-7.5 block 
         &__image
@@ -20,7 +20,7 @@
     &--right
         @apply items-center flex translate-x-0.5 gap-1
     &__live
-        @apply flex items-center gap-x-1 justify-center font-semibold text-xs rounded-md h-7 px-2 mr-1 transition-colors
+        @apply flex items-center gap-x-1 justify-center mr-1 font-semibold text-xs rounded-md h-7 px-2 transition-colors bg-primary text-white
     &__login
         @apply flex items-center justify-center gap-1.5 size-7 text-xs transition-colors
         &__icon
@@ -61,13 +61,13 @@
             &__close
                 @apply h-10 w-10 -mr-2 flex items-center justify-center cursor-pointer
         &__menu
-            @apply flex flex-col overflow-y-auto h-full pb-4 whitespace-nowrap
+            @apply flex flex-col overflow-y-auto overflow-x-hidden h-full px-4 pb-4 whitespace-nowrap
             &::-webkit-scrollbar
                 @apply hidden
             &__break
-                @apply border-b 
+                @apply border-b -mx-4
             &__link
-                @apply flex items-center gap-2 py-3 px-4 transition-colors
+                @apply flex items-center gap-2 py-3 transition-colors
             &__item
                 // &.submenu
                 //     .header--collapsed__menu__link
@@ -88,26 +88,6 @@
                     @apply opacity-100
                 &__inner
                     @apply translate-x-0
-
-// .submenu
-//     &__icon
-//         @apply w-5 h-5
-//     &__list
-//         @apply absolute p-3 right-0 top-full max-h-96 overflow-y-auto z-20 rounded-lg transition-all duration-500 -translate-y-4 opacity-0 pointer-events-none shadow-[0_0_19px_0_rgba(159,161,162,0.3)]
-//         @apply dark:shadow-[0_0_19px_0_rgba(75,75,75,0.3)]
-//         .header--list__link
-//             @apply rounded-lg px-3
-//     &:hover
-//         .submenu__list
-//             @apply opacity-100 pointer-events-auto translate-y-0
-.switch-theme
-    @apply cursor-pointer size-7 flex items-center justify-center
-    &__icon
-        @apply pointer-events-none size-6
-        &.--dark
-            @apply block dark:hidden
-        &.--light
-            @apply hidden dark:block
 
 .submenu
     // @apply relative
