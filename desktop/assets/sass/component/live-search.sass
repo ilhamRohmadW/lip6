@@ -1,0 +1,87 @@
+.smartsearch
+    @apply flex justify-center flex-col pb-8
+    &-logo
+        @apply flex justify-center mb-12
+    &-form
+        &-group
+            background: linear-gradient(90deg, #FF633D 0%, #0E09FF 100%)
+            &-remove
+                @apply hidden
+    &-title
+        @apply mb-2.5
+    &-result
+        &-disclaimer
+            @apply mt-5
+            &-title
+                @apply mb-1.5
+            &-text
+                @apply text-xs hidden mb-6
+        // &-title,
+        // &-subtitle
+        //     @apply block
+        &-summary
+            @apply hidden
+
+            &-content
+                @apply mb-4
+            &-respons
+                @apply flex items-center gap-3 mb-8
+                &-radio
+                    @apply flex items-center gap-1
+                    span
+                        @apply h-7 rounded-full px-2 flex items-center justify-center gap-1
+                    input
+                        @apply absolute opacity-0
+                    label
+                        @apply flex items-center gap-1 relative text-inherit cursor-pointer
+            &-article
+                &-title
+                    @apply mb-6
+            &-main
+                @apply relative border-t pt-5 mt-6 -mx-4
+        &-latest
+            @apply text-center mt-4
+            &-title
+                @apply mb-4
+            &-list
+                @apply flex justify-center flex-wrap gap-3 *:*:block  *:*:py-1 *:*:px-3 *:*:rounded-full
+.skeleton
+    @apply hidden px-4 -mx-4 overflow-hidden
+    &-box
+        background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%)
+        background-size: 200% 100%
+        animation: shimmer 1.2s infinite
+        border-radius: 6px
+        margin-bottom: 12px
+    &-text
+        height: 16px
+        width: 100%
+        &.short
+            @apply w-10/12
+    &-wrapper
+        @apply flex
+    &-image
+        @apply w-50 h-25 mb-3
+.loading
+    @apply size-12 border-4 rounded-full mx-auto mt-8 mb-6
+    animation: spin 0.8s linear infinite
+@keyframes spin
+    to 
+        transform: rotate(360deg)
+@keyframes shimmer
+    0%
+        background-position: -200% 0
+    100%
+        background-position: 200% 0
+
+.footer__copyright
+    background-color: transparent
+// .footer__wrapper
+//     @apply w-full
+// .articles--iridescent-list--text-item__figure-thumbnail
+//     @apply mr-2.5
+// #bottomframe-toggle,
+// #bottomframe-toggle img
+//     display: inline-block
+// #div-gpt-ad-bottomfrm-placeholder iframe
+//     @apply mx-auto

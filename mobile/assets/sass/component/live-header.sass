@@ -44,11 +44,13 @@
         &__inner
             @apply relative flex flex-col w-2xs h-full -translate-x-full transition-transform duration-500
         &__form
-            @apply flex-1 w-full rounded-lg px-2 gap-1 text-sm flex items-center justify-between
+            @apply flex-1 w-full rounded-lg px-2 gap-1 text-sm flex items-center justify-between relative
+            svg
+                @apply shrink-0
             &__input
                 @apply flex-1 h-9 outline-none
             &__close
-                @apply opacity-0 pointer-events-none transition-opacity
+                @apply opacity-0 pointer-events-none transition-opacity absolute my-auto right-2
             &.--active
                 .header--collapsed__form__close
                     @apply opacity-100 pointer-events-auto

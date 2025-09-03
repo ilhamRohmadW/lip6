@@ -83,7 +83,11 @@
 }
 
 .header--collapsed__form {
-  @apply flex-1 w-full rounded-lg px-2 gap-1 text-sm flex items-center justify-between {}
+  @apply flex-1 w-full rounded-lg px-2 gap-1 text-sm flex items-center justify-between relative {}
+}
+
+.header--collapsed__form svg {
+  @apply shrink-0 {}
 }
 
 .header--collapsed__form__input {
@@ -91,7 +95,7 @@
 }
 
 .header--collapsed__form__close {
-  @apply opacity-0 pointer-events-none transition-opacity {}
+  @apply opacity-0 pointer-events-none transition-opacity absolute my-auto right-2 {}
 }
 
 .header--collapsed__form.--active .header--collapsed__form__close {
