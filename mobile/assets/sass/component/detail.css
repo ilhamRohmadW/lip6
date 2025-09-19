@@ -1,0 +1,75 @@
+@layer components {
+  .breadcrumb {
+    @apply flex items-center gap-3 leading-none mb-4 {}
+  }
+  .breadcrumb__item {
+    @apply pr-4 relative after:absolute after:right-0 after:inset-y-0 after:my-auto after:inline-block after:size-1.5 after:border-t-1 after:border-r-1 after:rotate-45 after:border-primary {}    @apply last:text-primary last:after:hidden {}
+  }
+  .detail__title {
+    @apply mb-3 {}
+  }
+  .detail__description {
+    @apply mb-3 {}
+  }
+  .detail__datetime {
+    @apply mb-3 {}
+  }
+  .detail__datetime summary {
+    @apply relative flex items-center gap-1 {}
+  }
+  .detail__datetime summary svg {
+    @apply transition-transform {}
+  }
+  .detail__datetime[open] summary svg {
+    @apply rotate-90 {}
+  }
+  .detail__info {
+    @apply p-4 rounded-lg flex items-center justify-between z-0 relative text-xs {}    @apply lg:gap-6 {}    @apply xl:gap-10 {}
+  }
+  .detail__comment, .detail__share__button {
+    @apply flex items-center gap-2 {}
+  }
+  .detail__comment span,
+  .detail__comment svg, .detail__share__button span,
+  .detail__share__button svg {
+    @apply pointer-events-none {}
+  }
+  .detail__share {
+    @apply relative {}
+  }
+  .detail__share__copy {
+    @apply flex items-center justify-center gap-1 py-1 border rounded-md transition-all duration-300 ease-in-out {}
+  }
+  .detail__share__copy span,
+  .detail__share__copy svg {
+    @apply pointer-events-none {}
+  }
+  .detail__share__cancel {
+    @apply py-2 block text-center transition-colors duration-300 ease-in-out {}
+  }
+  .detail__share__social {
+    @apply flex items-center justify-center gap-5 mb-5 {}
+  }
+  .detail__share__social__button {
+    @apply flex transition-transform duration-300 ease-in-out hover:scale-125 {}
+  }
+  .detail__share__social__button span,
+  .detail__share__social__button svg {
+    @apply pointer-events-none {}
+  }
+  .detail__share__dropdown {
+    @apply absolute top-full right-0 pointer-events-none w-fit -translate-y-4 transition-all duration-300 ease-in-out opacity-0 font-medium rounded-lg shadow-[0_10px_40px_10px_rgba(0,0,0,0.16)] {}
+  }
+  .detail__share__dropdown__content {
+    @apply p-4 {}
+  }
+  .detail__share__dropdown__bottom {
+    @apply border-t {}
+  }
+  .detail__share.--collapsed .detail__share__dropdown {
+    @apply translate-y-1 opacity-100 pointer-events-auto {}
+  }
+  .detail__reaction--like, .detail__reaction--dislike {
+    @apply flex items-center gap-1 transition cursor-pointer {}
+  }
+}

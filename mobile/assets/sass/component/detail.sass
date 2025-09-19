@@ -1,0 +1,60 @@
+@layer components
+    .breadcrumb
+        @apply flex items-center gap-3 leading-none mb-4
+        &__item
+            @apply pr-4 relative after:absolute after:right-0 after:inset-y-0 after:my-auto after:inline-block after:size-1.5 after:border-t-1 after:border-r-1 after:rotate-45 after:border-primary
+            @apply last:text-primary last:after:hidden
+    .detail
+        &__title
+            @apply mb-3
+        &__description
+            @apply mb-3
+        &__datetime
+            @apply mb-3
+            summary
+                @apply relative flex items-center gap-1
+                svg
+                    @apply transition-transform
+            &[open]
+                summary
+                    svg
+                        @apply rotate-90
+        &__info
+            @apply p-4 rounded-lg flex items-center justify-between z-0 relative text-xs
+            @apply lg:gap-6
+            @apply xl:gap-10
+        &__comment,
+        &__share__button
+            @apply flex items-center gap-2
+            span,
+            svg,
+                @apply pointer-events-none
+        &__share
+            @apply relative
+            &__copy
+                @apply flex items-center justify-center gap-1 py-1 border rounded-md transition-all duration-300 ease-in-out
+                span,
+                svg
+                    @apply pointer-events-none
+            &__cancel
+                @apply py-2 block text-center transition-colors duration-300 ease-in-out
+            &__social
+                @apply flex items-center justify-center gap-5 mb-5
+                &__button
+                    @apply flex transition-transform duration-300 ease-in-out hover:scale-125
+                    span,
+                    svg
+                        @apply pointer-events-none
+            &__dropdown
+                @apply absolute top-full right-0 pointer-events-none w-fit -translate-y-4 transition-all duration-300 ease-in-out opacity-0 font-medium rounded-lg shadow-[0_10px_40px_10px_rgba(0,0,0,0.16)]
+                &__content
+                    @apply p-4
+                &__bottom
+                    @apply border-t
+            &.--collapsed 
+                .detail__share__dropdown
+                    @apply translate-y-1 opacity-100 pointer-events-auto
+        &__reaction
+            &--like,
+            &--dislike
+                @apply flex items-center gap-1 transition cursor-pointer
